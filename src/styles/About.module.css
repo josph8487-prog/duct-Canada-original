@@ -1,0 +1,122 @@
+.hero {
+    position: relative;
+    height: 400px;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 17, 44, 0.8), rgba(0, 17, 44, 0.8)), url('/images/Banner.jpeg');
+    /* Need an image or fallback */
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    color: white;
+}
+
+.contentSection {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.textColumn h2 {
+    color: var(--primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.textColumn h3 {
+    color: var(--secondary);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.description p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-800);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.highlightBox {
+    background-color: var(--secondary);
+    color: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--primary);
+    margin-top: 2rem;
+}
+
+.highlightBox h4 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.imageColumn {
+    position: relative;
+    height: 500px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.statsSection {
+    background-color: var(--gray-50);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.statItem h4 {
+    font-size: 3rem;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.statItem p {
+    color: var(--secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

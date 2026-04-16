@@ -1,0 +1,510 @@
+.hero {
+    position: relative;
+    min-height: 600px;
+    /* Changed from fixed height to min-height for mobile responsiveness */
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary);
+    /* Fallback */
+    overflow: hidden;
+    flex-direction: column;
+    /* Stack on mobile */
+}
+
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        height: 600px;
+    }
+}
+
+.heroContentWrapper {
+    display: flex;
+    height: 100%;
+}
+
+.heroLeft {
+    flex: 1;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    /* Reduced padding for mobile */
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .heroLeft {
+        padding: 4rem 2rem 4rem 0;
+        width: auto;
+    }
+}
+
+/* Create the curve effect on the right of the blue section */
+.heroLeft::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 100px;
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 0 50% 50% 0;
+    /* Curve outward */
+    z-index: 2;
+    display: none;
+    /* Hide on mobile defaults */
+}
+
+@media (min-width: 900px) {
+    .heroLeft::after {
+        display: block;
+    }
+}
+
+.heroRight {
+    flex: 1;
+    background-image: url('/hero.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 300px;
+    /* Ensure visible on mobile */
+}
+
+@media (min-width: 900px) {
+    .heroRight {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* Extra bold */
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.heroSubtitle {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 500px;
+    font-weight: 400;
+}
+
+.features {
+    background-color: white;
+    text-align: center;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.featureCard {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-100);
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.featureTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    text-align: center;
+    /* Per reference design */
+}
+
+.featureText {
+    color: var(--gray-800);
+    padding: 0 1rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.servicesPreview {
+    background-color: var(--gray-50);
+}
+
+@media (min-width: 768px) {
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols for services */
+    }
+}
+
+@media (min-width: 1100px) {
+    .featureGrid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Keep 3 or go to 4 if space permits */
+    }
+}
+
+/* About Section */
+.aboutSection {
+    background-color: white;
+    padding: 5rem 0;
+    /* Add subtle diagonal stripe pattern if desired, or keep white */
+    background-image: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.02) 0px,
+            rgba(0, 0, 0, 0.02) 2px,
+            transparent 2px,
+            transparent 10px);
+}
+
+.aboutGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 900px) {
+    .aboutGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+/* Text Content Column */
+.aboutContent h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.aboutContent h3 {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.aboutText {
+    color: var(--gray-800);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* Middle Image Grid Column */
+.aboutImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    height: 400px;
+    /* Fixed height for consistency */
+}
+
+.aboutImageItem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--gray-200);
+}
+
+/* Right Highlight Column */
+.localHighlight {
+    background-color: var(--primary);
+    color: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.localHighlight h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.localHighlight p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* Process Section */
+.processSection {
+    background-color: var(--gray-50);
+    padding: 5rem 0;
+}
+
+.processGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stepItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.stepNumber {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gray-200);
+    /* Large grey numbers */
+    line-height: 1;
+    min-width: 60px;
+}
+
+.stepContent h4 {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+    color: var(--gray-800);
+    line-height: 1.6;
+}
+
+.quoteFormCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    position: sticky;
+    top: 100px;
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+}
+
+.formTextarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Why Choose Us */
+.whyChooseSection {
+    background-color: var(--secondary);
+    color: white;
+    padding: 5rem 0;
+}
+
+.whyChooseGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.whyChooseContent h2 {
+    color: var(--primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.whyChooseContent h3 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.benefitsList {
+    list-style: none;
+}
+
+.benefitItem {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefitIcon {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.benefitTitle {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+/* Testimonials */
+.testimonialsSection {
+    background-color: var(--secondary);
+    /* Dark Navy Background */
+    padding: 5rem 0;
+    color: white;
+    background-image: radial-gradient(var(--gray-800) 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Dotted pattern effect */
+}
+
+.testimonialsContentWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.testimonialLeft {
+    flex: 1;
+}
+
+.testimonialHeader {
+    margin-bottom: 3rem;
+}
+
+.testimonialHeader h2 {
+    color: var(--primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.testimonialHeader h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonialHeader p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.reviewGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.reviewCard {
+    background: white;
+    /* High contrast card */
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: left;
+    position: relative;
+    /* Remove colored border for cleaner look, or keep */
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviewText {
+    font-style: italic;
+    color: var(--gray-800);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.reviewName {
+    font-weight: 700;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonialRight {
+    position: relative;
+    height: 500px;
+    display: none;
+    /* Hidden on mobile */
+}
+
+/* Diagonal clip path for image frame */
+.testimonialImageFrame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border-left: 10px solid var(--primary);
+    /* Optional: Clip path for slanted look */
+    /* clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); */
+}
+
+/* Responsive */
+/* Responsive */
+@media (min-width: 900px) {
+    .aboutGrid {
+        grid-template-columns: 1.2fr 1fr 0.8fr;
+        /* Text larger, Images med, box small */
+    }
+
+    .whyChooseGrid,
+    .processGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .reviewGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
