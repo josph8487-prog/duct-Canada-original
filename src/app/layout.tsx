@@ -13,15 +13,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileContactButton from '@/components/MobileContactButton';
 
- export const metadata: Metadata = {
+export const metadata: Metadata = {
   title: 'Duct Cleaning Canada - Professional Duct Cleaning Services',
-  description: 'Top-rated air duct cleaning, dryer vent cleaning, and sanitization services.',
+  description: 'Top-rated air duct cleaning, dryer vent cleaning, and sanitization services for residential and commercial properties.',
   icons: {
     icon: '/favicon.ico',
   },
 };
-
-
 
 export default function RootLayout({
   children,
@@ -31,6 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.variable}>
       <head>
+        {/* Metadata for SEO */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={metadata.icons.icon} />
+
         {/* Google tag (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-QY5NQEY4EP" strategy="lazyOnload" />
         <Script id="google-analytics" strategy="lazyOnload">
