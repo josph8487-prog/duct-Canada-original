@@ -54,6 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.variable}>
       <head>
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-QY5NQEY4EP"
@@ -68,8 +69,39 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Fallback favicon */}
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* ================= SCHEMA MARKUP (LOCAL BUSINESS) ================= */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Duct Cleaning Canada",
+              "url": "https://ductcleaningcanada.com",
+              "telephone": "226-777-2863",
+              "image": "https://ductcleaningcanada.com/favicon.ico",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Markham",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              },
+              "description":
+                "Professional air duct cleaning, dryer vent cleaning, furnace cleaning, and HVAC services in Markham and across Ontario.",
+              "sameAs": [
+                "https://www.facebook.com/share/1BVciPbPKA/",
+                "https://www.instagram.com/duct_cleaning_canada/",
+                "https://www.hotfrog.ca/company/2748911d6537073e9476bb10ec11b299/duct-cleaning-canada/markham/heating-air",
+                "https://wa.me/12267772863"
+              ]
+            })
+          }}
+        />
+        {/* ================= END SCHEMA ================= */}
+
       </head>
 
       <body>
