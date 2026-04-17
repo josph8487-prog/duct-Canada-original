@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
@@ -30,26 +29,6 @@ export default function Home() {
       title: "Duct Sanitization",
       text: "Eco-friendly duct sanitization to remove bacteria, mold and odors for healthier indoor air.",
       image: "/images/services/sanitization.jpg"
-    },
-    {
-      title: "Filter Replacement",
-      text: "Professional HVAC filter replacement to maintain clean airflow and system efficiency.",
-      image: "/images/services/filter-replacement.jpg"
-    },
-    {
-      title: "Kitchen Vent Cleaning",
-      text: "Remove grease and improve ventilation with expert kitchen exhaust and dishwasher vent cleaning.",
-      image: "/images/services/dishwasher-cleaning.jpg"
-    },
-    {
-      title: "Exhaust Fan Cleaning",
-      text: "Prevent mold buildup and improve ventilation with bathroom and kitchen exhaust fan cleaning.",
-      image: "/images/services/exhaust-fan-cleaning.jpg"
-    },
-    {
-      title: "Complete HVAC Services",
-      text: "Full residential and commercial HVAC cleaning solutions across Markham, Toronto and Ontario.",
-      image: "/images/services/air-duct-cleaning.jpg"
     }
   ];
 
@@ -62,20 +41,19 @@ export default function Home() {
           <div className={styles.heroLeft}>
             <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
 
-              {/* SEO H1 */}
               <h1 className={styles.heroTitle}>
                 Air Duct Cleaning Services in Markham, Toronto & GTA
               </h1>
 
               <p className={styles.heroSubtitle}>
-                Trusted duct cleaning company in Canada offering professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services across Markham and Ontario.
+                Trusted duct cleaning company in Canada offering professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services.
               </p>
 
               <Link href="/services" className="btn btn-primary">
                 Explore Services
               </Link>
 
-              {/* SERVICE AREA QUICK SIGNAL */}
+              {/* SERVICE AREA QUICK LINE */}
               <div style={{ marginTop: "15px", fontSize: "14px" }}>
                 <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
               </div>
@@ -96,7 +74,7 @@ export default function Home() {
             <h2>Who We Are</h2>
             <h3>Trusted Air Duct Cleaning Experts in Ontario</h3>
             <p className={styles.aboutText}>
-              We provide professional air duct cleaning, HVAC cleaning, furnace cleaning and dryer vent cleaning services in Markham, Toronto and surrounding GTA areas. Our goal is to improve indoor air quality and system performance.
+              We provide professional air duct cleaning, HVAC cleaning, furnace cleaning and dryer vent cleaning services in Markham, Toronto and GTA.
             </p>
 
             <Link href="/about" className="btn btn-primary">
@@ -121,22 +99,20 @@ export default function Home() {
 
           <div className={styles.localHighlight}>
             <h4>Locally Trusted in GTA</h4>
-            <p>
-              Serving Markham, Toronto, Vaughan, Richmond Hill and North York with professional duct cleaning services.
-            </p>
+            <p>Serving Markham, Toronto, Vaughan, Richmond Hill and North York.</p>
           </div>
 
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES SECTION */}
       <section className={`section ${styles.servicesPreview}`}>
         <div className="container">
 
           <h2 className="section-title">Our Professional Services</h2>
 
           <p className="section-subtitle">
-            Complete HVAC and air duct cleaning services for homes and businesses across Markham, Toronto and GTA.
+            Complete HVAC and air duct cleaning services across Ontario.
           </p>
 
           <div className={styles.featureGrid}>
@@ -159,7 +135,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCESS */}
+      {/* 🔥 SERVICE AREAS MINI SEO BLOCK (IMPORTANT) */}
+      <section className={styles.serviceAreasMini}>
+        <div className="container">
+
+          <h2 className="section-title">
+            Service Areas in Ontario
+          </h2>
+
+          <p className="section-subtitle">
+            We provide professional duct cleaning services in Markham and nearby GTA cities.
+          </p>
+
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '10px',
+            justifyContent: 'center',
+            marginTop: '20px'
+          }}>
+
+            <Link href="/service-areas" className="btn btn-outline">Markham</Link>
+            <Link href="/service-areas" className="btn btn-outline">Toronto</Link>
+            <Link href="/service-areas" className="btn btn-outline">Vaughan</Link>
+            <Link href="/service-areas" className="btn btn-outline">Richmond Hill</Link>
+            <Link href="/service-areas" className="btn btn-outline">North York</Link>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* PROCESS SECTION */}
       <section className={styles.processSection}>
         <div className={`container ${styles.processGrid}`}>
 
@@ -168,7 +175,7 @@ export default function Home() {
             <h3>Step-by-Step Professional Duct Cleaning</h3>
 
             <p>
-              We follow a proven cleaning process including inspection, deep cleaning, sanitization and final testing to ensure best air quality results.
+              We inspect, clean, sanitize and test your HVAC system for best indoor air quality.
             </p>
 
           </div>
@@ -181,7 +188,7 @@ export default function Home() {
         <div className={`container ${styles.testimonialsContentWrapper}`}>
 
           <h2>Customer Reviews</h2>
-          <p>Trusted by homeowners across Markham, Toronto & Ontario.</p>
+          <p>Trusted by homeowners across Ontario.</p>
 
         </div>
       </section>
