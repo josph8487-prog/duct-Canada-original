@@ -13,10 +13,15 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileContactButton from '@/components/MobileContactButton';
 
-export const metadata: Metadata = {
+ export const metadata: Metadata = {
   title: 'Duct Cleaning Canada - Professional Duct Cleaning Services',
   description: 'Top-rated air duct cleaning, dryer vent cleaning, and sanitization services.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
+
+
 
 export default function RootLayout({
   children,
