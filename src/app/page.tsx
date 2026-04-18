@@ -1,247 +1,185 @@
-"use client";
-
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@/styles/Home.module.css';
 
 export default function Home() {
+
+  const services = [
+    {
+      title: "Air Duct Cleaning Markham & GTA",
+      text: "Professional air duct cleaning services in Markham, Toronto and GTA. Improve indoor air quality and airflow.",
+      image: "/images/services/air-duct-cleaning.jpg"
+    },
+    {
+      title: "Furnace Cleaning",
+      text: "Improve heating efficiency and extend furnace life with expert cleaning services.",
+      image: "/images/services/furnace-cleaning.jpg"
+    },
+    {
+      title: "Dryer Vent Cleaning",
+      text: "Prevent fire hazards and improve dryer performance with professional vent cleaning.",
+      image: "/images/services/dryer-vent-cleaning.jpg"
+    },
+    {
+      title: "HVAC Blower Cleaning",
+      text: "Improve airflow and energy efficiency with professional blower cleaning.",
+      image: "/images/services/blower-fan-cleaning.jpg"
+    },
+    {
+      title: "Duct Sanitization",
+      text: "Remove bacteria, mold and odors with eco-friendly sanitization services.",
+      image: "/images/services/sanitization.jpg"
+    }
+  ];
+
   return (
     <>
-      {/* ================= HERO ================= */}
-      <section style={hero}>
-        <div style={overlay}></div>
+      {/* HERO */}
+      <section className={styles.hero}>
+        <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
-        <div style={content}>
-          <h1 style={title}>
-            Air Duct Cleaning Services in Markham, Toronto & GTA
-          </h1>
+          <div className={styles.heroLeft}>
+            <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
 
-          <p style={desc}>
-            Professional air duct, dryer vent & furnace cleaning across Ontario.
-            Improve indoor air quality for your home or business.
-          </p>
+              <h1 className={styles.heroTitle}>
+                Air Duct Cleaning Services in Markham, Toronto & GTA
+              </h1>
 
-          <div style={btnWrap}>
-            <Link href="/contact" style={primaryBtn}>
-              Get Free Quote
-            </Link>
+              <p className={styles.heroSubtitle}>
+                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+              </p>
 
-            <a href="tel:2267772863" style={secondaryBtn}>
-              Call Now
-            </a>
+              <Link href="/services" className="btn btn-primary">
+                Explore Services
+              </Link>
+
+              {/* SERVICE AREAS */}
+              <div style={{ marginTop: "15px", fontSize: "14px" }}>
+                <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+              </div>
+
+            </div>
           </div>
 
-          <p style={serve}>
-            Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
+          <div className={styles.heroRight}></div>
+
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className={styles.aboutSection}>
+        <div className={`container ${styles.aboutGrid}`}>
+
+          <div className={styles.aboutContent}>
+            <h2>Who We Are</h2>
+            <h3>Trusted Air Duct Cleaning Experts in Ontario</h3>
+            <p className={styles.aboutText}>
+              We provide professional air duct cleaning, furnace cleaning and HVAC services across Markham, Toronto and GTA.
+            </p>
+
+            <Link href="/about" className="btn btn-primary">
+              Learn More
+            </Link>
+          </div>
+
+          <div className={styles.aboutImages}>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/air-duct-cleaning.jpg" alt="Air Duct Cleaning Markham" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/furnace-cleaning.jpg" alt="Furnace Cleaning" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/blower-fan-cleaning.jpg" alt="HVAC Cleaning" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/sanitization.jpg" alt="Duct Sanitization" fill style={{ objectFit: 'cover' }} />
+            </div>
+          </div>
+
+          <div className={styles.localHighlight}>
+            <h4>Locally Trusted in GTA</h4>
+            <p>Serving Markham, Toronto, Vaughan, Richmond Hill and North York.</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SERVICE AREAS */}
+      <section style={{ padding: "50px 20px", background: "#f9f9f9" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
+
+          <h2>Service Areas We Cover</h2>
+
+          <p style={{ marginBottom: "20px" }}>
+            We provide professional duct cleaning services across Markham and nearby GTA cities.
           </p>
+
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "15px"
+          }}>
+
+            <Link href="/location/markham" style={areaBtn}>Markham</Link>
+            <Link href="/location/toronto" style={areaBtn}>Toronto</Link>
+            <Link href="/location/vaughan" style={areaBtn}>Vaughan</Link>
+            <Link href="/location/richmond-hill" style={areaBtn}>Richmond Hill</Link>
+
+          </div>
+
         </div>
       </section>
 
-      {/* ================= TRUST BAR ================= */}
-      <section style={trustBar}>
-        <div>✔ Same Day Service</div>
-        <div>✔ Certified Technicians</div>
-        <div>✔ Affordable Pricing</div>
-      </section>
+      {/* SERVICES GRID */}
+      <section className={`section ${styles.servicesPreview}`}>
+        <div className="container">
 
-      {/* ================= SERVICES ================= */}
-      <section style={section}>
-        <h2 style={h2}>Our Services</h2>
+          <h2 className="section-title">Our Services</h2>
 
-        <div style={grid}>
-          <Card title="Air Duct Cleaning" />
-          <Card title="Furnace Cleaning" />
-          <Card title="Dryer Vent Cleaning" />
-          <Card title="Duct Sanitization" />
+          <div className={styles.featureGrid}>
+            {services.map((service, index) => (
+              <div key={index} className={styles.featureCard}>
+                <div style={{ position: 'relative', height: '220px' }}>
+                  <Image src={service.image} alt={service.title} fill />
+                </div>
+                <h3 className={styles.featureTitle}>{service.title}</h3>
+                <p className={styles.featureText}>{service.text}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* ================= SERVICE AREAS ================= */}
-      <section style={sectionAlt}>
-        <h2 style={h2}>Service Areas</h2>
-
-        <div style={areas}>
-          <Link href="/location/markham" style={chip}>Markham</Link>
-          <Link href="/location/toronto" style={chip}>Toronto</Link>
-          <Link href="/location/vaughan" style={chip}>Vaughan</Link>
-          <Link href="/location/richmond-hill" style={chip}>Richmond Hill</Link>
+      {/* PROCESS */}
+      <section className={styles.processSection}>
+        <div className={`container ${styles.processGrid}`}>
+          <div>
+            <h2>Our Cleaning Process</h2>
+            <p>Inspection → Cleaning → Sanitization → Final Check</p>
+          </div>
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
-      <section style={cta}>
-        <h2>Need Duct Cleaning Today?</h2>
-        <p>Call now or request a free quote</p>
-
-        <div style={btnWrap}>
-          <Link href="/contact" style={primaryBtn}>
-            Get Free Quote
-          </Link>
-
-          <a href="tel:2267772863" style={secondaryBtn}>
-            Call Now
-          </a>
+      {/* TESTIMONIALS */}
+      <section className={styles.testimonialsSection}>
+        <div className="container">
+          <h2>Customer Reviews</h2>
+          <p>Trusted by homeowners across Ontario.</p>
         </div>
       </section>
-
-      {/* ================= STICKY CALL BUTTON ================= */}
-      <a href="tel:2267772863" style={stickyCall}>
-        📞 Call Now
-      </a>
     </>
   );
 }
 
-/* ================= COMPONENT ================= */
-
-function Card({ title }: any) {
-  return (
-    <div style={card}>
-      <h3>{title}</h3>
-    </div>
-  );
-}
-
-/* ================= STYLES ================= */
-
-const hero = {
-  position: "relative",
-  minHeight: "85vh",
-  backgroundImage: "url('/images/services/air-duct-cleaning.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "20px",
-};
-
-const overlay = {
-  position: "absolute",
-  inset: 0,
-  background: "rgba(0,0,0,0.75)",
-};
-
-const content = {
-  position: "relative",
-  textAlign: "center",
-  maxWidth: "750px",
-};
-
-const title = {
-  color: "#fff",
-  fontSize: "clamp(28px,6vw,52px)",
-  fontWeight: "900",
-  lineHeight: "1.2",
-  textShadow: "0 5px 25px rgba(0,0,0,0.9)",
-};
-
-const desc = {
-  color: "#eee",
-  fontSize: "clamp(15px,3.5vw,18px)",
-  marginTop: "15px",
-};
-
-const btnWrap = {
-  display: "flex",
-  gap: "12px",
-  justifyContent: "center",
-  flexWrap: "wrap",
-  marginTop: "20px",
-};
-
-const primaryBtn = {
-  padding: "14px 24px",
-  borderRadius: "10px",
-  background: "#00c853",
-  color: "#fff",
-  fontWeight: "700",
-  textDecoration: "none",
-};
-
-const secondaryBtn = {
-  padding: "14px 24px",
-  borderRadius: "10px",
-  border: "1px solid #fff",
-  color: "#fff",
-  textDecoration: "none",
-};
-
-const serve = {
-  marginTop: "15px",
-  color: "#ccc",
-  fontSize: "13px",
-};
-
-const trustBar = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "20px",
-  padding: "15px",
-  background: "#111",
-  color: "#fff",
-  flexWrap: "wrap",
-  fontSize: "14px",
-};
-
-const section = {
-  padding: "50px 20px",
-  textAlign: "center",
-};
-
-const sectionAlt = {
-  padding: "50px 20px",
-  background: "#f7f7f7",
-  textAlign: "center",
-};
-
-const h2 = {
-  fontSize: "24px",
-  marginBottom: "25px",
-};
-
-const grid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(180px,1fr))",
-  gap: "15px",
-};
-
-const card = {
-  padding: "20px",
-  border: "1px solid #eee",
-  borderRadius: "10px",
-};
-
-const areas = {
-  display: "flex",
-  gap: "10px",
-  justifyContent: "center",
-  flexWrap: "wrap",
-};
-
-const chip = {
-  padding: "10px 16px",
-  border: "1px solid #ccc",
-  borderRadius: "20px",
+const areaBtn = {
+  padding: "10px 18px",
+  border: "1px solid #000",
+  borderRadius: "6px",
   textDecoration: "none",
   color: "#000",
-};
-
-const cta = {
-  padding: "50px 20px",
-  background: "#111",
-  color: "#fff",
-  textAlign: "center",
-};
-
-const stickyCall = {
-  position: "fixed",
-  bottom: "15px",
-  left: "50%",
-  transform: "translateX(-50%)",
-  background: "#00c853",
-  color: "#fff",
-  padding: "14px 24px",
-  borderRadius: "30px",
-  fontWeight: "700",
-  textDecoration: "none",
-  zIndex: 9999,
+  fontWeight: "500",
+  display: "inline-block"
 };
