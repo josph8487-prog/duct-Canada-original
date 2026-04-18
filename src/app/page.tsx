@@ -34,6 +34,7 @@ export default function Home() {
 
   return (
     <>
+
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -53,6 +54,7 @@ export default function Home() {
                 Explore Services
               </Link>
 
+              {/* SERVICE AREAS */}
               <div style={{ marginTop: "15px", fontSize: "14px" }}>
                 <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
               </div>
@@ -61,6 +63,7 @@ export default function Home() {
           </div>
 
           <div className={styles.heroRight}></div>
+
         </div>
       </section>
 
@@ -103,9 +106,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS */}
+      {/* 🔥 SERVICE AREAS BOX FIXED */}
       <section style={{ padding: "50px 20px", background: "#f9f9f9" }}>
-        <div className="container" style={{ textAlign: "center" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
 
           <h2>Service Areas We Cover</h2>
 
@@ -130,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES GRID */}
       <section className={`section ${styles.servicesPreview}`}>
         <div className="container">
 
@@ -179,5 +182,6 @@ const areaBtn = {
   borderRadius: "6px",
   textDecoration: "none",
   color: "#000",
-  fontWeight: "500"
+  fontWeight: "500",
+  display: "inline-block"
 };
