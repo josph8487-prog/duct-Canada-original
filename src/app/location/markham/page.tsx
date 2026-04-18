@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Air Duct Cleaning in Markham | Duct Cleaning Canada",
+  description:
+    "Professional air duct cleaning in Markham, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Call now for same-day service.",
+  keywords: [
+    "air duct cleaning Markham",
+    "duct cleaning Markham",
+    "dryer vent cleaning Markham",
+    "furnace cleaning Markham",
+    "HVAC cleaning Markham"
+  ],
+};
+
 export default function MarkhamPage() {
   return (
     <>
@@ -7,7 +22,8 @@ export default function MarkhamPage() {
 
         <p>
           Professional air duct cleaning, dryer vent cleaning, furnace cleaning
-          and HVAC services in Markham, Ontario. Improve indoor air quality today.
+          and HVAC services in Markham, Ontario. Improve your indoor air quality
+          with trusted local experts.
         </p>
 
         <a
@@ -26,9 +42,9 @@ export default function MarkhamPage() {
         </a>
       </section>
 
-      {/* SERVICE SECTION */}
+      {/* SERVICES SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
-        <h2>Our Services in Markham</h2>
+        <h2>Our Duct Cleaning Services in Markham</h2>
 
         <ul>
           <li>Air Duct Cleaning Markham</li>
@@ -37,18 +53,18 @@ export default function MarkhamPage() {
           <li>HVAC Sanitization Markham</li>
         </ul>
 
-        <h3>Why Choose Us</h3>
+        <h3>Why Choose Our Markham Team</h3>
         <ul>
-          <li>✔ Fast service in Markham</li>
-          <li>✔ Affordable pricing</li>
-          <li>✔ Certified technicians</li>
-          <li>✔ 100% satisfaction guarantee</li>
+          <li>✔ Fast & reliable service in Markham</li>
+          <li>✔ Affordable & transparent pricing</li>
+          <li>✔ Certified HVAC technicians</li>
+          <li>✔ 100% customer satisfaction guarantee</li>
         </ul>
       </section>
 
-      {/* GOOGLE MAP SECTION */}
+      {/* MAP SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Service Area Map</h2>
+        <h2>Duct Cleaning Services Near You in Markham</h2>
 
         <iframe
           src="https://www.google.com/maps?q=Markham+Ontario&output=embed"
@@ -57,6 +73,21 @@ export default function MarkhamPage() {
           style={{ border: 0, borderRadius: "10px" }}
           loading="lazy"
         ></iframe>
+      </section>
+
+      {/* INTERNAL LINKING (VERY IMPORTANT SEO BOOST) */}
+      <section style={{ padding: "40px 20px", textAlign: "center" }}>
+        <h3>Nearby Service Areas</h3>
+
+        <p>
+          We also provide services in nearby cities:
+        </p>
+
+        <div style={{ marginTop: "10px" }}>
+          <a href="/location/toronto">Toronto</a> |{" "}
+          <a href="/location/vaughan">Vaughan</a> |{" "}
+          <a href="/location/richmond-hill">Richmond Hill</a>
+        </div>
       </section>
 
       {/* CTA SECTION */}
