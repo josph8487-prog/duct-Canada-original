@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Air Duct Cleaning in Markham | Duct Cleaning Canada",
   description:
-    "Professional air duct cleaning in Markham, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Trusted local experts for residential and commercial duct cleaning.",
+    "Professional air duct cleaning in Markham, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted experts in Markham and GTA.",
   keywords: [
     "air duct cleaning Markham",
     "duct cleaning Markham",
     "dryer vent cleaning Markham",
     "furnace cleaning Markham",
     "HVAC cleaning Markham",
-    "duct cleaning near me Markham"
+    "duct cleaning near me Markham",
+    "Markham air duct cleaning services"
   ],
 };
 
@@ -21,12 +22,11 @@ export default function MarkhamPage() {
       <section style={{ padding: "60px 20px", textAlign: "center" }}>
         <h1>Air Duct Cleaning in Markham</h1>
 
-        <p style={{ maxWidth: "800px", margin: "auto" }}>
-          If you are looking for professional air duct cleaning in Markham,
-          Duct Cleaning Canada provides expert HVAC cleaning, dryer vent cleaning,
-          furnace cleaning, and full duct sanitization services. We help homeowners
-          and businesses improve indoor air quality, reduce allergens, and boost
-          HVAC efficiency across Markham, Ontario.
+        <p style={{ maxWidth: "850px", margin: "auto" }}>
+          If you are looking for professional air duct cleaning in Markham, you are at the right place.
+          Our expert team provides high-quality air duct cleaning in Markham, helping homeowners and businesses
+          improve indoor air quality, reduce dust, and increase HVAC efficiency. We proudly serve all areas of Markham
+          with reliable and affordable duct cleaning services.
         </p>
 
         <a
@@ -45,31 +45,52 @@ export default function MarkhamPage() {
         </a>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
-        <h2>Professional Duct Cleaning Services in Markham</h2>
+        <h2>Professional Air Duct Cleaning Services in Markham</h2>
+
+        <p>
+          Our air duct cleaning service in Markham is designed to remove dust, allergens, mold particles, and debris
+          from your HVAC system. Many homes in Markham suffer from poor indoor air quality due to clogged ducts,
+          which is why professional duct cleaning in Markham is essential.
+        </p>
+
+        <p>
+          We provide complete duct cleaning in Markham including furnace cleaning, dryer vent cleaning, HVAC system
+          cleaning, and sanitization. Our goal is to improve airflow and make your home in Markham healthier and more
+          energy efficient.
+        </p>
+
+        <h3>Why Air Duct Cleaning in Markham is Important</h3>
+
+        <p>
+          Living in Markham means seasonal changes that affect your HVAC system. Dust buildup is common, and without
+          regular air duct cleaning in Markham, your system becomes less efficient. Our Markham duct cleaning experts
+          ensure your system runs smoothly and safely.
+        </p>
 
         <ul>
-          <li>Air Duct Cleaning in Markham Homes & Offices</li>
-          <li>Dryer Vent Cleaning to Prevent Fire Hazards</li>
-          <li>Furnace Cleaning for Better Heating Efficiency</li>
-          <li>Complete HVAC System Deep Cleaning</li>
-          <li>Sanitization & Odor Removal Services</li>
+          <li>Improve indoor air quality in Markham homes</li>
+          <li>Reduce allergies and dust buildup</li>
+          <li>Increase HVAC efficiency in Markham properties</li>
+          <li>Lower energy bills for Markham residents</li>
+          <li>Extend HVAC system life in Markham homes</li>
         </ul>
 
-        <h3>Why Markham Chooses Us</h3>
+        <h3>Our Services in Markham</h3>
+
         <ul>
-          <li>✔ Local Markham HVAC cleaning specialists</li>
-          <li>✔ Fast same-day service available</li>
-          <li>✔ Affordable transparent pricing</li>
-          <li>✔ Certified & insured technicians</li>
-          <li>✔ 100% satisfaction guaranteed</li>
+          <li>Air Duct Cleaning Markham</li>
+          <li>Dryer Vent Cleaning Markham</li>
+          <li>Furnace Cleaning Markham</li>
+          <li>HVAC System Cleaning Markham</li>
+          <li>Duct Sanitization Markham</li>
         </ul>
       </section>
 
       {/* MAP SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Air Duct Cleaning Service Area in Markham</h2>
+        <h2>Service Area Map - Markham</h2>
 
         <iframe
           src="https://www.google.com/maps?q=Markham+Ontario+duct+cleaning&output=embed"
@@ -80,11 +101,31 @@ export default function MarkhamPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL SEO LINKS */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h3>We Also Serve Nearby Areas</h3>
+      {/* FAQ SECTION (SEO BOOST) */}
+      <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
+        <h2>Frequently Asked Questions - Markham Air Duct Cleaning</h2>
 
-        <p>Our duct cleaning services are also available in:</p>
+        <h4>How often should I get air duct cleaning in Markham?</h4>
+        <p>
+          Most homes in Markham should get air duct cleaning every 2–3 years depending on usage, pets, and dust levels.
+        </p>
+
+        <h4>Is duct cleaning in Markham worth it?</h4>
+        <p>
+          Yes, professional duct cleaning in Markham improves air quality, reduces allergens, and helps HVAC systems run efficiently.
+        </p>
+
+        <h4>Do you offer same-day duct cleaning in Markham?</h4>
+        <p>
+          Yes, we provide same-day air duct cleaning service in Markham depending on availability.
+        </p>
+      </section>
+
+      {/* INTERNAL LINKS */}
+      <section style={{ textAlign: "center", padding: "40px 20px" }}>
+        <h3>Nearby Service Areas</h3>
+
+        <p>We also serve nearby cities around Markham:</p>
 
         <div style={{ marginTop: "10px" }}>
           <a href="/location/toronto">Toronto</a> |{" "}
@@ -96,7 +137,10 @@ export default function MarkhamPage() {
       {/* CTA SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h2>Need Air Duct Cleaning in Markham?</h2>
-        <p>Call now for fast same-day service</p>
+
+        <p>
+          Contact our Markham duct cleaning experts today for fast, affordable and professional service.
+        </p>
 
         <a
           href="tel:2267772863"
