@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Air Duct Cleaning in Richmond Hill | Duct Cleaning Canada",
   description:
-    "Professional air duct cleaning in Richmond Hill, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted experts.",
+    "Professional air duct cleaning in Richmond Hill, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted local experts in Richmond Hill and GTA.",
   keywords: [
     "air duct cleaning Richmond Hill",
     "duct cleaning Richmond Hill",
     "dryer vent cleaning Richmond Hill",
     "furnace cleaning Richmond Hill",
     "HVAC cleaning Richmond Hill",
-    "duct cleaning near me Richmond Hill"
+    "duct cleaning near me Richmond Hill",
+    "Richmond Hill duct cleaning services"
   ],
 };
 
@@ -24,16 +25,28 @@ export default function RichmondHillPage() {
         <p style={{ maxWidth: "800px", margin: "auto" }}>
           Professional air duct cleaning, dryer vent cleaning, furnace cleaning
           and HVAC services in Richmond Hill, Ontario. We help improve indoor air
-          quality, reduce dust buildup, and improve HVAC efficiency for homes and businesses.
+          quality, remove dust buildup, and improve HVAC efficiency for homes
+          and businesses across Richmond Hill & GTA.
         </p>
 
-        <a href="/contact" style={btnBlack}>
+        <a
+          href="/contact"
+          style={{
+            display: "inline-block",
+            marginTop: "20px",
+            padding: "12px 20px",
+            background: "#000",
+            color: "#fff",
+            borderRadius: "6px",
+            textDecoration: "none",
+          }}
+        >
           Get Free Quote
         </a>
       </section>
 
       {/* SERVICES SECTION */}
-      <section style={container}>
+      <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
         <h2>Our Duct Cleaning Services in Richmond Hill</h2>
 
         <ul>
@@ -44,10 +57,10 @@ export default function RichmondHillPage() {
           <li>Duct Sanitization Richmond Hill</li>
         </ul>
 
-        <h3>Why Choose Us in Richmond Hill</h3>
+        <h3>Why Choose Our Richmond Hill Team</h3>
         <ul>
-          <li>✔ Fast local service in Richmond Hill</li>
-          <li>✔ Affordable pricing with no hidden charges</li>
+          <li>✔ Fast local service in Richmond Hill & GTA</li>
+          <li>✔ Affordable & transparent pricing</li>
           <li>✔ Certified HVAC technicians</li>
           <li>✔ 100% satisfaction guarantee</li>
         </ul>
@@ -66,7 +79,7 @@ export default function RichmondHillPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL LINKS (SEO BOOST) */}
+      {/* INTERNAL SEO LINKS */}
       <section style={{ textAlign: "center", padding: "40px 20px" }}>
         <h3>Nearby Service Areas</h3>
 
@@ -84,35 +97,20 @@ export default function RichmondHillPage() {
         <h2>Need Air Duct Cleaning in Richmond Hill?</h2>
         <p>Call now for same-day service</p>
 
-        <a href="tel:2267772863" style={btnGreen}>
+        <a
+          href="tel:2267772863"
+          style={{
+            display: "inline-block",
+            padding: "12px 20px",
+            background: "green",
+            color: "#fff",
+            borderRadius: "6px",
+            textDecoration: "none",
+          }}
+        >
           Call Now
         </a>
       </section>
     </>
   );
 }
-
-const container = {
-  padding: "40px 20px",
-  maxWidth: "900px",
-  margin: "auto",
-};
-
-const btnBlack = {
-  display: "inline-block",
-  marginTop: "20px",
-  padding: "12px 20px",
-  background: "#000",
-  color: "#fff",
-  borderRadius: "6px",
-  textDecoration: "none",
-};
-
-const btnGreen = {
-  display: "inline-block",
-  padding: "12px 20px",
-  background: "green",
-  color: "#fff",
-  borderRadius: "6px",
-  textDecoration: "none",
-};
