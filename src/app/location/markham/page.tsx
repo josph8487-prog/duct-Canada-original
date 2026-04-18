@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Air Duct Cleaning in Markham | Duct Cleaning Canada",
   description:
-    "Professional air duct cleaning in Markham, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted experts.",
+    "Professional air duct cleaning in Markham, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted local experts.",
   keywords: [
     "air duct cleaning Markham",
     "duct cleaning Markham",
@@ -65,9 +65,9 @@ export default function MarkhamPage() {
         </ul>
       </section>
 
-      {/* MAP SECTION (LOCAL SEO BOOST) */}
+      {/* MAP SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Duct Cleaning Services in Markham Map</h2>
+        <h2>Service Area Map - Markham</h2>
 
         <iframe
           src="https://www.google.com/maps?q=Markham+Ontario+duct+cleaning&output=embed"
@@ -78,7 +78,7 @@ export default function MarkhamPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL LINKS (VERY IMPORTANT SEO) */}
+      {/* INTERNAL SEO LINKS */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h3>Nearby Service Areas</h3>
 
