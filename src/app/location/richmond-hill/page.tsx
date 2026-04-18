@@ -91,3 +91,28 @@ export default function RichmondHillPage() {
     </>
   );
 }
+
+const container = {
+  padding: "40px 20px",
+  maxWidth: "900px",
+  margin: "auto",
+};
+
+const btnBlack = {
+  display: "inline-block",
+  marginTop: "20px",
+  padding: "12px 20px",
+  background: "#000",
+  color: "#fff",
+  borderRadius: "6px",
+  textDecoration: "none",
+};
+
+const btnGreen = {
+  display: "inline-block",
+  padding: "12px 20px",
+  background: "green",
+  color: "#fff",
+  borderRadius: "6px",
+  textDecoration: "none",
+};
