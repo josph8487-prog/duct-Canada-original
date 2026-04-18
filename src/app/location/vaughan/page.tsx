@@ -9,7 +9,8 @@ export const metadata: Metadata = {
     "duct cleaning Vaughan",
     "dryer vent cleaning Vaughan",
     "furnace cleaning Vaughan",
-    "HVAC cleaning Vaughan"
+    "HVAC cleaning Vaughan",
+    "duct cleaning near me Vaughan"
   ],
 };
 
@@ -20,10 +21,10 @@ export default function VaughanPage() {
       <section style={{ padding: "60px 20px", textAlign: "center" }}>
         <h1>Air Duct Cleaning in Vaughan</h1>
 
-        <p>
+        <p style={{ maxWidth: "800px", margin: "auto" }}>
           Professional air duct cleaning, dryer vent cleaning, furnace cleaning
-          and HVAC services in Vaughan, Ontario. Improve indoor air quality
-          with trusted local experts.
+          and HVAC services in Vaughan, Ontario. We help improve indoor air quality,
+          reduce dust buildup, and improve HVAC efficiency for homes and businesses.
         </p>
 
         <a
@@ -35,7 +36,7 @@ export default function VaughanPage() {
             background: "#000",
             color: "#fff",
             borderRadius: "6px",
-            textDecoration: "none"
+            textDecoration: "none",
           }}
         >
           Get Free Quote
@@ -50,24 +51,25 @@ export default function VaughanPage() {
           <li>Air Duct Cleaning Vaughan</li>
           <li>Dryer Vent Cleaning Vaughan</li>
           <li>Furnace Cleaning Vaughan</li>
-          <li>HVAC Sanitization Vaughan</li>
+          <li>HVAC System Cleaning Vaughan</li>
+          <li>Duct Sanitization Vaughan</li>
         </ul>
 
-        <h3>Why Choose Our Vaughan Team</h3>
+        <h3>Why Choose Us in Vaughan</h3>
         <ul>
-          <li>✔ Fast & reliable service in Vaughan</li>
+          <li>✔ Fast local service in Vaughan</li>
           <li>✔ Affordable & transparent pricing</li>
           <li>✔ Certified HVAC technicians</li>
-          <li>✔ 100% customer satisfaction guarantee</li>
+          <li>✔ 100% satisfaction guarantee</li>
         </ul>
       </section>
 
-      {/* MAP SECTION */}
+      {/* MAP SECTION (SEO BOOSTED) */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Duct Cleaning Services Near You in Vaughan</h2>
+        <h2>Duct Cleaning Services in Vaughan Map</h2>
 
         <iframe
-          src="https://www.google.com/maps?q=Vaughan+Ontario&output=embed"
+          src="https://www.google.com/maps?q=Vaughan+Ontario+duct+cleaning&output=embed"
           width="100%"
           height="350"
           style={{ border: 0, borderRadius: "10px" }}
@@ -75,11 +77,11 @@ export default function VaughanPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL LINKING (SEO BOOST) */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
+      {/* INTERNAL LINKING (VERY IMPORTANT SEO) */}
+      <section style={{ textAlign: "center", padding: "40px 20px" }}>
         <h3>Nearby Service Areas</h3>
 
-        <p>We also serve nearby locations:</p>
+        <p>We also serve nearby cities:</p>
 
         <div style={{ marginTop: "10px" }}>
           <a href="/location/markham">Markham</a> |{" "}
@@ -101,7 +103,7 @@ export default function VaughanPage() {
             background: "green",
             color: "#fff",
             borderRadius: "6px",
-            textDecoration: "none"
+            textDecoration: "none",
           }}
         >
           Call Now
