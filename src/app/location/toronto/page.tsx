@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Air Duct Cleaning in Toronto | Duct Cleaning Canada",
   description:
-    "Professional air duct cleaning in Toronto, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted experts.",
+    "Professional air duct cleaning in Toronto, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted experts in Toronto and GTA.",
   keywords: [
     "air duct cleaning Toronto",
     "duct cleaning Toronto",
     "dryer vent cleaning Toronto",
     "furnace cleaning Toronto",
     "HVAC cleaning Toronto",
-    "duct cleaning near me Toronto"
+    "duct cleaning near me Toronto",
+    "Toronto duct cleaning services"
   ],
 };
 
@@ -24,8 +25,8 @@ export default function TorontoPage() {
         <p style={{ maxWidth: "800px", margin: "auto" }}>
           Professional air duct cleaning, dryer vent cleaning, furnace cleaning
           and HVAC sanitization services in Toronto, Ontario. We help improve
-          indoor air quality, reduce dust, and improve HVAC efficiency for homes
-          and businesses.
+          indoor air quality, remove dust, allergens and improve HVAC efficiency
+          for homes and commercial buildings across Toronto & GTA.
         </p>
 
         <a
@@ -56,12 +57,12 @@ export default function TorontoPage() {
           <li>Duct Sanitization Toronto</li>
         </ul>
 
-        <h3>Why Choose Us in Toronto</h3>
+        <h3>Why Choose Our Toronto Team</h3>
         <ul>
-          <li>✔ Fast local service in Toronto</li>
+          <li>✔ Fast local service in Toronto & GTA</li>
           <li>✔ Affordable pricing with no hidden charges</li>
           <li>✔ Certified HVAC technicians</li>
-          <li>✔ 100% satisfaction guarantee</li>
+          <li>✔ 100% customer satisfaction guarantee</li>
         </ul>
       </section>
 
@@ -78,7 +79,7 @@ export default function TorontoPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL LINKS */}
+      {/* INTERNAL SEO LINKS */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h3>Nearby Service Areas</h3>
 
