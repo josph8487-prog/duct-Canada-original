@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Air Duct Cleaning in Vaughan | Duct Cleaning Canada",
   description:
-    "Professional air duct cleaning in Vaughan, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Call now for fast and reliable service.",
+    "Professional air duct cleaning in Vaughan, Ontario. Dryer vent cleaning, furnace cleaning & HVAC sanitization services. Improve indoor air quality with trusted local experts in Vaughan and GTA.",
   keywords: [
     "air duct cleaning Vaughan",
     "duct cleaning Vaughan",
     "dryer vent cleaning Vaughan",
     "furnace cleaning Vaughan",
     "HVAC cleaning Vaughan",
-    "duct cleaning near me Vaughan"
+    "duct cleaning near me Vaughan",
+    "Vaughan duct cleaning services"
   ],
 };
 
@@ -24,7 +25,8 @@ export default function VaughanPage() {
         <p style={{ maxWidth: "800px", margin: "auto" }}>
           Professional air duct cleaning, dryer vent cleaning, furnace cleaning
           and HVAC services in Vaughan, Ontario. We help improve indoor air quality,
-          reduce dust buildup, and improve HVAC efficiency for homes and businesses.
+          remove dust buildup, and increase HVAC efficiency for residential and
+          commercial properties across Vaughan & GTA.
         </p>
 
         <a
@@ -55,18 +57,18 @@ export default function VaughanPage() {
           <li>Duct Sanitization Vaughan</li>
         </ul>
 
-        <h3>Why Choose Us in Vaughan</h3>
+        <h3>Why Choose Our Vaughan Team</h3>
         <ul>
-          <li>✔ Fast local service in Vaughan</li>
+          <li>✔ Fast local service in Vaughan & GTA</li>
           <li>✔ Affordable & transparent pricing</li>
           <li>✔ Certified HVAC technicians</li>
           <li>✔ 100% satisfaction guarantee</li>
         </ul>
       </section>
 
-      {/* MAP SECTION (SEO BOOSTED) */}
+      {/* MAP SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Duct Cleaning Services in Vaughan Map</h2>
+        <h2>Service Area Map - Vaughan</h2>
 
         <iframe
           src="https://www.google.com/maps?q=Vaughan+Ontario+duct+cleaning&output=embed"
@@ -77,7 +79,7 @@ export default function VaughanPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL LINKING (VERY IMPORTANT SEO) */}
+      {/* INTERNAL SEO LINKS */}
       <section style={{ textAlign: "center", padding: "40px 20px" }}>
         <h3>Nearby Service Areas</h3>
 
