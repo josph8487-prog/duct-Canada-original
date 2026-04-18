@@ -22,11 +22,11 @@ export default function TorontoPage() {
       <section style={{ padding: "60px 20px", textAlign: "center" }}>
         <h1>Air Duct Cleaning in Toronto</h1>
 
-        <p style={{ maxWidth: "800px", margin: "auto" }}>
-          Professional air duct cleaning, dryer vent cleaning, furnace cleaning
-          and HVAC sanitization services in Toronto, Ontario. We help improve
-          indoor air quality, remove dust, allergens and improve HVAC efficiency
-          for homes and commercial buildings across Toronto & GTA.
+        <p style={{ maxWidth: "850px", margin: "auto" }}>
+          If you are searching for professional air duct cleaning in Toronto, our expert team provides
+          reliable and affordable duct cleaning services across Toronto and the GTA. We specialize in
+          air duct cleaning in Toronto for residential and commercial properties, helping improve indoor
+          air quality, reduce dust buildup, and increase HVAC efficiency.
         </p>
 
         <a
@@ -45,9 +45,40 @@ export default function TorontoPage() {
         </a>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
-        <h2>Our Duct Cleaning Services in Toronto</h2>
+        <h2>Professional Air Duct Cleaning Services in Toronto</h2>
+
+        <p>
+          Our air duct cleaning services in Toronto are designed to remove dust, allergens, mold spores,
+          and debris from your HVAC system. Many homes in Toronto suffer from poor indoor air quality due
+          to clogged ducts, which makes professional duct cleaning in Toronto essential.
+        </p>
+
+        <p>
+          We provide complete duct cleaning in Toronto including furnace cleaning, dryer vent cleaning,
+          HVAC system cleaning, and sanitization services. Our goal is to make Toronto homes cleaner,
+          healthier, and more energy efficient.
+        </p>
+
+        <h3>Why Air Duct Cleaning in Toronto is Important</h3>
+
+        <p>
+          Toronto homes and buildings experience heavy HVAC usage due to seasonal weather changes.
+          Without proper air duct cleaning in Toronto, dust and allergens accumulate inside ducts,
+          reducing air quality and system efficiency. Regular duct cleaning in Toronto ensures better airflow
+          and healthier indoor environments.
+        </p>
+
+        <ul>
+          <li>Improve indoor air quality in Toronto homes</li>
+          <li>Reduce allergies and respiratory issues</li>
+          <li>Increase HVAC efficiency in Toronto properties</li>
+          <li>Lower energy bills for Toronto residents</li>
+          <li>Extend HVAC system lifespan in Toronto buildings</li>
+        </ul>
+
+        <h3>Our Services in Toronto</h3>
 
         <ul>
           <li>Air Duct Cleaning Toronto</li>
@@ -55,14 +86,6 @@ export default function TorontoPage() {
           <li>Furnace Cleaning Toronto</li>
           <li>HVAC System Cleaning Toronto</li>
           <li>Duct Sanitization Toronto</li>
-        </ul>
-
-        <h3>Why Choose Our Toronto Team</h3>
-        <ul>
-          <li>✔ Fast local service in Toronto & GTA</li>
-          <li>✔ Affordable pricing with no hidden charges</li>
-          <li>✔ Certified HVAC technicians</li>
-          <li>✔ 100% customer satisfaction guarantee</li>
         </ul>
       </section>
 
@@ -79,11 +102,31 @@ export default function TorontoPage() {
         ></iframe>
       </section>
 
-      {/* INTERNAL SEO LINKS */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
+      {/* FAQ SECTION */}
+      <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
+        <h2>Frequently Asked Questions - Toronto Air Duct Cleaning</h2>
+
+        <h4>How often should I get air duct cleaning in Toronto?</h4>
+        <p>
+          Most Toronto homes should get air duct cleaning every 2–3 years depending on dust, pets, and usage.
+        </p>
+
+        <h4>Is duct cleaning in Toronto necessary?</h4>
+        <p>
+          Yes, duct cleaning in Toronto helps improve air quality, reduce allergens, and increase HVAC performance.
+        </p>
+
+        <h4>Do you provide emergency duct cleaning in Toronto?</h4>
+        <p>
+          Yes, we offer fast and same-day air duct cleaning service in Toronto depending on availability.
+        </p>
+      </section>
+
+      {/* INTERNAL LINKS */}
+      <section style={{ textAlign: "center", padding: "40px 20px" }}>
         <h3>Nearby Service Areas</h3>
 
-        <p>We also serve nearby cities:</p>
+        <p>We also serve nearby GTA cities:</p>
 
         <div style={{ marginTop: "10px" }}>
           <a href="/location/markham">Markham</a> |{" "}
@@ -95,7 +138,10 @@ export default function TorontoPage() {
       {/* CTA SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h2>Need Air Duct Cleaning in Toronto?</h2>
-        <p>Call now for same-day service</p>
+
+        <p>
+          Contact our Toronto duct cleaning experts today for fast, affordable and professional service.
+        </p>
 
         <a
           href="tel:2267772863"
