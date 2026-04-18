@@ -7,36 +7,36 @@ export default function Home() {
   const services = [
     {
       title: "Air Duct Cleaning Markham & GTA",
-      text: "Professional air duct cleaning services in Markham, Toronto and GTA. We remove dust, allergens and improve indoor air quality.",
+      text: "Professional air duct cleaning services in Markham, Toronto and GTA. Improve indoor air quality and airflow.",
       image: "/images/services/air-duct-cleaning.jpg"
     },
     {
       title: "Furnace Cleaning",
-      text: "Expert furnace cleaning services to improve heating efficiency and system lifespan in Ontario homes and businesses.",
+      text: "Improve heating efficiency and extend furnace life with expert cleaning services.",
       image: "/images/services/furnace-cleaning.jpg"
     },
     {
       title: "Dryer Vent Cleaning",
-      text: "Safe dryer vent cleaning in Markham and GTA to prevent fire hazards and improve appliance performance.",
+      text: "Prevent fire hazards and improve dryer performance with professional vent cleaning.",
       image: "/images/services/dryer-vent-cleaning.jpg"
     },
     {
       title: "HVAC Blower Cleaning",
-      text: "Improve airflow and energy efficiency with professional HVAC blower fan cleaning services.",
+      text: "Improve airflow and energy efficiency with professional blower cleaning.",
       image: "/images/services/blower-fan-cleaning.jpg"
     },
     {
       title: "Duct Sanitization",
-      text: "Eco-friendly duct sanitization to remove bacteria, mold and odors for healthier indoor air.",
+      text: "Remove bacteria, mold and odors with eco-friendly sanitization services.",
       image: "/images/services/sanitization.jpg"
     }
   ];
 
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section className={styles.hero}>
-        <div className={styles.heroContentWrapper} style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
+        <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
           <div className={styles.heroLeft}>
             <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
@@ -46,14 +46,13 @@ export default function Home() {
               </h1>
 
               <p className={styles.heroSubtitle}>
-                Trusted duct cleaning company in Canada offering professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services.
+                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
               </p>
 
               <Link href="/services" className="btn btn-primary">
                 Explore Services
               </Link>
 
-              {/* SERVICE AREA QUICK LINE */}
               <div style={{ marginTop: "15px", fontSize: "14px" }}>
                 <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
               </div>
@@ -62,11 +61,10 @@ export default function Home() {
           </div>
 
           <div className={styles.heroRight}></div>
-
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT */}
       <section className={styles.aboutSection}>
         <div className={`container ${styles.aboutGrid}`}>
 
@@ -74,7 +72,7 @@ export default function Home() {
             <h2>Who We Are</h2>
             <h3>Trusted Air Duct Cleaning Experts in Ontario</h3>
             <p className={styles.aboutText}>
-              We provide professional air duct cleaning, HVAC cleaning, furnace cleaning and dryer vent cleaning services in Markham, Toronto and GTA.
+              We provide professional air duct cleaning, furnace cleaning and HVAC services across Markham, Toronto and GTA.
             </p>
 
             <Link href="/about" className="btn btn-primary">
@@ -87,13 +85,13 @@ export default function Home() {
               <Image src="/images/services/air-duct-cleaning.jpg" alt="Air Duct Cleaning Markham" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className={styles.aboutImageItem}>
-              <Image src="/images/services/furnace-cleaning.jpg" alt="Furnace Cleaning Canada" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/services/furnace-cleaning.jpg" alt="Furnace Cleaning" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className={styles.aboutImageItem}>
-              <Image src="/images/services/blower-fan-cleaning.jpg" alt="HVAC Cleaning GTA" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/services/blower-fan-cleaning.jpg" alt="HVAC Cleaning" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className={styles.aboutImageItem}>
-              <Image src="/images/services/sanitization.jpg" alt="Duct Sanitization Ontario" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/services/sanitization.jpg" alt="Duct Sanitization" fill style={{ objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -105,26 +103,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* 🔥 SERVICE AREAS SEO BLOCK (FIXED) */}
+      <section style={{ padding: "50px 20px", background: "#f9f9f9" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+
+          <h2>Service Areas We Cover</h2>
+
+          <p style={{ marginBottom: "20px" }}>
+            We provide professional duct cleaning services across Markham and nearby GTA cities.
+          </p>
+
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "15px"
+          }}>
+
+            <Link href="/location/markham" style={areaBtn}>Markham</Link>
+            <Link href="/location/toronto" style={areaBtn}>Toronto</Link>
+            <Link href="/location/vaughan" style={areaBtn}>Vaughan</Link>
+            <Link href="/location/richmond-hill" style={areaBtn}>Richmond Hill</Link>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* SERVICES */}
       <section className={`section ${styles.servicesPreview}`}>
         <div className="container">
 
-          <h2 className="section-title">Our Professional Services</h2>
-
-          <p className="section-subtitle">
-            Complete HVAC and air duct cleaning services across Ontario.
-          </p>
+          <h2 className="section-title">Our Services</h2>
 
           <div className={styles.featureGrid}>
             {services.map((service, index) => (
               <div key={index} className={styles.featureCard}>
-                <div style={{ position: 'relative', height: '220px', width: '100%' }}>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
+                <div style={{ position: 'relative', height: '220px' }}>
+                  <Image src={service.image} alt={service.title} fill />
                 </div>
                 <h3 className={styles.featureTitle}>{service.title}</h3>
                 <p className={styles.featureText}>{service.text}</p>
@@ -135,64 +151,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔥 SERVICE AREAS MINI SEO BLOCK (IMPORTANT) */}
-      <section className={styles.serviceAreasMini}>
-        <div className="container">
-
-          <h2 className="section-title">
-            Service Areas in Ontario
-          </h2>
-
-          <p className="section-subtitle">
-            We provide professional duct cleaning services in Markham and nearby GTA cities.
-          </p>
-
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '10px',
-            justifyContent: 'center',
-            marginTop: '20px'
-          }}>
-
-            <Link href="/service-areas" className="btn btn-outline">Markham</Link>
-            <Link href="/service-areas" className="btn btn-outline">Toronto</Link>
-            <Link href="/service-areas" className="btn btn-outline">Vaughan</Link>
-            <Link href="/service-areas" className="btn btn-outline">Richmond Hill</Link>
-            <Link href="/service-areas" className="btn btn-outline">North York</Link>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* PROCESS SECTION */}
+      {/* PROCESS */}
       <section className={styles.processSection}>
         <div className={`container ${styles.processGrid}`}>
-
           <div>
             <h2>Our Cleaning Process</h2>
-            <h3>Step-by-Step Professional Duct Cleaning</h3>
-
-            <p>
-              We inspect, clean, sanitize and test your HVAC system for best indoor air quality.
-            </p>
-
+            <p>Inspection → Cleaning → Sanitization → Final Check</p>
           </div>
-
         </div>
       </section>
 
       {/* TESTIMONIALS */}
       <section className={styles.testimonialsSection}>
-        <div className={`container ${styles.testimonialsContentWrapper}`}>
-
+        <div className="container">
           <h2>Customer Reviews</h2>
           <p>Trusted by homeowners across Ontario.</p>
-
         </div>
       </section>
 
     </>
   );
 }
+
+const areaBtn = {
+  padding: "10px 18px",
+  border: "1px solid #000",
+  borderRadius: "6px",
+  textDecoration: "none",
+  color: "#000",
+  fontWeight: "500"
+};
