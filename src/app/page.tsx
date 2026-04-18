@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -8,36 +9,56 @@ export default function Home() {
       <section style={hero}>
         <div style={overlay}></div>
 
-        <div style={heroContent}>
-          <h1 style={h1}>
+        <div style={content}>
+          <h1 style={title}>
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
 
-          <p style={heroText}>
-            Professional duct cleaning services across Ontario. We improve indoor air quality for homes and businesses.
+          <p style={desc}>
+            Professional air duct, dryer vent & furnace cleaning across Ontario.
+            Improve indoor air quality for your home or business.
           </p>
 
-          <div style={btnGroup}>
-            <Link href="/contact" style={glassBtn}>
+          <div style={btnWrap}>
+            <Link href="/contact" style={primaryBtn}>
               Get Free Quote
             </Link>
 
-            <Link href="/services" style={outlineBtn}>
-              Explore Services
-            </Link>
+            <a href="tel:2267772863" style={secondaryBtn}>
+              Call Now
+            </a>
           </div>
 
-          <div style={serving}>
+          <p style={serve}>
             Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
-          </div>
+          </p>
+        </div>
+      </section>
+
+      {/* ================= TRUST BAR ================= */}
+      <section style={trustBar}>
+        <div>✔ Same Day Service</div>
+        <div>✔ Certified Technicians</div>
+        <div>✔ Affordable Pricing</div>
+      </section>
+
+      {/* ================= SERVICES ================= */}
+      <section style={section}>
+        <h2 style={h2}>Our Services</h2>
+
+        <div style={grid}>
+          <Card title="Air Duct Cleaning" />
+          <Card title="Furnace Cleaning" />
+          <Card title="Dryer Vent Cleaning" />
+          <Card title="Duct Sanitization" />
         </div>
       </section>
 
       {/* ================= SERVICE AREAS ================= */}
-      <section style={section}>
+      <section style={sectionAlt}>
         <h2 style={h2}>Service Areas</h2>
 
-        <div style={chipWrap}>
+        <div style={areas}>
           <Link href="/location/markham" style={chip}>Markham</Link>
           <Link href="/location/toronto" style={chip}>Toronto</Link>
           <Link href="/location/vaughan" style={chip}>Vaughan</Link>
@@ -45,29 +66,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SERVICES ================= */}
-      <section style={sectionAlt}>
-        <h2 style={h2Dark}>Our Services</h2>
+      {/* ================= FINAL CTA ================= */}
+      <section style={cta}>
+        <h2>Need Duct Cleaning Today?</h2>
+        <p>Call now or request a free quote</p>
 
-        <div style={grid}>
-          <Card title="Air Duct Cleaning" img="/images/services/air-duct-cleaning.jpg" />
-          <Card title="Furnace Cleaning" img="/images/services/furnace-cleaning.jpg" />
-          <Card title="Dryer Vent Cleaning" img="/images/services/dryer-vent-cleaning.jpg" />
-          <Card title="Duct Sanitization" img="/images/services/sanitization.jpg" />
+        <div style={btnWrap}>
+          <Link href="/contact" style={primaryBtn}>
+            Get Free Quote
+          </Link>
+
+          <a href="tel:2267772863" style={secondaryBtn}>
+            Call Now
+          </a>
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
-      <section style={ctaSection}>
-        <h2 style={{ fontSize: "22px" }}>Need Duct Cleaning Today?</h2>
-        <p>Fast same-day service available</p>
-
-        <Link href="/contact" style={glassBtn}>
-          Get Free Quote
-        </Link>
-      </section>
-
-      {/* ================= STICKY MOBILE CALL BUTTON ================= */}
+      {/* ================= STICKY CALL BUTTON ================= */}
       <a href="tel:2267772863" style={stickyCall}>
         📞 Call Now
       </a>
@@ -77,11 +92,10 @@ export default function Home() {
 
 /* ================= COMPONENT ================= */
 
-function Card({ title, img }: any) {
+function Card({ title }: any) {
   return (
     <div style={card}>
-      <Image src={img} alt={title} width={400} height={250} style={{ borderRadius: "10px" }} />
-      <h3 style={{ marginTop: "10px" }}>{title}</h3>
+      <h3>{title}</h3>
     </div>
   );
 }
@@ -90,122 +104,129 @@ function Card({ title, img }: any) {
 
 const hero = {
   position: "relative",
-  minHeight: "75vh",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  textAlign: "center",
-  padding: "40px 20px",
+  minHeight: "85vh",
   backgroundImage: "url('/images/services/air-duct-cleaning.jpg')",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "20px",
 };
 
 const overlay = {
   position: "absolute",
   inset: 0,
-  background: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))",
+  background: "rgba(0,0,0,0.75)",
 };
 
-const heroContent = {
+const content = {
   position: "relative",
-  maxWidth: "700px",
+  textAlign: "center",
+  maxWidth: "750px",
 };
 
-const h1 = {
-  fontSize: "clamp(26px, 6vw, 50px)",
-  fontWeight: "800",
+const title = {
   color: "#fff",
-  textShadow: "0 4px 25px rgba(0,0,0,0.8)",
-  marginBottom: "12px",
+  fontSize: "clamp(28px,6vw,52px)",
+  fontWeight: "900",
+  lineHeight: "1.2",
+  textShadow: "0 5px 25px rgba(0,0,0,0.9)",
 };
 
-const heroText = {
-  color: "rgba(255,255,255,0.9)",
-  fontSize: "clamp(14px,3.5vw,18px)",
-  marginBottom: "25px",
+const desc = {
+  color: "#eee",
+  fontSize: "clamp(15px,3.5vw,18px)",
+  marginTop: "15px",
 };
 
-const btnGroup = {
+const btnWrap = {
   display: "flex",
   gap: "12px",
   justifyContent: "center",
   flexWrap: "wrap",
-  marginBottom: "15px",
+  marginTop: "20px",
 };
 
-const glassBtn = {
-  padding: "12px 22px",
-  borderRadius: "12px",
-  background: "rgba(255,255,255,0.15)",
-  backdropFilter: "blur(10px)",
-  border: "1px solid rgba(255,255,255,0.25)",
+const primaryBtn = {
+  padding: "14px 24px",
+  borderRadius: "10px",
+  background: "#00c853",
   color: "#fff",
+  fontWeight: "700",
   textDecoration: "none",
-  fontWeight: "600",
 };
 
-const outlineBtn = {
-  padding: "12px 22px",
-  borderRadius: "12px",
+const secondaryBtn = {
+  padding: "14px 24px",
+  borderRadius: "10px",
   border: "1px solid #fff",
   color: "#fff",
   textDecoration: "none",
 };
 
-const serving = {
-  color: "#ddd",
+const serve = {
+  marginTop: "15px",
+  color: "#ccc",
   fontSize: "13px",
 };
 
+const trustBar = {
+  display: "flex",
+  justifyContent: "center",
+  gap: "20px",
+  padding: "15px",
+  background: "#111",
+  color: "#fff",
+  flexWrap: "wrap",
+  fontSize: "14px",
+};
+
 const section = {
-  padding: "40px 20px",
+  padding: "50px 20px",
   textAlign: "center",
 };
 
 const sectionAlt = {
-  padding: "40px 20px",
+  padding: "50px 20px",
   background: "#f7f7f7",
   textAlign: "center",
 };
 
 const h2 = {
-  fontSize: "22px",
-  marginBottom: "20px",
-};
-
-const h2Dark = {
-  fontSize: "22px",
-  marginBottom: "20px",
-};
-
-const chipWrap = {
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  gap: "10px",
-};
-
-const chip = {
-  padding: "8px 14px",
-  borderRadius: "20px",
-  border: "1px solid #ccc",
-  textDecoration: "none",
-  color: "#000",
+  fontSize: "24px",
+  marginBottom: "25px",
 };
 
 const grid = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(160px,1fr))",
+  gridTemplateColumns: "repeat(auto-fit, minmax(180px,1fr))",
   gap: "15px",
 };
 
 const card = {
-  padding: "10px",
+  padding: "20px",
+  border: "1px solid #eee",
+  borderRadius: "10px",
 };
 
-const ctaSection = {
-  padding: "40px 20px",
+const areas = {
+  display: "flex",
+  gap: "10px",
+  justifyContent: "center",
+  flexWrap: "wrap",
+};
+
+const chip = {
+  padding: "10px 16px",
+  border: "1px solid #ccc",
+  borderRadius: "20px",
+  textDecoration: "none",
+  color: "#000",
+};
+
+const cta = {
+  padding: "50px 20px",
   background: "#111",
   color: "#fff",
   textAlign: "center",
@@ -220,8 +241,7 @@ const stickyCall = {
   color: "#fff",
   padding: "14px 24px",
   borderRadius: "30px",
-  textDecoration: "none",
   fontWeight: "700",
-  boxShadow: "0 5px 20px rgba(0,0,0,0.3)",
+  textDecoration: "none",
   zIndex: 9999,
 };
