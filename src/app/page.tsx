@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 
-// 1. DYNAMIC METADATA (Aapki Values Mehfooz Hain)
+// 1. DYNAMIC METADATA (Google Search ke liye)
 export const metadata = {
   title: 'Best Air Duct Cleaning Markham, Toronto & GTA | Professional HVAC Services',
   description: 'Top-rated air duct cleaning in Markham, Toronto, and GTA. We offer furnace cleaning, dryer vent cleaning, and HVAC sanitization. Book your professional cleaning today!',
@@ -14,12 +14,12 @@ export const metadata = {
     description: 'Improve your indoor air quality with our expert duct cleaning services.',
     url: 'https://yourwebsite.com',
     siteName: 'Your Business Name',
-    images: [{ url: '/images/Banner.jpeg' }], // Updated for Social Media
+    images: [{ url: '/images/services/air-duct-cleaning.jpg' }],
     type: 'website',
   },
 };
 
-// 2. FULL SCHEMA MARKUP
+// 2. FULL SCHEMA MARKUP (Local Business + Services)
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -86,57 +86,30 @@ export default function Home() {
       />
 
       <main>
-        {/* HERO SECTION WITH NEW BANNER IMAGE */}
-        <section className={styles.hero} style={{ position: 'relative', height: '80vh', minHeight: '500px', overflow: 'hidden' }}>
-          
-          {/* BACKGROUND IMAGE (About Us Wali Image Ab Home Par) */}
-          <Image
-            src="/images/Banner.jpeg"
-            alt="Air Duct Cleaning Services Banner"
-            fill
-            priority
-            style={{ objectFit: 'cover', zIndex: -1 }}
-          />
-
-          {/* DARK OVERLAY (Taake Text Clear Nazar Aaye) */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.4)', // Isse image thori dark hogi taake text chamke
-            zIndex: 0
-          }}></div>
-
-          <div className={styles.heroContentWrapper} style={{ 
-            maxWidth: '1400px', 
-            margin: '0 auto', 
-            position: 'relative', 
-            zIndex: 1,
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center'
-          }}>
+        {/* HERO SECTION */}
+        <section className={styles.hero}>
+          <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <div className={styles.heroLeft}>
-              <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))', color: '#fff' }}>
-                <h1 className={styles.heroTitle} style={{ color: '#fff', fontSize: 'clamp(2rem, 5vw, 3.5rem)', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+              <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
+                <h1 className={styles.heroTitle}>
                   Air Duct Cleaning Services in Markham, Toronto & GTA
                 </h1>
 
-                <p className={styles.heroSubtitle} style={{ color: '#f0f0f0', fontSize: '1.2rem', marginBottom: '20px' }}>
+                <p className={styles.heroSubtitle}>
                   Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
                 </p>
 
-                <Link href="/services" className="btn btn-primary" style={{ padding: '15px 30px', fontSize: '1.1rem' }}>
+                <Link href="/services" className="btn btn-primary">
                   Explore Services
                 </Link>
 
-                {/* LOCATIONS TEXT (Clear Visibility) */}
                 <div style={{
                   marginTop: "25px",
                   fontSize: "16px",
                   color: "#000",
                   fontWeight: "bold",
-                  background: "rgba(255, 255, 255, 0.95)", // High contrast white box
-                  padding: "12px 18px",
+                  background: "#fff",
+                  padding: "10px 15px",
                   borderRadius: "5px",
                   display: "inline-block",
                   borderLeft: "5px solid #0056b3"
@@ -145,14 +118,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className={styles.heroRight}></div>
           </div>
         </section>
 
-        {/* SERVICE AREAS SECTION */}
+        {/* SERVICE AREAS */}
         <section style={{ padding: "60px 20px", background: "#f9f9f9" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{ fontSize: '2.2rem', marginBottom: '10px' }}>Service Areas We Cover</h2>
-            <p style={{ marginBottom: "30px", color: "#555", fontSize: '1.1rem' }}>
+            <h2>Service Areas We Cover</h2>
+            <p style={{ marginBottom: "30px", color: "#555" }}>
               Expert duct cleaning in Markham and surrounding GTA areas.
             </p>
 
@@ -166,14 +140,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SERVICES GRID SECTION */}
-        <section className={`section ${styles.servicesPreview}`} style={{ padding: '60px 0' }}>
+        {/* SERVICES GRID */}
+        <section className={`section ${styles.servicesPreview}`}>
           <div className="container">
-            <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Our Professional Services</h2>
+            <h2 className="section-title">Our Professional Services</h2>
 
             <div className={styles.featureGrid}>
               {services.map((service, index) => (
-                <article key={index} className={styles.featureCard} style={{ borderRadius: '10px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+                <article key={index} className={styles.featureCard}>
                   <div style={{ position: 'relative', height: '220px' }}>
                     <Image
                       src={service.image}
@@ -183,10 +157,8 @@ export default function Home() {
                       style={{ objectFit: 'cover' }}
                     />
                   </div>
-                  <div style={{ padding: '20px' }}>
-                    <h3 style={{ fontSize: '1.4rem', marginBottom: '10px' }}>{service.title}</h3>
-                    <p style={{ color: '#666', lineHeight: '1.6' }}>{service.text}</p>
-                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
                 </article>
               ))}
             </div>
@@ -205,6 +177,6 @@ const areaBtnStyle = {
   textDecoration: "none",
   fontWeight: "600",
   fontSize: "15px",
-  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-  transition: "0.3s ease"
+  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+  transition: "0.3s"
 };
