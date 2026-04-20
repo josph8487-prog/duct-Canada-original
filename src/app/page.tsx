@@ -1,201 +1,185 @@
-import Head from "next/head";
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@/styles/Home.module.css';
 
-export default function Page() {
+export default function Home() {
 
-  const SITE_URL = "https://yourdomain.com";
-
-  /* ================= FULL SCHEMA PACKAGE ================= */
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Duct Cleaning Canada",
-    "url": SITE_URL,
-    "telephone": "+1-226-777-2863",
-    "priceRange": "$$",
-    "image": `${SITE_URL}/logo.png`,
-    "logo": `${SITE_URL}/logo.png`,
-    "description": "Professional air duct cleaning services in Markham, Toronto, Vaughan & GTA.",
-    "areaServed": [
-      "Markham",
-      "Toronto",
-      "Vaughan",
-      "Richmond Hill",
-      "North York",
-      "GTA Ontario"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "CA"
+  const services = [
+    {
+      title: "Air Duct Cleaning Markham & GTA",
+      text: "Professional air duct cleaning services in Markham, Toronto and GTA. Improve indoor air quality and airflow.",
+      image: "/images/services/air-duct-cleaning.jpg"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.6532,
-      "longitude": -79.3832
+    {
+      title: "Furnace Cleaning",
+      text: "Improve heating efficiency and extend furnace life with expert cleaning services.",
+      image: "/images/services/furnace-cleaning.jpg"
     },
-    "sameAs": [
-      "https://www.google.com/maps",
-      "https://www.yelp.ca",
-      "https://www.yellowpages.ca",
-      "https://www.angieslist.com"
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How often should air ducts be cleaned?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every 2–3 years depending on dust, pets, and HVAC usage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve all GTA cities?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we cover Markham, Toronto, Vaughan, Richmond Hill, North York and surrounding GTA areas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is duct cleaning worth it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it improves air quality, HVAC efficiency, and reduces allergens and dust buildup."
-        }
-      }
-    ]
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services` },
-      { "@type": "ListItem", "position": 3, "name": "Air Duct Cleaning GTA", "item": `${SITE_URL}/duct-cleaning-gta` }
-    ]
-  };
+    {
+      title: "Dryer Vent Cleaning",
+      text: "Prevent fire hazards and improve dryer performance with professional vent cleaning.",
+      image: "/images/services/dryer-vent-cleaning.jpg"
+    },
+    {
+      title: "HVAC Blower Cleaning",
+      text: "Improve airflow and energy efficiency with professional blower cleaning.",
+      image: "/images/services/blower-fan-cleaning.jpg"
+    },
+    {
+      title: "Duct Sanitization",
+      text: "Remove bacteria, mold and odors with eco-friendly sanitization services.",
+      image: "/images/services/sanitization.jpg"
+    }
+  ];
 
   return (
     <>
-      {/* ================= SEO HEAD (FULL STACK) ================= */}
-      <Head>
+      {/* HERO */}
+      <section className={styles.hero}>
+        <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
 
-        {/* CORE SEO */}
-        <title>Air Duct Cleaning Markham | Toronto | Vaughan | GTA Experts</title>
-        <meta name="description" content="Professional air duct cleaning in Markham, Toronto, Vaughan & GTA. Furnace, HVAC & dryer vent cleaning experts." />
-        <meta name="keywords" content="air duct cleaning Markham, Toronto duct cleaning, Vaughan HVAC cleaning, GTA furnace cleaning, dryer vent cleaning Canada" />
+          <div className={styles.heroLeft}>
+            <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
 
-        {/* INDEX CONTROL */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:large" />
-        <meta name="googlebot" content="index, follow" />
+              <h1 className={styles.heroTitle}>
+                Air Duct Cleaning Services in Markham, Toronto & GTA
+              </h1>
 
-        {/* CANONICAL */}
-        <link rel="canonical" href={SITE_URL} />
+              <p className={styles.heroSubtitle}>
+                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+              </p>
 
-        {/* OPEN GRAPH */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Air Duct Cleaning GTA Experts" />
-        <meta property="og:description" content="Trusted duct cleaning services in Markham, Toronto, Vaughan & GTA." />
-        <meta property="og:url" content={SITE_URL} />
-        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
+              <Link href="/services" className="btn btn-primary">
+                Explore Services
+              </Link>
 
-        {/* TWITTER */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Air Duct Cleaning GTA Experts" />
-        <meta name="twitter:description" content="Professional HVAC & duct cleaning services across Ontario." />
+              {/* SERVICE AREAS */}
+              <div style={{ marginTop: "15px", fontSize: "14px" }}>
+                <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+              </div>
 
-        {/* GEO SIGNALS */}
-        <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Ontario, Canada" />
-        <meta name="geo.position" content="43.6532;-79.3832" />
-        <meta name="ICBM" content="43.6532, -79.3832" />
+            </div>
+          </div>
 
-        {/* SCHEMA PACKAGE */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
+          <div className={styles.heroRight}></div>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        </div>
+      </section>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
+      {/* ABOUT */}
+      <section className={styles.aboutSection}>
+        <div className={`container ${styles.aboutGrid}`}>
 
-      </Head>
+          <div className={styles.aboutContent}>
+            <h2>Who We Are</h2>
+            <h3>Trusted Air Duct Cleaning Experts in Ontario</h3>
+            <p className={styles.aboutText}>
+              We provide professional air duct cleaning, furnace cleaning and HVAC services across Markham, Toronto and GTA.
+            </p>
 
-      {/* ================= PAGE CONTENT ================= */}
-      <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
+            <Link href="/about" className="btn btn-primary">
+              Learn More
+            </Link>
+          </div>
 
-        {/* HERO */}
-        <header>
-          <h1>Air Duct Cleaning Services in Markham, Toronto, Vaughan & GTA</h1>
-          <p>
-            Licensed HVAC cleaning experts improving indoor air quality, energy efficiency,
-            and safety across Ontario residential and commercial properties.
+          <div className={styles.aboutImages}>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/air-duct-cleaning.jpg" alt="Air Duct Cleaning Markham" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/furnace-cleaning.jpg" alt="Furnace Cleaning" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/blower-fan-cleaning.jpg" alt="HVAC Cleaning" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={styles.aboutImageItem}>
+              <Image src="/images/services/sanitization.jpg" alt="Duct Sanitization" fill style={{ objectFit: 'cover' }} />
+            </div>
+          </div>
+
+          <div className={styles.localHighlight}>
+            <h4>Locally Trusted in GTA</h4>
+            <p>Serving Markham, Toronto, Vaughan, Richmond Hill and North York.</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SERVICE AREAS */}
+      <section style={{ padding: "50px 20px", background: "#f9f9f9" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
+
+          <h2>Service Areas We Cover</h2>
+
+          <p style={{ marginBottom: "20px" }}>
+            We provide professional duct cleaning services across Markham and nearby GTA cities.
           </p>
-        </header>
 
-        {/* TRUST SIGNALS */}
-        <section>
-          <strong>✔ Licensed • ✔ Insured • ✔ Certified Technicians • ✔ 5-Star Rated Local Service</strong>
-        </section>
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "15px"
+          }}>
 
-        {/* MAIN SEO CONTENT BLOCK */}
-        <section>
-          <h2>Complete Air Duct & HVAC Cleaning Across GTA</h2>
-          <p>
-            We specialize in deep air duct cleaning, furnace cleaning, dryer vent cleaning,
-            and full HVAC system sanitization across Markham, Toronto, Vaughan, Richmond Hill,
-            and surrounding GTA regions. Our advanced cleaning systems remove dust, allergens,
-            mold spores, and debris from ventilation systems to improve indoor air quality and
-            HVAC performance. Regular cleaning helps reduce energy bills, improve airflow,
-            and extend system lifespan.
-          </p>
-        </section>
+            <Link href="/location/markham" style={areaBtn}>Markham</Link>
+            <Link href="/location/toronto" style={areaBtn}>Toronto</Link>
+            <Link href="/location/vaughan" style={areaBtn}>Vaughan</Link>
+            <Link href="/location/richmond-hill" style={areaBtn}>Richmond Hill</Link>
 
-        {/* INTERNAL LINKING STRUCTURE */}
-        <section>
-          <h3>Service Locations</h3>
-          <ul>
-            <li><a href="/location/markham">Air Duct Cleaning Markham</a></li>
-            <li><a href="/location/toronto">Air Duct Cleaning Toronto</a></li>
-            <li><a href="/location/vaughan">Air Duct Cleaning Vaughan</a></li>
-            <li><a href="/location/richmond-hill">Air Duct Cleaning Richmond Hill</a></li>
-            <li><a href="/location/north-york">Air Duct Cleaning North York</a></li>
-          </ul>
-        </section>
+          </div>
 
-        {/* LOCAL SEO REINFORCEMENT */}
-        <section>
-          <h2>Trusted Across Ontario</h2>
-          <p>
-            Our team is trusted across multiple GTA cities for residential homes, condos,
-            commercial buildings, and offices. We provide same-day service, affordable pricing,
-            and professional-grade HVAC cleaning solutions designed for Canadian weather conditions.
-          </p>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section style={{ textAlign: "center", marginTop: "40px" }}>
-          <h2>Get Free Quote Today</h2>
-          <button style={{ padding: "12px 20px", fontSize: "16px" }}>
-            Contact Now
-          </button>
-        </section>
+      {/* SERVICES GRID */}
+      <section className={`section ${styles.servicesPreview}`}>
+        <div className="container">
 
-      </main>
+          <h2 className="section-title">Our Services</h2>
+
+          <div className={styles.featureGrid}>
+            {services.map((service, index) => (
+              <div key={index} className={styles.featureCard}>
+                <div style={{ position: 'relative', height: '220px' }}>
+                  <Image src={service.image} alt={service.title} fill />
+                </div>
+                <h3 className={styles.featureTitle}>{service.title}</h3>
+                <p className={styles.featureText}>{service.text}</p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className={styles.processSection}>
+        <div className={`container ${styles.processGrid}`}>
+          <div>
+            <h2>Our Cleaning Process</h2>
+            <p>Inspection → Cleaning → Sanitization → Final Check</p>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className={styles.testimonialsSection}>
+        <div className="container">
+          <h2>Customer Reviews</h2>
+          <p>Trusted by homeowners across Ontario.</p>
+        </div>
+      </section>
     </>
   );
 }
+
+const areaBtn = {
+  padding: "10px 18px",
+  border: "1px solid #000",
+  borderRadius: "6px",
+  textDecoration: "none",
+  color: "#000",
+  fontWeight: "500",
+  display: "inline-block"
+};
