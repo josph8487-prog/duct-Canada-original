@@ -34,9 +34,36 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO */}
-      <section className={styles.hero}>
-        <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
+      {/* HERO - UPDATED */}
+      <section className={styles.hero} style={{ position: "relative" }}>
+
+        {/* BACKGROUND IMAGE */}
+        <Image
+          src="/images/hero/duct-cleaning-hero.jpg"
+          alt="Air Duct Cleaning Services"
+          fill
+          priority
+          style={{
+            objectFit: "cover",
+            zIndex: 0
+          }}
+        />
+
+        {/* DARK OVERLAY */}
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0,0,0,0.55)",
+          zIndex: 1
+        }} />
+
+        <div className={styles.heroContentWrapper} style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          position: "relative",
+          zIndex: 2,
+          color: "#fff"
+        }}>
 
           <div className={styles.heroLeft}>
             <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
