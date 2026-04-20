@@ -41,11 +41,11 @@ export default function Home() {
           <div className={styles.heroLeft}>
             <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
 
-              <h1 className={styles.heroTitle}>
+              <h1 className={styles.heroTitle} style={{ color: "#111" }}>
                 Air Duct Cleaning Services in Markham, Toronto & GTA
               </h1>
 
-              <p className={styles.heroSubtitle}>
+              <p className={styles.heroSubtitle} style={{ color: "#222" }}>
                 Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
               </p>
 
@@ -54,7 +54,7 @@ export default function Home() {
               </Link>
 
               {/* SERVICE AREAS */}
-              <div style={{ marginTop: "15px", fontSize: "14px" }}>
+              <div style={{ marginTop: "15px", fontSize: "14px", color: "#111" }}>
                 <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
               </div>
 
@@ -71,9 +71,10 @@ export default function Home() {
         <div className={`container ${styles.aboutGrid}`}>
 
           <div className={styles.aboutContent}>
-            <h2>Who We Are</h2>
-            <h3>Trusted Air Duct Cleaning Experts in Ontario</h3>
-            <p className={styles.aboutText}>
+            <h2 style={{ color: "#111" }}>Who We Are</h2>
+            <h3 style={{ color: "#111" }}>Trusted Air Duct Cleaning Experts in Ontario</h3>
+
+            <p className={styles.aboutText} style={{ color: "#222" }}>
               We provide professional air duct cleaning, furnace cleaning and HVAC services across Markham, Toronto and GTA.
             </p>
 
@@ -98,8 +99,10 @@ export default function Home() {
           </div>
 
           <div className={styles.localHighlight}>
-            <h4>Locally Trusted in GTA</h4>
-            <p>Serving Markham, Toronto, Vaughan, Richmond Hill and North York.</p>
+            <h4 style={{ color: "#111" }}>Locally Trusted in GTA</h4>
+            <p style={{ color: "#222" }}>
+              Serving Markham, Toronto, Vaughan, Richmond Hill and North York.
+            </p>
           </div>
 
         </div>
@@ -109,9 +112,9 @@ export default function Home() {
       <section style={{ padding: "50px 20px", background: "#f9f9f9" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
 
-          <h2>Service Areas We Cover</h2>
+          <h2 style={{ color: "#111" }}>Service Areas We Cover</h2>
 
-          <p style={{ marginBottom: "20px" }}>
+          <p style={{ marginBottom: "20px", color: "#222" }}>
             We provide professional duct cleaning services across Markham and nearby GTA cities.
           </p>
 
@@ -136,7 +139,7 @@ export default function Home() {
       <section className={`section ${styles.servicesPreview}`}>
         <div className="container">
 
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title" style={{ color: "#111" }}>Our Services</h2>
 
           <div className={styles.featureGrid}>
             {services.map((service, index) => (
@@ -144,8 +147,12 @@ export default function Home() {
                 <div style={{ position: 'relative', height: '220px' }}>
                   <Image src={service.image} alt={service.title} fill />
                 </div>
-                <h3 className={styles.featureTitle}>{service.title}</h3>
-                <p className={styles.featureText}>{service.text}</p>
+                <h3 className={styles.featureTitle} style={{ color: "#111" }}>
+                  {service.title}
+                </h3>
+                <p className={styles.featureText} style={{ color: "#222" }}>
+                  {service.text}
+                </p>
               </div>
             ))}
           </div>
@@ -157,8 +164,8 @@ export default function Home() {
       <section className={styles.processSection}>
         <div className={`container ${styles.processGrid}`}>
           <div>
-            <h2>Our Cleaning Process</h2>
-            <p>Inspection → Cleaning → Sanitization → Final Check</p>
+            <h2 style={{ color: "#111" }}>Our Cleaning Process</h2>
+            <p style={{ color: "#222" }}>Inspection → Cleaning → Sanitization → Final Check</p>
           </div>
         </div>
       </section>
@@ -166,8 +173,8 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <section className={styles.testimonialsSection}>
         <div className="container">
-          <h2>Customer Reviews</h2>
-          <p>Trusted by homeowners across Ontario.</p>
+          <h2 style={{ color: "#111" }}>Customer Reviews</h2>
+          <p style={{ color: "#222" }}>Trusted by homeowners across Ontario.</p>
         </div>
       </section>
     </>
