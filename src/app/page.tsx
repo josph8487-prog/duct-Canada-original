@@ -53,10 +53,22 @@ export default function Home() {
                 Explore Services
               </Link>
 
-              {/* SERVICE AREAS */}
-              <div style={{ marginTop: "15px", fontSize: "14px", color: "#111" }}>
-                <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
-              </div>
+            {/* SERVICE AREAS */}
+<div
+  style={{
+    marginTop: "15px",
+    fontSize: "14px",
+    color: "#ffffff",
+    fontWeight: "600",
+    textShadow: "0 2px 6px rgba(0,0,0,0.6)",
+    letterSpacing: "0.3px"
+  }}
+>
+  <strong style={{ color: "#ffd700" }}>Serving:</strong>{" "}
+  <span style={{ color: "#ffffff" }}>
+    Markham • Toronto • Vaughan • Richmond Hill • North York
+  </span>
+</div>
 
             </div>
           </div>
