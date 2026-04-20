@@ -53,7 +53,12 @@ export default function Home() {
             fontSize: "clamp(26px, 5vw, 42px)",
             fontWeight: "700",
             marginBottom: "15px",
-            textShadow: "0 2px 10px rgba(0,0,0,0.6)"
+            background: "linear-gradient(90deg, #ffffff, #b9f6ca)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 2px 10px rgba(0,0,0,0.6)",
+            letterSpacing: "0.5px",
+            lineHeight: "1.2"
           }}>
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
@@ -69,7 +74,6 @@ export default function Home() {
           {/* CTA BUTTONS */}
           <div style={{ display: "flex", justifyContent: "center", gap: "15px", flexWrap: "wrap" }}>
 
-            {/* GLASS BUTTON */}
             <a href="tel:2267772863" style={{
               padding: "14px 24px",
               background: "rgba(255,255,255,0.15)",
