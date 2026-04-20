@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
+/* ✅ SEO META (App Router correct way) */
 export const metadata = {
   title: "Air Duct Cleaning Markham, Toronto & GTA | Duct Canada",
   description:
@@ -42,80 +43,42 @@ export default function Home() {
             "@type": "LocalBusiness",
             name: "Duct Cleaning Canada",
             telephone: "+1-226-777-2863",
-            areaServed: ["Markham", "Toronto", "Vaughan", "Richmond Hill"],
+            areaServed: [
+              "Markham",
+              "Toronto",
+              "Vaughan",
+              "Richmond Hill",
+              "North York",
+            ],
           }),
         }}
       />
 
       {/* HERO */}
-      <section
-        style={{
-          position: "relative",
-          padding: "80px 20px",
-          color: "#ffffff",
-          textAlign: "center",
-        }}
-      >
-        {/* ✅ OPTIMIZED LCP IMAGE */}
+      <section style={heroSection}>
+        {/* ✅ FAST LCP IMAGE */}
         <Image
           src="/images/services/air-duct-cleaning.jpg"
           alt="Air duct cleaning service"
           fill
           priority
           quality={60}
-          style={{ objectFit: "cover", zIndex: 0 }}
+          style={{ objectFit: "cover" }}
         />
 
         {/* OVERLAY */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85))",
-            zIndex: 1,
-          }}
-        ></div>
+        <div style={overlay}></div>
 
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            maxWidth: "900px",
-            margin: "auto",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "clamp(26px, 5vw, 42px)",
-              fontWeight: "700",
-              marginBottom: "15px",
-              color: "#e8f5e9", // ✅ better contrast
-              textShadow: "0 3px 12px rgba(0,0,0,0.9)",
-              lineHeight: "1.2",
-            }}
-          >
+        <div style={heroContent}>
+          <h1 style={heading}>
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
 
-          <p
-            style={{
-              fontSize: "clamp(15px, 4vw, 18px)",
-              marginBottom: "25px",
-              color: "#eeeeee",
-            }}
-          >
+          <p style={subText}>
             Professional duct, furnace, dryer vent & HVAC cleaning across Ontario.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "15px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div style={btnWrap}>
             <a href="tel:2267772863" style={btnGlass}>
               Call Now
             </a>
@@ -123,6 +86,10 @@ export default function Home() {
             <Link href="/services" style={btnPrimary}>
               Explore Services
             </Link>
+          </div>
+
+          <div style={serviceAreas}>
+            Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
           </div>
         </div>
       </section>
@@ -173,7 +140,7 @@ export default function Home() {
 
           <details>
             <summary>Is duct cleaning worth it?</summary>
-            <p>Yes, it improves air quality and efficiency.</p>
+            <p>Yes, it improves air quality and HVAC efficiency.</p>
           </details>
         </div>
       </section>
@@ -194,18 +161,62 @@ export default function Home() {
       </a>
 
       {/* WHATSAPP */}
-      <a
-        href="https://wa.me/12267772863"
-        target="_blank"
-        style={whatsappBtn}
-      >
+      <a href="https://wa.me/12267772863" target="_blank" style={whatsappBtn}>
         💬 WhatsApp
       </a>
     </>
   );
 }
 
-/* STYLES */
+/* 🔧 STYLES (clean + error free) */
+const heroSection = {
+  position: "relative",
+  padding: "80px 20px",
+  color: "#fff",
+  textAlign: "center",
+  minHeight: "400px",
+};
+
+const overlay = {
+  position: "absolute",
+  inset: 0,
+  background: "linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85))",
+};
+
+const heroContent = {
+  position: "relative",
+  zIndex: 2,
+  maxWidth: "900px",
+  margin: "auto",
+};
+
+const heading = {
+  fontSize: "clamp(26px, 5vw, 42px)",
+  fontWeight: "700",
+  marginBottom: "15px",
+  color: "#e8f5e9",
+  textShadow: "0 3px 12px rgba(0,0,0,0.9)",
+};
+
+const subText = {
+  fontSize: "clamp(15px, 4vw, 18px)",
+  marginBottom: "25px",
+  color: "#eeeeee",
+};
+
+const btnWrap = {
+  display: "flex",
+  justifyContent: "center",
+  gap: "15px",
+  flexWrap: "wrap",
+};
+
+const serviceAreas = {
+  marginTop: "20px",
+  fontSize: "14px",
+  color: "#ccc",
+};
+
 const grid = {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(250px,1fr))",
