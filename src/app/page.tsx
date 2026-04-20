@@ -5,7 +5,7 @@ export const metadata = {
   title:
     "Air Duct Cleaning Markham, Toronto & GTA | Furnace & HVAC Experts",
   description:
-    "Professional air duct, furnace, dryer vent & HVAC cleaning services in GTA. Fast, affordable and trusted service.",
+    "Professional air duct, furnace, dryer vent & HVAC cleaning services in GTA. Fast and reliable service.",
   keywords:
     "duct cleaning Toronto, furnace cleaning Markham, HVAC cleaning GTA",
 };
@@ -28,13 +28,6 @@ export default function Home() {
               "Vaughan",
               "Richmond Hill",
               "North York",
-              "Scarborough",
-            ],
-            serviceType: [
-              "Air Duct Cleaning",
-              "Furnace Cleaning",
-              "Dryer Vent Cleaning",
-              "HVAC Cleaning",
             ],
           }),
         }}
@@ -42,7 +35,6 @@ export default function Home() {
 
       {/* ================= HERO ================= */}
       <section className="hero">
-
         <Image
           src="/images/services/air-duct-cleaning.jpg"
           alt="Air duct cleaning GTA"
@@ -53,31 +45,30 @@ export default function Home() {
           className="heroImg"
         />
 
-        <div className="overlay"></div>
+        <div className="overlay" />
 
         <div className="heroContent">
-
           <h1 className="heroTitle">
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
 
           <p className="heroSub">
-            Professional duct cleaning, furnace cleaning & HVAC maintenance services across Ontario.
+            Professional duct, furnace & HVAC cleaning services across Ontario.
           </p>
 
           <div className="btnWrap">
             <a href="tel:2267772863" className="btnPrimary">
               Call Now
             </a>
+
             <Link href="/services" className="btnSecondary">
-              View Services
+              Services
             </Link>
           </div>
 
           <div className="areas">
             Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
           </div>
-
         </div>
       </section>
 
@@ -86,7 +77,6 @@ export default function Home() {
         <h2 className="titleCenter">Our Services</h2>
 
         <div className="grid">
-
           <div className="card">
             <h3>Air Duct Cleaning</h3>
             <p>Improve air quality & airflow efficiency.</p>
@@ -106,16 +96,16 @@ export default function Home() {
             <h3>HVAC Cleaning</h3>
             <p>Full system cleaning for maximum efficiency.</p>
           </div>
-
         </div>
       </section>
 
-      {/* ================= ABOUT ================= */}
+      {/* ================= ABOUT (FIXED CONTRAST) ================= */}
       <section className="about">
         <h2>Why Choose Us?</h2>
         <p>
-          We provide professional duct cleaning services with advanced tools,
-          trained technicians, and guaranteed results to improve indoor air quality.
+          We provide professional duct cleaning services using advanced tools,
+          trained technicians, and guaranteed results to improve indoor air
+          quality and HVAC performance.
         </p>
       </section>
 
@@ -124,35 +114,19 @@ export default function Home() {
         <h2>Frequently Asked Questions</h2>
 
         <div className="faqBox">
-          <p><strong>How often should ducts be cleaned?</strong> Every 2–3 years.</p>
-          <p><strong>Does it improve air quality?</strong> Yes, significantly reduces dust.</p>
-          <p><strong>Service duration?</strong> 2–4 hours depending on home size.</p>
+          <p>
+            <strong>How often should ducts be cleaned?</strong> Every 2–3 years.
+          </p>
+
+          <p>
+            <strong>Does it improve air quality?</strong> Yes, removes dust and
+            allergens.
+          </p>
+
+          <p>
+            <strong>Service time?</strong> 2–4 hours depending on house size.
+          </p>
         </div>
-      </section>
-
-      {/* ================= SERVICE AREAS ================= */}
-      <section className="areasSection">
-        <h2>Service Areas</h2>
-
-        <div className="areaGrid">
-          <span>Markham</span>
-          <span>Toronto</span>
-          <span>Vaughan</span>
-          <span>Richmond Hill</span>
-          <span>North York</span>
-          <span>Scarborough</span>
-          <span>Brampton</span>
-          <span>Mississauga</span>
-        </div>
-      </section>
-
-      {/* ================= REVIEWS ================= */}
-      <section className="reviews">
-        <h2>Customer Reviews</h2>
-        <p>⭐⭐⭐⭐⭐ Rated 5/5 by GTA customers</p>
-        <p>
-          "Very professional service, quick response and excellent cleaning quality."
-        </p>
       </section>
 
       {/* ================= CTA ================= */}
@@ -176,10 +150,10 @@ export default function Home() {
         💬 WhatsApp
       </a>
 
-      {/* ================= DARK MODE CSS ================= */}
+      {/* ================= DARK THEME CSS (FIXED CONTRAST) ================= */}
       <style jsx>{`
         body {
-          background: #0b0b0b;
+          background: #0a0a0a;
         }
 
         .hero {
@@ -195,13 +169,13 @@ export default function Home() {
 
         .heroImg {
           object-fit: cover;
-          filter: brightness(0.55) contrast(1.1);
+          filter: brightness(0.5) contrast(1.2);
         }
 
         .overlay {
           position: absolute;
           inset: 0;
-          background: rgba(0, 0, 0, 0.80);
+          background: rgba(0, 0, 0, 0.85);
         }
 
         .heroContent {
@@ -215,12 +189,12 @@ export default function Home() {
           font-size: 42px;
           font-weight: 800;
           color: #ffffff;
-          text-shadow: 0 4px 14px rgba(0,0,0,0.95);
+          text-shadow: 0 5px 15px rgba(0, 0, 0, 1);
         }
 
         .heroSub {
           margin: 15px 0;
-          color: #e6e6e6;
+          color: #eaeaea;
         }
 
         .btnWrap {
@@ -234,39 +208,41 @@ export default function Home() {
           background: #00c853;
           padding: 12px 20px;
           border-radius: 8px;
-          color: white;
+          color: #ffffff;
           text-decoration: none;
           font-weight: 600;
         }
 
         .btnSecondary {
-          background: rgba(255,255,255,0.12);
+          background: rgba(255, 255, 255, 0.2);
           padding: 12px 20px;
           border-radius: 8px;
-          color: white;
+          color: #ffffff;
           text-decoration: none;
         }
 
         .areas {
           margin-top: 15px;
           font-size: 13px;
-          color: #bdbdbd;
+          color: #cfcfcf;
         }
 
         .section {
           padding: 60px 20px;
           max-width: 1000px;
           margin: auto;
+          color: #fff;
         }
 
         .titleCenter {
           text-align: center;
           margin-bottom: 25px;
+          color: #ffffff;
         }
 
         .grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 15px;
         }
 
@@ -281,13 +257,14 @@ export default function Home() {
         .about {
           padding: 60px 20px;
           text-align: center;
-          color: #fff;
+          background: #0d0d0d;
+          color: #ffffff; /* ✅ FIXED WHITE TEXT */
         }
 
         .faq {
           padding: 60px 20px;
           background: #111;
-          color: #fff;
+          color: #ffffff;
           text-align: center;
         }
 
@@ -295,26 +272,6 @@ export default function Home() {
           max-width: 800px;
           margin: auto;
           text-align: left;
-        }
-
-        .areasSection {
-          padding: 60px 20px;
-          text-align: center;
-          color: #fff;
-        }
-
-        .areaGrid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          justify-content: center;
-          color: #ccc;
-        }
-
-        .reviews {
-          padding: 60px 20px;
-          text-align: center;
-          color: #fff;
         }
 
         .cta {
