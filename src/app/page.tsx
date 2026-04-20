@@ -1,213 +1,201 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
 
-  const phone = "+14379999999";
+  const SITE_URL = "https://yourdomain.com";
 
-  const locations = [
-    { name: "Markham", slug: "markham" },
-    { name: "Toronto", slug: "toronto" },
-    { name: "Vaughan", slug: "vaughan" },
-    { name: "Richmond Hill", slug: "richmond-hill" },
-  ];
+  /* ================= FULL SCHEMA PACKAGE ================= */
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Duct Cleaning Canada",
+    "url": SITE_URL,
+    "telephone": "+1-226-777-2863",
+    "priceRange": "$$",
+    "image": `${SITE_URL}/logo.png`,
+    "logo": `${SITE_URL}/logo.png`,
+    "description": "Professional air duct cleaning services in Markham, Toronto, Vaughan & GTA.",
+    "areaServed": [
+      "Markham",
+      "Toronto",
+      "Vaughan",
+      "Richmond Hill",
+      "North York",
+      "GTA Ontario"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.6532,
+      "longitude": -79.3832
+    },
+    "sameAs": [
+      "https://www.google.com/maps",
+      "https://www.yelp.ca",
+      "https://www.yellowpages.ca",
+      "https://www.angieslist.com"
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How often should air ducts be cleaned?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every 2–3 years depending on dust, pets, and HVAC usage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve all GTA cities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we cover Markham, Toronto, Vaughan, Richmond Hill, North York and surrounding GTA areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is duct cleaning worth it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, it improves air quality, HVAC efficiency, and reduces allergens and dust buildup."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": `${SITE_URL}/services` },
+      { "@type": "ListItem", "position": 3, "name": "Air Duct Cleaning GTA", "item": `${SITE_URL}/duct-cleaning-gta` }
+    ]
+  };
 
   return (
     <>
-      {/* ================= SEO META ================= */}
+      {/* ================= SEO HEAD (FULL STACK) ================= */}
       <Head>
-        <title>
-          Air Duct Cleaning Markham, Toronto, Vaughan & Richmond Hill | $110
-        </title>
 
-        <meta
-          name="description"
-          content="Affordable air duct cleaning services in Markham, Toronto, Vaughan & Richmond Hill. Only $110. Same day service available."
-        />
+        {/* CORE SEO */}
+        <title>Air Duct Cleaning Markham | Toronto | Vaughan | GTA Experts</title>
+        <meta name="description" content="Professional air duct cleaning in Markham, Toronto, Vaughan & GTA. Furnace, HVAC & dryer vent cleaning experts." />
+        <meta name="keywords" content="air duct cleaning Markham, Toronto duct cleaning, Vaughan HVAC cleaning, GTA furnace cleaning, dryer vent cleaning Canada" />
 
-        <meta
-          name="keywords"
-          content="air duct cleaning Markham, duct cleaning Toronto, Vaughan duct cleaning, Richmond Hill air duct cleaning"
-        />
+        {/* INDEX CONTROL */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:large" />
+        <meta name="googlebot" content="index, follow" />
 
-        <link rel="canonical" href="https://yourwebsite.com/" />
+        {/* CANONICAL */}
+        <link rel="canonical" href={SITE_URL} />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Air Duct Cleaning GTA | $110 Offer" />
-        <meta property="og:description" content="Book professional duct cleaning today." />
-        <meta property="og:url" content="https://yourwebsite.com/" />
+        {/* OPEN GRAPH */}
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="Air Duct Cleaning GTA Experts" />
+        <meta property="og:description" content="Trusted duct cleaning services in Markham, Toronto, Vaughan & GTA." />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
 
-        {/* Geo Tags */}
+        {/* TWITTER */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Air Duct Cleaning GTA Experts" />
+        <meta name="twitter:description" content="Professional HVAC & duct cleaning services across Ontario." />
+
+        {/* GEO SIGNALS */}
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Markham" />
-        <meta name="geo.position" content="43.8561;-79.3370" />
-        <meta name="ICBM" content="43.8561, -79.3370" />
+        <meta name="geo.placename" content="Ontario, Canada" />
+        <meta name="geo.position" content="43.6532;-79.3832" />
+        <meta name="ICBM" content="43.6532, -79.3832" />
+
+        {/* SCHEMA PACKAGE */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
       </Head>
 
-      {/* ================= TOP OFFER ================= */}
-      <div style={{ background: "#000", color: "#fff", textAlign: "center", padding: "10px" }}>
-        🔥 FULL DUCT CLEANING ONLY $110
-        <a href={`tel:${phone}`} style={{ marginLeft: 10, color: "#00ff00" }}>
-          Call Now
-        </a>
-      </div>
+      {/* ================= PAGE CONTENT ================= */}
+      <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
 
-      {/* ================= HERO ================= */}
-      <section style={{ padding: "60px 20px", display: "flex", flexWrap: "wrap" }}>
-
-        <div style={{ flex: 1 }}>
-          <h1>
-            Air Duct Cleaning in Markham, Toronto, Vaughan & Richmond Hill
-          </h1>
-
+        {/* HERO */}
+        <header>
+          <h1>Air Duct Cleaning Services in Markham, Toronto, Vaughan & GTA</h1>
           <p>
-            Professional duct cleaning services to improve indoor air quality,
-            remove dust, allergens and increase HVAC efficiency.
+            Licensed HVAC cleaning experts improving indoor air quality, energy efficiency,
+            and safety across Ontario residential and commercial properties.
           </p>
+        </header>
 
-          <a href={`tel:${phone}`} className="btn btn-primary">
-            📞 Call Now
-          </a>
+        {/* TRUST SIGNALS */}
+        <section>
+          <strong>✔ Licensed • ✔ Insured • ✔ Certified Technicians • ✔ 5-Star Rated Local Service</strong>
+        </section>
 
-          <Link href="/services" className="btn btn-secondary">
-            View Services
-          </Link>
-        </div>
+        {/* MAIN SEO CONTENT BLOCK */}
+        <section>
+          <h2>Complete Air Duct & HVAC Cleaning Across GTA</h2>
+          <p>
+            We specialize in deep air duct cleaning, furnace cleaning, dryer vent cleaning,
+            and full HVAC system sanitization across Markham, Toronto, Vaughan, Richmond Hill,
+            and surrounding GTA regions. Our advanced cleaning systems remove dust, allergens,
+            mold spores, and debris from ventilation systems to improve indoor air quality and
+            HVAC performance. Regular cleaning helps reduce energy bills, improve airflow,
+            and extend system lifespan.
+          </p>
+        </section>
 
-        <div style={{ flex: 1, position: "relative", height: 400 }}>
-          <Image
-            src="/images/services/air-duct-cleaning.jpg"
-            alt="Air duct cleaning Markham Toronto"
-            fill
-            priority
-            sizes="(max-width:768px) 100vw, 50vw"
-          />
-        </div>
-      </section>
+        {/* INTERNAL LINKING STRUCTURE */}
+        <section>
+          <h3>Service Locations</h3>
+          <ul>
+            <li><a href="/location/markham">Air Duct Cleaning Markham</a></li>
+            <li><a href="/location/toronto">Air Duct Cleaning Toronto</a></li>
+            <li><a href="/location/vaughan">Air Duct Cleaning Vaughan</a></li>
+            <li><a href="/location/richmond-hill">Air Duct Cleaning Richmond Hill</a></li>
+            <li><a href="/location/north-york">Air Duct Cleaning North York</a></li>
+          </ul>
+        </section>
 
-      {/* ================= INTERNAL LINK BOOST ================= */}
-      <section style={{ padding: "50px", textAlign: "center" }}>
-        <h2>Air Duct Cleaning Services Near You</h2>
+        {/* LOCAL SEO REINFORCEMENT */}
+        <section>
+          <h2>Trusted Across Ontario</h2>
+          <p>
+            Our team is trusted across multiple GTA cities for residential homes, condos,
+            commercial buildings, and offices. We provide same-day service, affordable pricing,
+            and professional-grade HVAC cleaning solutions designed for Canadian weather conditions.
+          </p>
+        </section>
 
-        <p>
-          We provide professional duct cleaning services across all major GTA cities.
-        </p>
+        {/* CTA */}
+        <section style={{ textAlign: "center", marginTop: "40px" }}>
+          <h2>Get Free Quote Today</h2>
+          <button style={{ padding: "12px 20px", fontSize: "16px" }}>
+            Contact Now
+          </button>
+        </section>
 
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
-          {locations.map((loc, i) => (
-            <Link key={i} href={`/location/${loc.slug}`}>
-              Air Duct Cleaning {loc.name}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= CONTENT BOOST (VERY IMPORTANT) ================= */}
-      <section style={{ padding: "50px", maxWidth: "900px", margin: "0 auto" }}>
-        <h2>Best Air Duct Cleaning Company in GTA</h2>
-
-        <p>
-          If you are looking for reliable and affordable air duct cleaning in Markham, Toronto,
-          Vaughan or Richmond Hill, our expert team is here to help. We use advanced equipment
-          to remove dust, debris, allergens and improve your indoor air quality.
-        </p>
-
-        <p>
-          Our professional technicians ensure your HVAC system works efficiently, helping you
-          save energy and reduce utility costs. With our $110 special offer, you get complete
-          duct cleaning with no hidden charges.
-        </p>
-      </section>
-
-      {/* ================= CTA ================= */}
-      <section style={{ background: "#f4f4f4", padding: "60px", textAlign: "center" }}>
-        <h2>Book Your Duct Cleaning Today</h2>
-        <p>Limited Time Offer – Only $110</p>
-
-        <a href={`tel:${phone}`} className="btn btn-primary">
-          📞 Call Now
-        </a>
-      </section>
-
-      {/* ================= FAQ ================= */}
-      <section style={{ padding: "50px" }}>
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>How often should air ducts be cleaned?</h3>
-        <p>Every 2-3 years depending on usage.</p>
-
-        <h3>Do you serve all GTA cities?</h3>
-        <p>Yes, including Markham, Toronto, Vaughan and Richmond Hill.</p>
-      </section>
-
-      {/* ================= STICKY CALL ================= */}
-      <a
-        href={`tel:${phone}`}
-        style={{
-          position: "fixed",
-          bottom: 20,
-          right: 20,
-          background: "#28a745",
-          color: "#fff",
-          padding: "15px 20px",
-          borderRadius: "50px",
-          fontWeight: "bold",
-          zIndex: 999
-        }}
-      >
-        📞 Call Now
-      </a>
-
-      {/* ================= FULL ADVANCED SCHEMA ================= */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "LocalBusiness",
-                "name": "Air Duct Cleaning GTA",
-                "url": "https://yourwebsite.com",
-                "telephone": phone,
-                "priceRange": "$110",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Markham",
-                  "addressRegion": "ON",
-                  "addressCountry": "CA"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "43.8561",
-                  "longitude": "-79.3370"
-                },
-                "areaServed": ["Markham", "Toronto", "Vaughan", "Richmond Hill"]
-              },
-              {
-                "@type": "Service",
-                "name": "Air Duct Cleaning",
-                "areaServed": "GTA"
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How much does duct cleaning cost?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Our complete duct cleaning service costs only $110."
-                    }
-                  }
-                ]
-              }
-            ]
-          })
-        }}
-      />
+      </main>
     </>
   );
 }
