@@ -2,12 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "Air Duct Cleaning Markham, Toronto & GTA | Furnace & HVAC Cleaning Experts",
+  title: "Air Duct Cleaning Markham, Toronto & GTA | HVAC Experts",
   description:
-    "Professional air duct, furnace, dryer vent & HVAC cleaning services across Markham, Toronto, Vaughan, Richmond Hill & GTA.",
+    "Professional air duct, furnace, dryer vent & HVAC cleaning services across GTA.",
   keywords:
-    "duct cleaning Toronto, furnace cleaning Markham, HVAC cleaning GTA, dryer vent cleaning",
+    "duct cleaning Toronto, furnace cleaning Markham, HVAC cleaning GTA",
 };
 
 export default function Home() {
@@ -22,226 +21,127 @@ export default function Home() {
             "@type": "LocalBusiness",
             name: "Duct Cleaning Canada",
             telephone: "+1-226-777-2863",
-            email: "ductcleaningcanada2@gmail.com",
-            address: "35 Carlton Rd, Markham, ON L3R 1Z4",
-            areaServed: [
-              "Markham",
-              "Toronto",
-              "Vaughan",
-              "Richmond Hill",
-              "North York",
-              "Scarborough",
-            ],
-            serviceType: [
-              "Air Duct Cleaning",
-              "Furnace Cleaning",
-              "Dryer Vent Cleaning",
-              "HVAC Cleaning",
-              "Sanitization Services",
-            ],
+            address: "Markham, Ontario, Canada",
+            areaServed: ["Markham", "Toronto", "Vaughan", "Richmond Hill"],
           }),
         }}
       />
 
       {/* ================= HERO ================= */}
-      <section className="hero">
+      <header className="hero">
         <Image
           src="/images/services/air-duct-cleaning.jpg"
           alt="Air duct cleaning GTA"
           fill
           priority
-          quality={60}
           sizes="100vw"
+          quality={60}
           className="heroImg"
         />
 
         <div className="overlay" />
 
         <div className="heroContent">
-          <h1 className="heroTitle">
-            Air Duct Cleaning Services in Markham, Toronto & GTA
-          </h1>
+          <h1>Air Duct Cleaning Services in GTA</h1>
 
-          <p className="heroSub">
-            Professional duct, furnace, dryer vent & HVAC cleaning across Ontario.
+          <h2>Professional HVAC Cleaning Experts</h2>
+
+          <p>
+            Improve indoor air quality with expert duct, furnace & HVAC cleaning.
           </p>
 
-          <div className="btnWrap">
-            <a href="tel:2267772863" className="btnPrimary">
-              Call Now
-            </a>
-
-            <Link href="/services" className="btnSecondary">
-              Services
-            </Link>
-          </div>
-
-          <div className="areas">
-            Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
-          </div>
+          <a href="tel:2267772863" className="btn">
+            Call Now
+          </a>
         </div>
-      </section>
-
-      {/* ================= QUICK LINKS ================= */}
-      <section className="section">
-        <h2 className="titleCenter">Quick Links</h2>
-
-        <div className="links">
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-      </section>
+      </header>
 
       {/* ================= SERVICES ================= */}
-      <section className="section">
-        <h2 className="titleCenter">Our Services</h2>
+      <section>
+        <h2>Our Services</h2>
 
-        <div className="grid">
-          <div className="card">
-            <h3>Air Duct Cleaning</h3>
-            <p>Improve indoor air quality & airflow efficiency.</p>
-          </div>
-
-          <div className="card">
-            <h3>Furnace Cleaning</h3>
-            <p>Increase heating performance & system life.</p>
-          </div>
-
-          <div className="card">
-            <h3>Dryer Vent Cleaning</h3>
-            <p>Prevent fire hazards & improve safety.</p>
-          </div>
-
-          <div className="card">
-            <h3>HVAC Cleaning</h3>
-            <p>Full system cleaning for maximum efficiency.</p>
-          </div>
-
-          <div className="card">
-            <h3>Sanitization Services</h3>
-            <p>Remove bacteria & improve indoor hygiene.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= ABOUT ================= */}
-      <section className="about">
-        <h2>About Us</h2>
-        <p>
-          We are a professional duct cleaning company serving Ontario. Our goal
-          is to improve indoor air quality, reduce dust, and increase HVAC
-          efficiency for homes and businesses.
-        </p>
-      </section>
-
-      {/* ================= FAQ ================= */}
-      <section className="faq">
-        <h2>Frequently Asked Questions</h2>
-
-        <div className="faqBox">
-          <p>
-            <strong>How often should ducts be cleaned?</strong> Every 2–3 years.
-          </p>
-
-          <p>
-            <strong>Does duct cleaning improve air quality?</strong> Yes, it
-            removes dust, allergens & bacteria.
-          </p>
-
-          <p>
-            <strong>How long does service take?</strong> Usually 2–4 hours.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= CONTACT ================= */}
-      <section className="contact">
-        <h2>Contact Us</h2>
-
-        <p>📍 35 Carlton Rd, Markham, ON L3R 1Z4</p>
-        <p>📞 226-777-2863</p>
-        <p>📧 ductcleaningcanada2@gmail.com</p>
-
-        <a href="https://wa.me/12267772863" className="btnPrimary">
-          Chat on WhatsApp
-        </a>
+        <h3>Air Duct Cleaning</h3>
+        <h3>Furnace Cleaning</h3>
+        <h3>Dryer Vent Cleaning</h3>
+        <h3>HVAC Cleaning</h3>
+        <h3>Sanitization Services</h3>
       </section>
 
       {/* ================= SERVICE AREAS ================= */}
-      <section className="areasSection">
+      <section>
         <h2>Service Areas</h2>
-
-        <div className="areaGrid">
-          <span>Markham</span>
-          <span>Toronto</span>
-          <span>Vaughan</span>
-          <span>Richmond Hill</span>
-          <span>North York</span>
-          <span>Scarborough</span>
-          <span>Brampton</span>
-          <span>Mississauga</span>
-        </div>
+        <p>Markham • Toronto • Vaughan • Richmond Hill • North York</p>
       </section>
 
-      {/* ================= SOCIAL ================= */}
-      <section className="social">
-        <h2>Follow Us</h2>
-
-        <div className="socialLinks">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">WhatsApp</a>
-          <a href="#">Yelp</a>
-          <a href="#">Hotfrog</a>
-        </div>
+      {/* ================= ABOUT ================= */}
+      <section>
+        <h2>About Us</h2>
+        <p>
+          We are a professional HVAC cleaning company serving residential and
+          commercial clients across Ontario with advanced cleaning solutions.
+        </p>
       </section>
 
-      {/* ================= CTA ================= */}
-      <section className="cta">
-        <h2>Need Professional Cleaning?</h2>
+      {/* ================= BLOG SECTION (SEO BOOST) ================= */}
+      <section>
+        <h2>Latest Blogs</h2>
 
-        <a href="tel:2267772863" className="btnPrimary">
-          Call Now
-        </a>
+        <article>
+          <h3>Why Air Duct Cleaning is Important</h3>
+          <p>
+            Dirty ducts affect air quality, allergies, and HVAC efficiency.
+          </p>
+        </article>
+
+        <article>
+          <h3>How Often Should You Clean HVAC System?</h3>
+          <p>Experts recommend cleaning every 2–3 years.</p>
+        </article>
+      </section>
+
+      {/* ================= TRUST / BACKLINK SIGNAL ================= */}
+      <section>
+        <h2>Trusted Listings</h2>
+        <p>Google Business • Yelp • Yellow Pages • Hotfrog</p>
+      </section>
+
+      {/* ================= CONTACT ================= */}
+      <section>
+        <h2>Contact</h2>
+        <p>📍 Markham, Ontario</p>
+        <p>📞 226-777-2863</p>
+        <p>📧 ductcleaningcanada2@gmail.com</p>
       </section>
 
       {/* ================= FIXED BUTTONS ================= */}
-      <a href="tel:2267772863" className="sticky">
-        📞 Call Now
+      <a href="tel:2267772863" className="call">
+        Call Now
       </a>
 
-      <a
-        href="https://wa.me/12267772863"
-        target="_blank"
-        className="whatsapp"
-      >
-        💬 WhatsApp
+      <a href="https://wa.me/12267772863" className="wa">
+        WhatsApp
       </a>
 
-      {/* ================= DARK THEME CSS ================= */}
+      {/* ================= STYLES (LCP + SEO FIX) ================= */}
       <style jsx>{`
         body {
           background: #0a0a0a;
           color: #ffffff;
         }
 
+        /* HERO */
         .hero {
           position: relative;
-          height: 75vh;
+          height: 80vh;
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
-          overflow: hidden;
-          color: #fff;
         }
 
         .heroImg {
           object-fit: cover;
-          filter: brightness(0.5) contrast(1.2);
+          filter: brightness(0.55);
         }
 
         .overlay {
@@ -253,110 +153,46 @@ export default function Home() {
         .heroContent {
           position: relative;
           z-index: 2;
-          max-width: 900px;
-          padding: 20px;
+          max-width: 800px;
         }
 
-        .heroTitle {
+        h1 {
           font-size: 42px;
-          font-weight: 800;
-          color: #ffffff;
+          color: #fff;
         }
 
-        .heroSub {
-          margin: 15px 0;
+        h2, h3, p {
           color: #eaeaea;
         }
 
-        .btnWrap {
-          display: flex;
-          gap: 12px;
-          justify-content: center;
-          flex-wrap: wrap;
+        section {
+          padding: 60px 20px;
+          text-align: center;
         }
 
-        .btnPrimary {
+        .btn {
+          display: inline-block;
+          margin-top: 15px;
+          padding: 12px 20px;
           background: #00c853;
-          padding: 12px 20px;
-          border-radius: 8px;
           color: #fff;
-          text-decoration: none;
-          font-weight: 600;
-        }
-
-        .btnSecondary {
-          background: rgba(255,255,255,0.2);
-          padding: 12px 20px;
           border-radius: 8px;
-          color: #fff;
           text-decoration: none;
         }
 
-        .section {
-          padding: 60px 20px;
-          max-width: 1000px;
-          margin: auto;
-        }
-
-        .titleCenter {
-          text-align: center;
-          margin-bottom: 25px;
-          color: #fff;
-        }
-
-        .links a {
-          color: #fff;
-          margin: 0 10px;
-          text-decoration: none;
-        }
-
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-          gap: 15px;
-        }
-
-        .card {
-          background: #111;
-          border: 1px solid #333;
-          padding: 15px;
-          border-radius: 8px;
-        }
-
-        .about,
-        .faq,
-        .contact,
-        .social,
-        .areasSection {
-          padding: 60px 20px;
-          text-align: center;
-          color: #fff;
-        }
-
-        .socialLinks a {
-          color: #fff;
-          margin: 0 10px;
-        }
-
-        .areaGrid span {
-          color: #fff;
-          margin: 5px;
-        }
-
-        .sticky {
+        .call {
           position: fixed;
           bottom: 15px;
           left: 50%;
           transform: translateX(-50%);
           background: #00c853;
-          padding: 12px 24px;
+          padding: 12px 20px;
           border-radius: 50px;
           color: #fff;
           text-decoration: none;
-          font-weight: 600;
         }
 
-        .whatsapp {
+        .wa {
           position: fixed;
           bottom: 80px;
           right: 15px;
