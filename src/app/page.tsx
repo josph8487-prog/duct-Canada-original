@@ -1,23 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/* =========================
+   SEO METADATA (FULL)
+========================= */
 export const metadata = {
-  title: "Air Duct Cleaning Markham, Toronto & GTA | Duct Canada",
+  title:
+    "Air Duct Cleaning Markham, Toronto & GTA | Furnace & HVAC Cleaning Experts",
   description:
-    "Professional air duct, furnace, dryer vent & HVAC cleaning services in Markham, Toronto & GTA. Fast and reliable service.",
+    "Professional air duct, furnace, dryer vent & HVAC cleaning services in Markham, Toronto, Vaughan, Richmond Hill & GTA. Fast, affordable & trusted service.",
+  keywords:
+    "air duct cleaning, furnace cleaning, HVAC cleaning, dryer vent cleaning Toronto, Markham duct cleaning",
   openGraph: {
     title: "Air Duct Cleaning GTA",
-    description:
-      "Professional duct cleaning services in Markham, Toronto & GTA.",
+    description: "Trusted duct cleaning services in Toronto & GTA",
     url: "https://yourdomain.com",
     type: "website",
   },
 };
 
+/* =========================
+   MAIN COMPONENT
+========================= */
 export default function Home() {
   return (
     <>
-      {/* SEO SCHEMA */}
+      {/* ================= SCHEMA MARKUP ================= */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -26,22 +34,35 @@ export default function Home() {
             "@type": "LocalBusiness",
             name: "Duct Cleaning Canada",
             telephone: "+1-226-777-2863",
-            areaServed: ["Markham", "Toronto", "Vaughan", "Richmond Hill"],
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Toronto",
+              addressRegion: "ON",
+              addressCountry: "CA",
+            },
+            areaServed: [
+              "Markham",
+              "Toronto",
+              "Vaughan",
+              "Richmond Hill",
+              "North York",
+              "Scarborough",
+            ],
             serviceType: [
               "Air Duct Cleaning",
               "Furnace Cleaning",
-              "Dryer Vent Cleaning",
               "HVAC Cleaning",
+              "Dryer Vent Cleaning",
             ],
           }),
         }}
       />
 
-      {/* HERO SECTION (OPTIMIZED LCP) */}
+      {/* ================= HERO SECTION ================= */}
       <section className="hero">
         <Image
           src="/images/services/air-duct-cleaning.jpg"
-          alt="Air duct cleaning service"
+          alt="Air duct cleaning GTA"
           fill
           priority
           quality={60}
@@ -52,15 +73,16 @@ export default function Home() {
         <div className="overlay"></div>
 
         <div className="heroContent">
-          <h1 className="title">
+          <h1 className="heroTitle">
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
 
-          <p className="subtitle">
-            Professional duct, furnace, dryer vent & HVAC cleaning services.
+          <p className="heroSub">
+            Professional duct cleaning, furnace cleaning & HVAC maintenance
+            services across Ontario with fast response time.
           </p>
 
-          <div className="buttons">
+          <div className="heroButtons">
             <a href="tel:2267772863" className="btnPrimary">
               Call Now
             </a>
@@ -69,60 +91,110 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="areas">
+          <div className="heroAreas">
             Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
           </div>
         </div>
       </section>
 
-      {/* SERVICES (LIGHTWEIGHT) */}
+      {/* ================= SERVICES SECTION ================= */}
       <section className="section">
-        <h2>Our Services</h2>
+        <h2 className="sectionTitle">Our Professional Services</h2>
 
         <div className="grid">
-          {[
-            "Air Duct Cleaning",
-            "Furnace Cleaning",
-            "Dryer Vent Cleaning",
-            "HVAC Cleaning",
-          ].map((item, i) => (
-            <div key={i} className="card">
-              <h3>{item}</h3>
-              <p>Professional cleaning service across GTA</p>
-            </div>
-          ))}
+          <div className="card">
+            <h3>Air Duct Cleaning</h3>
+            <p>Improve indoor air quality & airflow efficiency.</p>
+          </div>
+
+          <div className="card">
+            <h3>Furnace Cleaning</h3>
+            <p>Increase heating performance & system life.</p>
+          </div>
+
+          <div className="card">
+            <h3>Dryer Vent Cleaning</h3>
+            <p>Prevent fire hazards and improve dryer efficiency.</p>
+          </div>
+
+          <div className="card">
+            <h3>HVAC Cleaning</h3>
+            <p>Full system cleaning for better performance.</p>
+          </div>
         </div>
       </section>
 
-      {/* FAQ (SEO BOOST) */}
-      <section className="faqSection">
+      {/* ================= ABOUT SECTION ================= */}
+      <section className="about">
+        <h2>Why Choose Us?</h2>
+        <p>
+          We provide professional duct cleaning services using advanced tools
+          and trained technicians. Our goal is to improve indoor air quality,
+          reduce energy bills, and extend HVAC system life.
+        </p>
+      </section>
+
+      {/* ================= FAQ SECTION ================= */}
+      <section className="faq">
         <h2>Frequently Asked Questions</h2>
 
         <div className="faqBox">
           <p>
             <strong>How often should ducts be cleaned?</strong> Every 2–3 years.
           </p>
+
           <p>
-            <strong>Is it worth it?</strong> Yes, improves air quality & HVAC
-            efficiency.
+            <strong>Does duct cleaning improve air quality?</strong> Yes,
+            significantly reduces dust and allergens.
+          </p>
+
+          <p>
+            <strong>How long does service take?</strong> Usually 2–4 hours
+            depending on house size.
           </p>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ================= SERVICE AREAS ================= */}
+      <section className="areas">
+        <h2>Service Areas</h2>
+
+        <div className="areaGrid">
+          <span>Markham</span>
+          <span>Toronto</span>
+          <span>Vaughan</span>
+          <span>Richmond Hill</span>
+          <span>North York</span>
+          <span>Scarborough</span>
+          <span>Brampton</span>
+          <span>Mississauga</span>
+        </div>
+      </section>
+
+      {/* ================= REVIEWS ================= */}
+      <section className="reviews">
+        <h2>Customer Reviews</h2>
+        <p>⭐⭐⭐⭐⭐ Rated 5/5 by customers across GTA</p>
+        <p>
+          “Excellent service, very professional team, highly recommended!”
+        </p>
+      </section>
+
+      {/* ================= CTA ================= */}
       <section className="cta">
-        <h2>Need Duct Cleaning Service?</h2>
+        <h2>Need Professional Duct Cleaning?</h2>
+        <p>Call now for fast and reliable service</p>
+
         <a href="tel:2267772863" className="btnPrimary">
           Call Now
         </a>
       </section>
 
-      {/* STICKY CALL */}
+      {/* ================= STICKY BUTTONS ================= */}
       <a href="tel:2267772863" className="stickyCall">
         📞 Call Now
       </a>
 
-      {/* WHATSAPP */}
       <a
         href="https://wa.me/12267772863"
         target="_blank"
@@ -131,17 +203,17 @@ export default function Home() {
         💬 WhatsApp
       </a>
 
-      {/* OPTIMIZED CSS (NO RENDER BLOCK ISSUES) */}
+      {/* ================= CSS (FULL OPTIMIZED) ================= */}
       <style jsx>{`
         .hero {
           position: relative;
-          height: 70vh;
+          height: 75vh;
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
+          color: #fff;
           overflow: hidden;
-          color: white;
         }
 
         .heroImg {
@@ -157,22 +229,21 @@ export default function Home() {
         .heroContent {
           position: relative;
           z-index: 2;
-          max-width: 850px;
+          max-width: 900px;
           padding: 20px;
         }
 
-        .title {
-          font-size: clamp(24px, 5vw, 42px);
+        .heroTitle {
+          font-size: 42px;
           font-weight: 700;
-          color: #ffffff;
         }
 
-        .subtitle {
+        .heroSub {
+          margin: 15px 0;
           color: #e0e0e0;
-          margin: 10px 0 20px;
         }
 
-        .buttons {
+        .heroButtons {
           display: flex;
           gap: 12px;
           justify-content: center;
@@ -185,7 +256,6 @@ export default function Home() {
           border-radius: 8px;
           color: white;
           text-decoration: none;
-          font-weight: 600;
         }
 
         .btnSecondary {
@@ -196,16 +266,21 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .areas {
+        .heroAreas {
           margin-top: 15px;
           font-size: 13px;
-          color: #cccccc;
+          color: #ccc;
         }
 
         .section {
-          padding: 50px 20px;
+          padding: 60px 20px;
           max-width: 1000px;
           margin: auto;
+        }
+
+        .sectionTitle {
+          text-align: center;
+          margin-bottom: 25px;
         }
 
         .grid {
@@ -220,7 +295,12 @@ export default function Home() {
           border-radius: 8px;
         }
 
-        .faqSection {
+        .about {
+          padding: 60px 20px;
+          text-align: center;
+        }
+
+        .faq {
           padding: 60px 20px;
           background: #f9f9f9;
           text-align: center;
@@ -230,6 +310,23 @@ export default function Home() {
           max-width: 800px;
           margin: auto;
           text-align: left;
+        }
+
+        .areas {
+          padding: 60px 20px;
+          text-align: center;
+        }
+
+        .areaGrid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+        }
+
+        .reviews {
+          padding: 60px 20px;
+          text-align: center;
         }
 
         .cta {
@@ -259,8 +356,8 @@ export default function Home() {
           color: white;
           padding: 12px 16px;
           border-radius: 50px;
-          text-decoration: none;
           font-weight: 600;
+          text-decoration: none;
           z-index: 9999;
         }
       `}</style>
