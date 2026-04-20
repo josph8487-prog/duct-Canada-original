@@ -1,208 +1,213 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Air Duct Cleaning Markham, Toronto & GTA | HVAC Experts",
-  description:
-    "Professional air duct, furnace, dryer vent & HVAC cleaning services across GTA.",
-  keywords:
-    "duct cleaning Toronto, furnace cleaning Markham, HVAC cleaning GTA",
-};
-
 export default function Home() {
+
+  const phone = "+14379999999";
+
+  const locations = [
+    { name: "Markham", slug: "markham" },
+    { name: "Toronto", slug: "toronto" },
+    { name: "Vaughan", slug: "vaughan" },
+    { name: "Richmond Hill", slug: "richmond-hill" },
+  ];
+
   return (
     <>
-      {/* ================= SCHEMA ================= */}
+      {/* ================= SEO META ================= */}
+      <Head>
+        <title>
+          Air Duct Cleaning Markham, Toronto, Vaughan & Richmond Hill | $110
+        </title>
+
+        <meta
+          name="description"
+          content="Affordable air duct cleaning services in Markham, Toronto, Vaughan & Richmond Hill. Only $110. Same day service available."
+        />
+
+        <meta
+          name="keywords"
+          content="air duct cleaning Markham, duct cleaning Toronto, Vaughan duct cleaning, Richmond Hill air duct cleaning"
+        />
+
+        <link rel="canonical" href="https://yourwebsite.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Air Duct Cleaning GTA | $110 Offer" />
+        <meta property="og:description" content="Book professional duct cleaning today." />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Geo Tags */}
+        <meta name="geo.region" content="CA-ON" />
+        <meta name="geo.placename" content="Markham" />
+        <meta name="geo.position" content="43.8561;-79.3370" />
+        <meta name="ICBM" content="43.8561, -79.3370" />
+      </Head>
+
+      {/* ================= TOP OFFER ================= */}
+      <div style={{ background: "#000", color: "#fff", textAlign: "center", padding: "10px" }}>
+        🔥 FULL DUCT CLEANING ONLY $110
+        <a href={`tel:${phone}`} style={{ marginLeft: 10, color: "#00ff00" }}>
+          Call Now
+        </a>
+      </div>
+
+      {/* ================= HERO ================= */}
+      <section style={{ padding: "60px 20px", display: "flex", flexWrap: "wrap" }}>
+
+        <div style={{ flex: 1 }}>
+          <h1>
+            Air Duct Cleaning in Markham, Toronto, Vaughan & Richmond Hill
+          </h1>
+
+          <p>
+            Professional duct cleaning services to improve indoor air quality,
+            remove dust, allergens and increase HVAC efficiency.
+          </p>
+
+          <a href={`tel:${phone}`} className="btn btn-primary">
+            📞 Call Now
+          </a>
+
+          <Link href="/services" className="btn btn-secondary">
+            View Services
+          </Link>
+        </div>
+
+        <div style={{ flex: 1, position: "relative", height: 400 }}>
+          <Image
+            src="/images/services/air-duct-cleaning.jpg"
+            alt="Air duct cleaning Markham Toronto"
+            fill
+            priority
+            sizes="(max-width:768px) 100vw, 50vw"
+          />
+        </div>
+      </section>
+
+      {/* ================= INTERNAL LINK BOOST ================= */}
+      <section style={{ padding: "50px", textAlign: "center" }}>
+        <h2>Air Duct Cleaning Services Near You</h2>
+
+        <p>
+          We provide professional duct cleaning services across all major GTA cities.
+        </p>
+
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
+          {locations.map((loc, i) => (
+            <Link key={i} href={`/location/${loc.slug}`}>
+              Air Duct Cleaning {loc.name}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= CONTENT BOOST (VERY IMPORTANT) ================= */}
+      <section style={{ padding: "50px", maxWidth: "900px", margin: "0 auto" }}>
+        <h2>Best Air Duct Cleaning Company in GTA</h2>
+
+        <p>
+          If you are looking for reliable and affordable air duct cleaning in Markham, Toronto,
+          Vaughan or Richmond Hill, our expert team is here to help. We use advanced equipment
+          to remove dust, debris, allergens and improve your indoor air quality.
+        </p>
+
+        <p>
+          Our professional technicians ensure your HVAC system works efficiently, helping you
+          save energy and reduce utility costs. With our $110 special offer, you get complete
+          duct cleaning with no hidden charges.
+        </p>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section style={{ background: "#f4f4f4", padding: "60px", textAlign: "center" }}>
+        <h2>Book Your Duct Cleaning Today</h2>
+        <p>Limited Time Offer – Only $110</p>
+
+        <a href={`tel:${phone}`} className="btn btn-primary">
+          📞 Call Now
+        </a>
+      </section>
+
+      {/* ================= FAQ ================= */}
+      <section style={{ padding: "50px" }}>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>How often should air ducts be cleaned?</h3>
+        <p>Every 2-3 years depending on usage.</p>
+
+        <h3>Do you serve all GTA cities?</h3>
+        <p>Yes, including Markham, Toronto, Vaughan and Richmond Hill.</p>
+      </section>
+
+      {/* ================= STICKY CALL ================= */}
+      <a
+        href={`tel:${phone}`}
+        style={{
+          position: "fixed",
+          bottom: 20,
+          right: 20,
+          background: "#28a745",
+          color: "#fff",
+          padding: "15px 20px",
+          borderRadius: "50px",
+          fontWeight: "bold",
+          zIndex: 999
+        }}
+      >
+        📞 Call Now
+      </a>
+
+      {/* ================= FULL ADVANCED SCHEMA ================= */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Duct Cleaning Canada",
-            telephone: "+1-226-777-2863",
-            address: "Markham, Ontario, Canada",
-            areaServed: ["Markham", "Toronto", "Vaughan", "Richmond Hill"],
-          }),
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "name": "Air Duct Cleaning GTA",
+                "url": "https://yourwebsite.com",
+                "telephone": phone,
+                "priceRange": "$110",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Markham",
+                  "addressRegion": "ON",
+                  "addressCountry": "CA"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "43.8561",
+                  "longitude": "-79.3370"
+                },
+                "areaServed": ["Markham", "Toronto", "Vaughan", "Richmond Hill"]
+              },
+              {
+                "@type": "Service",
+                "name": "Air Duct Cleaning",
+                "areaServed": "GTA"
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How much does duct cleaning cost?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our complete duct cleaning service costs only $110."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
         }}
       />
-
-      {/* ================= HERO ================= */}
-      <header className="hero">
-        <Image
-          src="/images/services/air-duct-cleaning.jpg"
-          alt="Air duct cleaning GTA"
-          fill
-          priority
-          sizes="100vw"
-          quality={60}
-          className="heroImg"
-        />
-
-        <div className="overlay" />
-
-        <div className="heroContent">
-          <h1>Air Duct Cleaning Services in GTA</h1>
-
-          <h2>Professional HVAC Cleaning Experts</h2>
-
-          <p>
-            Improve indoor air quality with expert duct, furnace & HVAC cleaning.
-          </p>
-
-          <a href="tel:2267772863" className="btn">
-            Call Now
-          </a>
-        </div>
-      </header>
-
-      {/* ================= SERVICES ================= */}
-      <section>
-        <h2>Our Services</h2>
-
-        <h3>Air Duct Cleaning</h3>
-        <h3>Furnace Cleaning</h3>
-        <h3>Dryer Vent Cleaning</h3>
-        <h3>HVAC Cleaning</h3>
-        <h3>Sanitization Services</h3>
-      </section>
-
-      {/* ================= SERVICE AREAS ================= */}
-      <section>
-        <h2>Service Areas</h2>
-        <p>Markham • Toronto • Vaughan • Richmond Hill • North York</p>
-      </section>
-
-      {/* ================= ABOUT ================= */}
-      <section>
-        <h2>About Us</h2>
-        <p>
-          We are a professional HVAC cleaning company serving residential and
-          commercial clients across Ontario with advanced cleaning solutions.
-        </p>
-      </section>
-
-      {/* ================= BLOG SECTION (SEO BOOST) ================= */}
-      <section>
-        <h2>Latest Blogs</h2>
-
-        <article>
-          <h3>Why Air Duct Cleaning is Important</h3>
-          <p>
-            Dirty ducts affect air quality, allergies, and HVAC efficiency.
-          </p>
-        </article>
-
-        <article>
-          <h3>How Often Should You Clean HVAC System?</h3>
-          <p>Experts recommend cleaning every 2–3 years.</p>
-        </article>
-      </section>
-
-      {/* ================= TRUST / BACKLINK SIGNAL ================= */}
-      <section>
-        <h2>Trusted Listings</h2>
-        <p>Google Business • Yelp • Yellow Pages • Hotfrog</p>
-      </section>
-
-      {/* ================= CONTACT ================= */}
-      <section>
-        <h2>Contact</h2>
-        <p>📍 Markham, Ontario</p>
-        <p>📞 226-777-2863</p>
-        <p>📧 ductcleaningcanada2@gmail.com</p>
-      </section>
-
-      {/* ================= FIXED BUTTONS ================= */}
-      <a href="tel:2267772863" className="call">
-        Call Now
-      </a>
-
-      <a href="https://wa.me/12267772863" className="wa">
-        WhatsApp
-      </a>
-
-      {/* ================= STYLES (LCP + SEO FIX) ================= */}
-      <style jsx>{`
-        body {
-          background: #0a0a0a;
-          color: #ffffff;
-        }
-
-        /* HERO */
-        .hero {
-          position: relative;
-          height: 80vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .heroImg {
-          object-fit: cover;
-          filter: brightness(0.55);
-        }
-
-        .overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.85);
-        }
-
-        .heroContent {
-          position: relative;
-          z-index: 2;
-          max-width: 800px;
-        }
-
-        h1 {
-          font-size: 42px;
-          color: #fff;
-        }
-
-        h2, h3, p {
-          color: #eaeaea;
-        }
-
-        section {
-          padding: 60px 20px;
-          text-align: center;
-        }
-
-        .btn {
-          display: inline-block;
-          margin-top: 15px;
-          padding: 12px 20px;
-          background: #00c853;
-          color: #fff;
-          border-radius: 8px;
-          text-decoration: none;
-        }
-
-        .call {
-          position: fixed;
-          bottom: 15px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: #00c853;
-          padding: 12px 20px;
-          border-radius: 50px;
-          color: #fff;
-          text-decoration: none;
-        }
-
-        .wa {
-          position: fixed;
-          bottom: 80px;
-          right: 15px;
-          background: #25d366;
-          padding: 12px 16px;
-          border-radius: 50px;
-          color: #fff;
-          text-decoration: none;
-        }
-      `}</style>
     </>
   );
 }
