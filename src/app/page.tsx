@@ -1,40 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/* ✅ SEO META (App Router correct way) */
 export const metadata = {
   title: "Air Duct Cleaning Markham, Toronto & GTA | Duct Canada",
   description:
-    "Professional air duct, furnace, dryer vent & HVAC cleaning services in Markham, Toronto & GTA. Call now for fast service.",
+    "Professional air duct, furnace, dryer vent & HVAC cleaning services in Markham, Toronto & GTA. Fast and reliable service.",
+  openGraph: {
+    title: "Air Duct Cleaning GTA",
+    description:
+      "Professional duct cleaning services in Markham, Toronto & GTA.",
+    url: "https://yourdomain.com",
+    type: "website",
+  },
 };
 
 export default function Home() {
-  const services = [
-    {
-      title: "Air Duct Cleaning",
-      text: "Improve air quality and airflow with professional duct cleaning.",
-      image: "/images/services/air-duct-cleaning.jpg",
-    },
-    {
-      title: "Furnace Cleaning",
-      text: "Boost heating efficiency and extend furnace life.",
-      image: "/images/services/furnace-cleaning.jpg",
-    },
-    {
-      title: "Dryer Vent Cleaning",
-      text: "Prevent fire hazards and improve dryer performance.",
-      image: "/images/services/dryer-vent-cleaning.jpg",
-    },
-    {
-      title: "HVAC Cleaning",
-      text: "Complete HVAC cleaning for better performance.",
-      image: "/images/services/blower-fan-cleaning.jpg",
-    },
-  ];
-
   return (
     <>
-      {/* ✅ SCHEMA */}
+      {/* SEO SCHEMA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -43,234 +26,244 @@ export default function Home() {
             "@type": "LocalBusiness",
             name: "Duct Cleaning Canada",
             telephone: "+1-226-777-2863",
-            areaServed: [
-              "Markham",
-              "Toronto",
-              "Vaughan",
-              "Richmond Hill",
-              "North York",
+            areaServed: ["Markham", "Toronto", "Vaughan", "Richmond Hill"],
+            serviceType: [
+              "Air Duct Cleaning",
+              "Furnace Cleaning",
+              "Dryer Vent Cleaning",
+              "HVAC Cleaning",
             ],
           }),
         }}
       />
 
-      {/* HERO */}
-      <section style={heroSection}>
-        {/* ✅ FAST LCP IMAGE */}
+      {/* HERO SECTION (OPTIMIZED LCP) */}
+      <section className="hero">
         <Image
           src="/images/services/air-duct-cleaning.jpg"
           alt="Air duct cleaning service"
           fill
           priority
           quality={60}
-          style={{ objectFit: "cover" }}
+          sizes="100vw"
+          className="heroImg"
         />
 
-        {/* OVERLAY */}
-        <div style={overlay}></div>
+        <div className="overlay"></div>
 
-        <div style={heroContent}>
-          <h1 style={heading}>
+        <div className="heroContent">
+          <h1 className="title">
             Air Duct Cleaning Services in Markham, Toronto & GTA
           </h1>
 
-          <p style={subText}>
-            Professional duct, furnace, dryer vent & HVAC cleaning across Ontario.
+          <p className="subtitle">
+            Professional duct, furnace, dryer vent & HVAC cleaning services.
           </p>
 
-          <div style={btnWrap}>
-            <a href="tel:2267772863" style={btnGlass}>
+          <div className="buttons">
+            <a href="tel:2267772863" className="btnPrimary">
               Call Now
             </a>
-
-            <Link href="/services" style={btnPrimary}>
+            <Link href="/services" className="btnSecondary">
               Explore Services
             </Link>
           </div>
 
-          <div style={serviceAreas}>
+          <div className="areas">
             Serving: Markham • Toronto • Vaughan • Richmond Hill • North York
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section style={{ padding: "60px 20px" }}>
-        <div style={{ maxWidth: "1100px", margin: "auto" }}>
-          <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
-            Our Services
-          </h2>
+      {/* SERVICES (LIGHTWEIGHT) */}
+      <section className="section">
+        <h2>Our Services</h2>
 
-          <div style={grid}>
-            {services.map((service, index) => (
-              <div key={index} style={card}>
-                <div style={{ position: "relative", height: "180px" }}>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    loading="lazy"
-                    quality={60}
-                    sizes="(max-width:768px) 100vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-
-                <div style={{ padding: "15px" }}>
-                  <h3>{service.title}</h3>
-                  <p style={{ fontSize: "14px" }}>{service.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="grid">
+          {[
+            "Air Duct Cleaning",
+            "Furnace Cleaning",
+            "Dryer Vent Cleaning",
+            "HVAC Cleaning",
+          ].map((item, i) => (
+            <div key={i} className="card">
+              <h3>{item}</h3>
+              <p>Professional cleaning service across GTA</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* FAQ */}
-      <section style={{ padding: "60px 20px", background: "#f9f9f9" }}>
-        <h2 style={{ textAlign: "center" }}>
-          Frequently Asked Questions
-        </h2>
+      {/* FAQ (SEO BOOST) */}
+      <section className="faqSection">
+        <h2>Frequently Asked Questions</h2>
 
-        <div style={{ maxWidth: "800px", margin: "20px auto" }}>
-          <details>
-            <summary>How often should air ducts be cleaned?</summary>
-            <p>Every 2–3 years depending on dust and usage.</p>
-          </details>
-
-          <details>
-            <summary>Is duct cleaning worth it?</summary>
-            <p>Yes, it improves air quality and HVAC efficiency.</p>
-          </details>
+        <div className="faqBox">
+          <p>
+            <strong>How often should ducts be cleaned?</strong> Every 2–3 years.
+          </p>
+          <p>
+            <strong>Is it worth it?</strong> Yes, improves air quality & HVAC
+            efficiency.
+          </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
+      <section className="cta">
         <h2>Need Duct Cleaning Service?</h2>
-        <p>Call now for fast service</p>
-
-        <a href="tel:2267772863" style={btnPrimary}>
+        <a href="tel:2267772863" className="btnPrimary">
           Call Now
         </a>
       </section>
 
       {/* STICKY CALL */}
-      <a href="tel:2267772863" style={stickyCall}>
+      <a href="tel:2267772863" className="stickyCall">
         📞 Call Now
       </a>
 
       {/* WHATSAPP */}
-      <a href="https://wa.me/12267772863" target="_blank" style={whatsappBtn}>
+      <a
+        href="https://wa.me/12267772863"
+        target="_blank"
+        className="whatsapp"
+      >
         💬 WhatsApp
       </a>
+
+      {/* OPTIMIZED CSS (NO RENDER BLOCK ISSUES) */}
+      <style jsx>{`
+        .hero {
+          position: relative;
+          height: 70vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          overflow: hidden;
+          color: white;
+        }
+
+        .heroImg {
+          object-fit: cover;
+        }
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.65);
+        }
+
+        .heroContent {
+          position: relative;
+          z-index: 2;
+          max-width: 850px;
+          padding: 20px;
+        }
+
+        .title {
+          font-size: clamp(24px, 5vw, 42px);
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .subtitle {
+          color: #e0e0e0;
+          margin: 10px 0 20px;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .btnPrimary {
+          background: #00c853;
+          padding: 12px 20px;
+          border-radius: 8px;
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .btnSecondary {
+          background: rgba(255, 255, 255, 0.15);
+          padding: 12px 20px;
+          border-radius: 8px;
+          color: white;
+          text-decoration: none;
+        }
+
+        .areas {
+          margin-top: 15px;
+          font-size: 13px;
+          color: #cccccc;
+        }
+
+        .section {
+          padding: 50px 20px;
+          max-width: 1000px;
+          margin: auto;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 15px;
+        }
+
+        .card {
+          padding: 15px;
+          border: 1px solid #eee;
+          border-radius: 8px;
+        }
+
+        .faqSection {
+          padding: 60px 20px;
+          background: #f9f9f9;
+          text-align: center;
+        }
+
+        .faqBox {
+          max-width: 800px;
+          margin: auto;
+          text-align: left;
+        }
+
+        .cta {
+          text-align: center;
+          padding: 60px 20px;
+        }
+
+        .stickyCall {
+          position: fixed;
+          bottom: 15px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #00c853;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          z-index: 9999;
+        }
+
+        .whatsapp {
+          position: fixed;
+          bottom: 80px;
+          right: 15px;
+          background: #25d366;
+          color: white;
+          padding: 12px 16px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          z-index: 9999;
+        }
+      `}</style>
     </>
   );
 }
-
-/* 🔧 STYLES (clean + error free) */
-const heroSection = {
-  position: "relative",
-  padding: "80px 20px",
-  color: "#fff",
-  textAlign: "center",
-  minHeight: "400px",
-};
-
-const overlay = {
-  position: "absolute",
-  inset: 0,
-  background: "linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85))",
-};
-
-const heroContent = {
-  position: "relative",
-  zIndex: 2,
-  maxWidth: "900px",
-  margin: "auto",
-};
-
-const heading = {
-  fontSize: "clamp(26px, 5vw, 42px)",
-  fontWeight: "700",
-  marginBottom: "15px",
-  color: "#e8f5e9",
-  textShadow: "0 3px 12px rgba(0,0,0,0.9)",
-};
-
-const subText = {
-  fontSize: "clamp(15px, 4vw, 18px)",
-  marginBottom: "25px",
-  color: "#eeeeee",
-};
-
-const btnWrap = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "15px",
-  flexWrap: "wrap",
-};
-
-const serviceAreas = {
-  marginTop: "20px",
-  fontSize: "14px",
-  color: "#ccc",
-};
-
-const grid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(250px,1fr))",
-  gap: "20px",
-};
-
-const card = {
-  borderRadius: "10px",
-  overflow: "hidden",
-  boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
-};
-
-const btnPrimary = {
-  padding: "14px 24px",
-  background: "#00c853",
-  borderRadius: "8px",
-  color: "#fff",
-  textDecoration: "none",
-  fontWeight: "600",
-};
-
-const btnGlass = {
-  padding: "14px 24px",
-  background: "rgba(255,255,255,0.15)",
-  backdropFilter: "blur(10px)",
-  border: "1px solid rgba(255,255,255,0.3)",
-  borderRadius: "8px",
-  color: "#fff",
-  textDecoration: "none",
-  fontWeight: "600",
-};
-
-const stickyCall = {
-  position: "fixed",
-  bottom: "15px",
-  left: "50%",
-  transform: "translateX(-50%)",
-  background: "#00c853",
-  color: "#fff",
-  padding: "14px 30px",
-  borderRadius: "50px",
-  fontWeight: "700",
-  zIndex: 9999,
-};
-
-const whatsappBtn = {
-  position: "fixed",
-  bottom: "80px",
-  right: "15px",
-  background: "#25D366",
-  color: "#fff",
-  padding: "12px 18px",
-  borderRadius: "50px",
-  fontWeight: "600",
-  textDecoration: "none",
-  zIndex: 9999,
-};
