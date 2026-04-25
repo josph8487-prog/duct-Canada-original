@@ -1,114 +1,59 @@
-import Image from "next/image";
-import Link from "next/link";
+// ============================= // FULL NEXT.JS WEBSITE (APP ROUTER) // =============================
 
-export const metadata = {
-  title: "Air Duct Cleaning Markham & Toronto | Premium HVAC Experts",
-  description:
-    "Top-rated duct cleaning services in Markham, Toronto & GTA. Improve air quality with certified professionals.",
-};
+// 1. app/layout.tsx export default function RootLayout({ children }: { children: React.ReactNode }) { return ( <html lang="en"> <body> <header className="header"> <div className="container nav"> <h2>Duct Cleaning Canada</h2> <nav> <a href="/">Home</a> <a href="/services">Services</a> <a href="/contact">Contact</a> </nav> </div> </header>
 
-export default function Home() {
-  return (
-    <main>
-      {/* HERO */}
-      <section className="hero">
-        <div className="overlay"></div>
+{children}
 
-        <div className="container heroContent">
-          <div className="heroLeft">
-            <h1>
-              Clean Air Starts <br />
-              <span>Inside Your Ducts</span>
-            </h1>
+    <footer className="footer">
+      <div className="container">
+        <p>© 2026 Duct Cleaning Canada. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
 
-            <p>
-              Professional air duct, furnace & dryer vent cleaning across
-              Markham & GTA. Trusted by hundreds of homeowners.
-            </p>
+); }
 
-            <div className="ctaRow">
-              <a href="tel:+16470000000" className="btn primary">
-                Call Now
-              </a>
+// ============================= // 2. app/page.tsx (HOMEPAGE) // ============================= import Link from "next/link";
 
-              <Link href="/contact" className="btn ghost">
-                Get Quote
-              </Link>
-            </div>
+export default function Home() { return ( <main> <section className="hero"> <div className="container"> <h1>Professional Air Duct Cleaning</h1> <p>Serving Markham, Toronto & GTA</p> <a href="tel:+16470000000" className="btn">Call Now</a> </div> </section>
 
-            <div className="trustBox">
-              ⭐ 5-Star Rated &nbsp; | &nbsp; Same Day Service &nbsp; | &nbsp;
-              Certified Experts
-            </div>
-          </div>
+<section className="section">
+    <div className="container">
+      <h2>Our Services</h2>
+      <div className="grid">
+        <div className="card">Air Duct Cleaning</div>
+        <div className="card">Furnace Cleaning</div>
+        <div className="card">Dryer Vent Cleaning</div>
+      </div>
+    </div>
+  </section>
+</main>
 
-          <div className="heroRight">
-            <div className="glassCard">
-              <h3>Book Your Service</h3>
-              <p>Fast response within 30 minutes</p>
+); }
 
-              <a href="tel:+16470000000" className="btn primary full">
-                Call Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+// ============================= // 3. app/services/page.tsx // ============================= export default function Services() { return ( <main className="section container"> <h1>Our Services</h1> <p>We provide full HVAC cleaning services.</p> </main> ); }
 
-      {/* SERVICES */}
-      <section className="section">
-        <div className="container">
-          <h2 className="heading">Our Services</h2>
+// ============================= // 4. app/contact/page.tsx // ============================= export default function Contact() { return ( <main className="section container"> <h1>Contact Us</h1> <p>Call us for fast service</p> <a href="tel:+16470000000" className="btn">Call Now</a> </main> ); }
 
-          <div className="serviceGrid">
-            {services.map((s, i) => (
-              <div key={i} className="serviceCard">
-                <div className="imgWrap">
-                  <Image src={s.image} alt={s.title} fill />
-                </div>
+// ============================= // 5. app/globals.css // ============================= body { margin: 0; font-family: Arial; background: #0f172a; color: white; }
 
-                <div className="cardContent">
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+.container { max-width: 1100px; margin: auto; padding: 20px; }
 
-      {/* CTA STRIP */}
-      <section className="ctaStrip">
-        <div className="container stripContent">
-          <h2>Need Urgent Cleaning?</h2>
-          <a href="tel:+16470000000" className="btn primary">
-            Call Now
-          </a>
-        </div>
-      </section>
-    </main>
-  );
-}
+.header { background: black; padding: 15px 0; }
 
-const services = [
-  {
-    title: "Air Duct Cleaning",
-    desc: "Remove dust & allergens for cleaner air.",
-    image: "/images/services/air-duct-cleaning.jpg",
-  },
-  {
-    title: "Furnace Cleaning",
-    desc: "Improve heating efficiency & lifespan.",
-    image: "/images/services/furnace-cleaning.jpg",
-  },
-  {
-    title: "Dryer Vent Cleaning",
-    desc: "Prevent fire hazards & improve drying.",
-    image: "/images/services/dryer-vent-cleaning.jpg",
-  },
-  {
-    title: "HVAC Cleaning",
-    desc: "Complete system cleaning service.",
-    image: "/images/services/blower-fan-cleaning.jpg",
-  },
-];
+.nav { display: flex; justify-content: space-between; }
+
+nav a { margin-left: 15px; color: white; text-decoration: none; }
+
+.hero { padding: 100px 20px; text-align: center; background: linear-gradient(45deg,#0077ff,#00e0ff); }
+
+.btn { background: white; color: black; padding: 10px 20px; display: inline-block; margin-top: 10px; }
+
+.section { padding: 60px 20px; }
+
+.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+
+.card { background: #1e293b; padding: 20px; }
+
+.footer { background: black; text-align: center; padding: 20px; }
