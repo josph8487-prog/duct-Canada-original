@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// ✅ METADATA
 export const metadata = {
-  title: "Air Duct Cleaning Markham & Toronto | Professional HVAC Experts",
+  title: "Air Duct Cleaning Markham & Toronto | Premium HVAC Experts",
   description:
-    "Top-rated air duct cleaning in Markham, Toronto & GTA. Book professional furnace, dryer vent & HVAC cleaning today.",
+    "Top-rated duct cleaning services in Markham, Toronto & GTA. Improve air quality with certified professionals.",
 };
 
 export default function Home() {
@@ -13,40 +12,45 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero">
-        <div className="container heroWrap">
-          <div className="heroText">
+        <div className="overlay"></div>
+
+        <div className="container heroContent">
+          <div className="heroLeft">
             <h1>
-              Breathe Cleaner Air <br />
-              <span>Professional Duct Cleaning</span>
+              Clean Air Starts <br />
+              <span>Inside Your Ducts</span>
             </h1>
 
             <p>
-              We provide expert air duct, furnace & dryer vent cleaning services
-              across Markham & GTA.
+              Professional air duct, furnace & dryer vent cleaning across
+              Markham & GTA. Trusted by hundreds of homeowners.
             </p>
 
-            <div className="buttons">
+            <div className="ctaRow">
               <a href="tel:+16470000000" className="btn primary">
                 Call Now
               </a>
 
-              <Link href="/contact" className="btn secondary">
-                Get Free Quote
+              <Link href="/contact" className="btn ghost">
+                Get Quote
               </Link>
             </div>
 
-            <div className="badges">
-              ✔ Same Day Service &nbsp; ✔ Certified Experts &nbsp; ✔ Affordable
+            <div className="trustBox">
+              ⭐ 5-Star Rated &nbsp; | &nbsp; Same Day Service &nbsp; | &nbsp;
+              Certified Experts
             </div>
           </div>
 
-          <div className="heroImg">
-            <Image
-              src="/images/services/air-duct-cleaning.jpg"
-              alt="Air duct cleaning service"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+          <div className="heroRight">
+            <div className="glassCard">
+              <h3>Book Your Service</h3>
+              <p>Fast response within 30 minutes</p>
+
+              <a href="tel:+16470000000" className="btn primary full">
+                Call Now
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -54,40 +58,29 @@ export default function Home() {
       {/* SERVICES */}
       <section className="section">
         <div className="container">
-          <h2 className="center">Our Services</h2>
+          <h2 className="heading">Our Services</h2>
 
-          <div className="grid">
+          <div className="serviceGrid">
             {services.map((s, i) => (
-              <div key={i} className="card">
-                <Image src={s.image} alt={s.title} width={400} height={250} />
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+              <div key={i} className="serviceCard">
+                <div className="imgWrap">
+                  <Image src={s.image} alt={s.title} fill />
+                </div>
+
+                <div className="cardContent">
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY US */}
-      <section className="why">
-        <div className="container">
-          <h2>Why Choose Us</h2>
-
-          <div className="whyGrid">
-            <div>✔ 5-Star Rated</div>
-            <div>✔ Latest Equipment</div>
-            <div>✔ Certified Technicians</div>
-            <div>✔ Fast Service</div>
-            <div>✔ Affordable Pricing</div>
-            <div>✔ Serving GTA</div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <div className="container center">
-          <h2>Book Your Cleaning Today</h2>
+      {/* CTA STRIP */}
+      <section className="ctaStrip">
+        <div className="container stripContent">
+          <h2>Need Urgent Cleaning?</h2>
           <a href="tel:+16470000000" className="btn primary">
             Call Now
           </a>
@@ -97,16 +90,15 @@ export default function Home() {
   );
 }
 
-// DATA
 const services = [
   {
     title: "Air Duct Cleaning",
-    desc: "Improve indoor air quality & airflow.",
+    desc: "Remove dust & allergens for cleaner air.",
     image: "/images/services/air-duct-cleaning.jpg",
   },
   {
     title: "Furnace Cleaning",
-    desc: "Boost heating efficiency & performance.",
+    desc: "Improve heating efficiency & lifespan.",
     image: "/images/services/furnace-cleaning.jpg",
   },
   {
@@ -116,7 +108,7 @@ const services = [
   },
   {
     title: "HVAC Cleaning",
-    desc: "Complete HVAC system cleaning.",
+    desc: "Complete system cleaning service.",
     image: "/images/services/blower-fan-cleaning.jpg",
   },
 ];
