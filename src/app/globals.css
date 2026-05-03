@@ -176,3 +176,8 @@ a {
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+  .hero-text-fixed { padding: 2rem 0 !important; }
+}
