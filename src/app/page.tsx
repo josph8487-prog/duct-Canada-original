@@ -1,8 +1,8 @@
-import Image from 'next/image';
+                import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 
-// 1. DYNAMIC METADATA
+// 1. DYNAMIC METADATA (Google Search ke liye)
 export const metadata = {
   title: 'Best Air Duct Cleaning Markham, Toronto & GTA | Professional HVAC Services',
   description: 'Top-rated air duct cleaning in Markham, Toronto, and GTA. We offer furnace cleaning, dryer vent cleaning, and HVAC sanitization. Book your professional cleaning today!',
@@ -19,7 +19,7 @@ export const metadata = {
   },
 };
 
-// 2. FULL SCHEMA MARKUP
+// 2. FULL SCHEMA MARKUP (Local Business + Services)
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -86,81 +86,47 @@ export default function Home() {
       />
 
       <main>
-        {/* FIXED HERO SECTION */}
-        <section className="section" style={{ position: 'relative', overflow: 'hidden', padding: '0', background: 'var(--gray-50)' }}>
-          
-          {/* Blue Shape Background - Desktop Only Fix */}
-          <div style={{ 
-            position: 'absolute', 
-            top: 0, 
-            left: 0, 
-            width: '45%', 
-            height: '100%', 
-            backgroundColor: 'var(--secondary)', 
-            clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)', 
-            zIndex: 0
-          }} className="hide-mobile" /> 
+        {/* HERO SECTION */}
+        <section className={styles.hero}>
+          <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
+            <div className={styles.heroLeft}>
+              <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
+                <h1 className={styles.heroTitle}>
+                  Air Duct Cleaning Services in Markham, Toronto & GTA
+                </h1>
 
-          <div className="hero-wrapper-fixed container">
-            {/* Left Side Content */}
-            <div className="hero-text-fixed" style={{ padding: '4rem 0', zIndex: 1 }}>
-              <h1 className="hero-heading-fixed">
-                Air Duct Cleaning Services in Markham, Toronto & GTA
-              </h1>
+                <p className={styles.heroSubtitle}>
+                  Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+                </p>
 
-              <p style={{ 
-                fontSize: '1.1rem', 
-                marginBottom: '2rem', 
-                color: 'var(--gray-800)',
-                maxWidth: '500px'
-              }}>
-                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
-              </p>
+                <Link href="/services" className="btn btn-primary">
+                  Explore Services
+                </Link>
 
-              <Link href="/services" className="btn btn-primary">
-                Explore Services
-              </Link>
-
-              {/* Serving Cities Badge */}
-              <div style={{
-                marginTop: "25px",
-                fontSize: "14px",
-                color: "#000",
-                fontWeight: "bold",
-                background: "#fff",
-                padding: "10px 15px",
-                borderRadius: "var(--radius)",
-                display: "block",
-                width: "fit-content",
-                borderLeft: "5px solid var(--primary)",
-                boxShadow: "var(--shadow-sm)"
-              }}>
-                <strong style={{ color: "var(--primary)" }}>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+                <div style={{
+                  marginTop: "25px",
+                  fontSize: "16px",
+                  color: "#000",
+                  fontWeight: "bold",
+                  background: "#fff",
+                  padding: "10px 15px",
+                  borderRadius: "5px",
+                  display: "inline-block",
+                  borderLeft: "5px solid #0056b3"
+                }}>
+                  <strong style={{ color: "#0056b3" }}>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+                </div>
               </div>
             </div>
-
-            {/* Right Side Image */}
-            <div className="hero-image-fixed" style={{ zIndex: 1 }}>
-              <img 
-                src="/images/services/air-duct-cleaning.jpg" 
-                alt="Air Duct Cleaning Services" 
-                style={{ 
-                  width: '100%', 
-                  maxWidth: '550px', 
-                  height: 'auto', 
-                  borderRadius: 'var(--radius)', 
-                  boxShadow: 'var(--shadow-lg)' 
-                }} 
-              />
-            </div>
+            <div className={styles.heroRight}></div>
           </div>
         </section>
 
         {/* SERVICE AREAS */}
-        <section style={{ padding: "60px 20px", background: "#ffffff" }}>
+        <section style={{ padding: "60px 20px", background: "#f9f9f9" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
-            <h2 className="section-title">Service Areas We Cover</h2>
-            <p className="section-subtitle">
+            <h2>Service Areas We Cover</h2>
+            <p style={{ marginBottom: "30px", color: "#555" }}>
               Expert duct cleaning in Markham and surrounding GTA areas.
             </p>
 
@@ -191,8 +157,8 @@ export default function Home() {
                       style={{ objectFit: 'cover' }}
                     />
                   </div>
-                  <h3 style={{ padding: '1.5rem 1rem 0.5rem' }}>{service.title}</h3>
-                  <p style={{ padding: '0 1rem 1.5rem' }}>{service.text}</p>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
                 </article>
               ))}
             </div>
@@ -205,7 +171,7 @@ export default function Home() {
 
 const areaBtnStyle = {
   padding: "12px 25px",
-  backgroundColor: "var(--secondary)",
+  backgroundColor: "#0056b3",
   color: "#fff",
   borderRadius: "8px",
   textDecoration: "none",
