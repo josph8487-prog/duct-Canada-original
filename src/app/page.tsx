@@ -87,58 +87,25 @@ export default function Home() {
 
       <main>
         {/* HERO SECTION */}
-        <section className={styles.hero}>
-          <div className={styles.heroContentWrapper} style={{ maxWidth: '1400px', margin: '0 auto' }}>
-            <div className={styles.heroLeft}>
-              <div style={{ paddingLeft: 'max(2rem, calc((100vw - 1200px) / 2))' }}>
-                <h1 className={styles.heroTitle}>
-                  Air Duct Cleaning Services in Markham, Toronto & GTA
-                </h1>
+     <section className={styles.hero}>
+  <div className={styles.heroContent}>
+    <h1 className={styles.heroTitle}>
+      Air Duct Cleaning Services in Markham, Toronto & GTA
+    </h1>
 
-                <p className={styles.heroSubtitle}>
-                  Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
-                </p>
+    <p className={styles.heroSubtitle}>
+      Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+    </p>
 
-                <Link href="/services" className="btn btn-primary">
-                  Explore Services
-                </Link>
+    <Link href="/services" className="btn btn-primary">
+      Explore Services
+    </Link>
 
-                <div style={{
-                  marginTop: "25px",
-                  fontSize: "16px",
-                  color: "#000",
-                  fontWeight: "bold",
-                  background: "#fff",
-                  padding: "10px 15px",
-                  borderRadius: "5px",
-                  display: "inline-block",
-                  borderLeft: "5px solid #0056b3"
-                }}>
-                  <strong style={{ color: "#0056b3" }}>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
-                </div>
-              </div>
-            </div>
-            <div className={styles.heroRight}></div>
-          </div>
-        </section>
-
-        {/* SERVICE AREAS */}
-        <section style={{ padding: "60px 20px", background: "#f9f9f9" }}>
-          <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
-            <h2>Service Areas We Cover</h2>
-            <p style={{ marginBottom: "30px", color: "#555" }}>
-              Expert duct cleaning in Markham and surrounding GTA areas.
-            </p>
-
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "15px" }}>
-              {["Markham", "Toronto", "Vaughan", "Richmond-Hill"].map((city) => (
-                <Link key={city} href={`/location/${city.toLowerCase()}`} style={areaBtnStyle}>
-                  {city.replace('-', ' ')}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+    <div className={styles.servingBadge}>
+      <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+    </div>
+  </div>
+</section>
 
         {/* SERVICES GRID */}
         <section className={`section ${styles.servicesPreview}`}>
