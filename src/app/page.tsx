@@ -72,9 +72,40 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* HERO SECTION */}
+      <section className={styles.hero} style={{ display: 'block', width: '100%' }}>
+        <div className={styles.heroContentWrapper}>
+
+          {/* LEFT */}
+          <div className={styles.heroLeft}>
+            <div>
+              <h1 className={styles.heroTitle}>
+                Air Duct Cleaning Services in Markham, Toronto & GTA
+              </h1>
+
+              <p className={styles.heroSubtitle}>
+                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+              </p>
+
+              <Link href="/services" className="btn btn-primary">
+                Explore Services
+              </Link>
+
+              <div className={styles.servingBadge}>
+                <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className={styles.heroRight}></div>
+
+        </div>
+      </section>
+
       {/* SERVICE AREAS */}
       <section className="w-full max-w-2xl mx-auto px-4 text-center" style={{ padding: '40px 15px', margin: '0 auto', textAlign: 'center', boxSizing: 'border-box', clear: 'both', display: 'block' }}>
-        
         <h2 className="text-xl font-bold text-gray-800 md:text-2xl" style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '25px', display: 'block', width: '100%' }}>
           Service Areas We Cover
         </h2>
