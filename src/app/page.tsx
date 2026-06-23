@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <main>
 
-      {/* HERO SECTION */}
+       {/* HERO SECTION */}
       <section className={styles.hero} style={{ display: 'block', width: '100%' }}>
         <div className={styles.heroContentWrapper}>
 
@@ -133,3 +133,4 @@ export default function Home() {
 
         </div>
       </section>
+     
