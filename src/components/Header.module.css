@@ -7,7 +7,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     z-index: 500;
-    height: 130px;
+    height: 90px;
 }
 
 .navContainer {
@@ -30,9 +30,9 @@
 
 .logoImage {
     object-fit: contain;
-    height: 115px;
+    height: 75px;
     width: auto;
-    max-width: 320px;
+    max-width: 220px;
 }
 
 /* ===================== DESKTOP NAV ===================== */
