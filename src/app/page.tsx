@@ -43,7 +43,7 @@ export default function Home() {
     <main>
 
       {/* HERO SECTION */}
-      <section className={styles.hero}>
+      <section className={styles.hero} style={{ display: 'block', width: '100%' }}>
         <div className={styles.heroContentWrapper}>
 
           {/* LEFT */}
@@ -67,30 +67,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT IMAGE (Fixed: Iski default float/flex positioning restore kar di taake upar chali jaye) */}
           <div className={styles.heroRight}></div>
 
         </div>
       </section>
 
-        {/* SERVICE AREAS */}
-      <section className={`${styles.areaSection} w-full max-w-2xl mx-auto px-4 py-6 text-center`}>
-        <h2 className="text-xl font-bold text-gray-800 md:text-2xl mb-5" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
+      {/* SERVICE AREAS (Fixed Layout & Gaps) */}
+      <section className="w-full max-w-xl mx-auto px-4 text-center" style={{ padding: '40px 15px', margin: '0 auto', textAlign: 'center', boxSizing: 'border-box', clear: 'both' }}>
+        
+        {/* 1. Title aur Buttons ke darmiyan 24px vertical gap */}
+        <h2 className="text-xl font-bold text-gray-800 md:text-2xl" style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '24px', display: 'block', width: '100%' }}>
           Service Areas We Cover
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-3 w-full mb-12">
+        {/* 2. Buttons ke aapas mein sides aur top-bottom ka perfect gap (12px) */}
+        {/* 3. Buttons aur niche wali heading ke darmiyan waziha spacing (80px) */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', width: '100%', marginBottom: '80px', boxSizing: 'border-box' }}>
           {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
               style={{ 
                 ...areaBtnStyle, 
-                padding: '12px 24px', 
+                padding: '14px 24px', 
                 fontSize: '1rem',
                 display: 'inline-block',
                 textAlign: 'center',
-                minWidth: '120px'
+                minWidth: '135px',
+                boxSizing: 'border-box'
               }}
               className="font-semibold rounded-md shadow-sm transition active:scale-95"
             >
@@ -101,10 +106,11 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className={styles.servicesSection}>
+      <section className={styles.servicesSection} style={{ paddingSelf: '0', marginTop: '0px', clear: 'both' }}>
         <div className="container">
 
-          <h2 className="section-title text-2xl md:text-3xl font-black uppercase text-center mt-6 mb-8" style={{ marginTop: '20px' }}>
+          {/* Heading ko perfect top spacing aur width di hai */}
+          <h2 className="section-title text-2xl md:text-3xl font-black uppercase text-center" style={{ textAlign: 'center', display: 'block', width: '100%', marginBottom: '40px' }}>
             Our Professional Services
           </h2>
 
