@@ -2,14 +2,11 @@
     position: relative;
     min-height: 600px;
     padding-top: 20px;
-    /* Changed from fixed height to min-height for mobile responsiveness */
     display: flex;
     align-items: center;
     background-color: var(--secondary);
-    /* Fallback */
     overflow: hidden;
     flex-direction: column;
-    /* Stack on mobile */
 }
 
 @media (min-width: 900px) {
