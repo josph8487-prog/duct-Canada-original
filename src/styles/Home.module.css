@@ -67,17 +67,17 @@
     background-image: url('/hero.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     z-index: 1;
-    width: 100%;
-    min-height: 300px;
-    /* Ensure visible on mobile */
+    min-width: 0;
+    min-height: 250px;
 }
 
 @media (min-width: 900px) {
     .heroRight {
-        width: auto;
         height: 100%;
+        min-height: auto;
     }
 }
 
