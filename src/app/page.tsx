@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
@@ -28,16 +29,16 @@ export default function Home() {
   ];
 
   const areaBtnStyle = {
-  padding: "14px 28px",
-  backgroundColor: "#0056b3",
-  color: "#fff",
-  borderRadius: "8px",
-  textDecoration: "none",
-  fontWeight: "600",
-  fontSize: "16px",
-  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-  transition: "0.3s"
-};
+    padding: "12px 25px",
+    backgroundColor: "#0056b3",
+    color: "#fff",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600",
+    fontSize: "15px",
+    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+    display: "inline-block"
+  };
 
   return (
     <main>
