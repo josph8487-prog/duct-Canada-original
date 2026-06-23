@@ -1,4 +1,4 @@
-import Image from "next/image";
+iimport Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
@@ -38,8 +38,11 @@ export default function Home() {
   boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
   transition: "0.3s"
 };
-return (
-{/* HERO SECTION */}
+
+  return (
+    <main>
+
+      {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.heroContentWrapper}>
 
@@ -70,26 +73,16 @@ return (
         </div>
       </section>
 
-        {/* SERVICE AREAS */}
-      <section className={`${styles.areaSection} w-full max-w-2xl mx-auto px-4 py-6 text-center`}>
-        <h2 className="text-xl font-bold text-gray-800 md:text-2xl mb-5" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
-          Service Areas We Cover
-        </h2>
+      {/* SERVICE AREAS */}
+      <section className={styles.areaSection}>
+        <h2>Service Areas We Cover</h2>
 
-        <div className="flex flex-wrap justify-center gap-3 w-full mb-12">
+        <div className={styles.areaGrid}>
           {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={{ 
-                ...areaBtnStyle, 
-                padding: '12px 24px', 
-                fontSize: '1rem',
-                display: 'inline-block',
-                textAlign: 'center',
-                minWidth: '120px'
-              }}
-              className="font-semibold rounded-md shadow-sm transition active:scale-95"
+              style={areaBtnStyle}
             >
               {city}
             </Link>
@@ -101,9 +94,7 @@ return (
       <section className={styles.servicesSection}>
         <div className="container">
 
-          <h2 className="section-title text-2xl md:text-3xl font-black uppercase text-center mt-6 mb-8" style={{ marginTop: '20px' }}>
-            Our Professional Services
-          </h2>
+          <h2 className="section-title">Our Professional Services</h2>
 
           <div className={styles.featureGrid}>
             {services.map((service, index) => (
@@ -127,3 +118,7 @@ return (
 
         </div>
       </section>
+
+    </main>
+  );
+}
