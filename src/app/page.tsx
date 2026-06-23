@@ -38,11 +38,9 @@ export default function Home() {
   boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
   transition: "0.3s"
 };
-
-  return (
-    <main>
-      {/* HERO SECTION */}
-      <section className={styles.hero} style={{ display: 'block', width: '100%' }}>
+return (
+{/* HERO SECTION */}
+      <section className={styles.hero}>
         <div className={styles.heroContentWrapper}>
 
           {/* LEFT */}
@@ -72,26 +70,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS */}
-      <section className="w-full max-w-2xl mx-auto px-4 text-center" style={{ padding: '40px 15px', margin: '0 auto', textAlign: 'center', boxSizing: 'border-box', clear: 'both', display: 'block' }}>
-        <h2 className="text-xl font-bold text-gray-800 md:text-2xl" style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '25px', display: 'block', width: '100%' }}>
+        {/* SERVICE AREAS */}
+      <section className={`${styles.areaSection} w-full max-w-2xl mx-auto px-4 py-6 text-center`}>
+        <h2 className="text-xl font-bold text-gray-800 md:text-2xl mb-5" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
           Service Areas We Cover
         </h2>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', width: '100%', marginBottom: '80px', boxSizing: 'border-box' }}>
+        <div className="flex flex-wrap justify-center gap-3 w-full mb-12">
           {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
               style={{ 
                 ...areaBtnStyle, 
-                padding: '14px 24px', 
+                padding: '12px 24px', 
                 fontSize: '1rem',
                 display: 'inline-block',
                 textAlign: 'center',
-                minWidth: '135px',
-                boxSizing: 'border-box',
-                margin: '8px' 
+                minWidth: '120px'
               }}
               className="font-semibold rounded-md shadow-sm transition active:scale-95"
             >
@@ -102,10 +98,10 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className={styles.servicesSection} style={{ marginTop: '0px', clear: 'both', display: 'block' }}>
+      <section className={styles.servicesSection}>
         <div className="container">
 
-          <h2 className="section-title text-2xl md:text-3xl font-black uppercase text-center" style={{ textAlign: 'center', display: 'block', width: '100%', marginBottom: '40px' }}>
+          <h2 className="section-title text-2xl md:text-3xl font-black uppercase text-center mt-6 mb-8" style={{ marginTop: '20px' }}>
             Our Professional Services
           </h2>
 
@@ -131,3 +127,4 @@ export default function Home() {
 
         </div>
       </section>
+
