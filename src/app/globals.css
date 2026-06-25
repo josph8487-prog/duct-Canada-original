@@ -130,3 +130,16 @@ a {
   font-size: 1.1rem;
 }
 
+@media (max-width: 480px) {
+    h2.section-title, 
+    .section-title {
+        font-size: 1.7rem !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        padding: 0 10px !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
