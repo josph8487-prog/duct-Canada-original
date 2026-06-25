@@ -559,3 +559,47 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.areaSection {
+    padding: 4rem 1.5rem;
+    text-align: center;
+    background-color: #fdfdfd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.areaSectionTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .areaSectionTitle {
+        font-size: 1.7rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.areaGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.areaLinkHover:hover {
+    background-color: #004085 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
+}
+
