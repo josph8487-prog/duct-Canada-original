@@ -56,20 +56,21 @@ export default function About() {
             {/* Stats / Trust Section */}
             <section className={styles.statsSection}>
                 <div className={`container ${styles.statsGrid}`}>
-                    <div className={styles.statItem}>
-                        <h4>8+</h4>
-                        <p>Years in Business</p>
+                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
+                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>8+</h4>
+                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Years in Business</p>
                     </div>
-                    <div className={styles.statItem}>
-                        <h4>100%</h4>
-                        <p>Satisfaction Guarantee</p>
+                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
+                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>100%</h4>
+                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Satisfaction Guarantee</p>
                     </div>
-                    <div className={styles.statItem}>
-                        <h4>GTA</h4>
-                        <p style={{ fontSize: "clamp(0.9rem, 4vw, 1.1rem)", wordBreak: "break-word", whiteSpace: "normal", width: "100%", display: "block" }}>Wide Service Area</p>
+                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
+                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>GTA</h4>
+                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Wide Service Area</p>
                     </div>
                 </div>
             </section>
         </>
     );
 }
+
