@@ -120,3 +120,12 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+h1, h2, .title, .heading {
+    font-size: clamp(1.8rem, 6vw, 3.5rem) !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+}
