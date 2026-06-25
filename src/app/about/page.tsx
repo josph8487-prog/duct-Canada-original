@@ -66,7 +66,7 @@ export default function About() {
                     </div>
                     <div className={styles.statItem}>
                         <h4>GTA</h4>
-                        <p>Wide Service Area</p>
+                        <p style={{ fontSize: "clamp(0.9rem, 4vw, 1.1rem)", wordBreak: "break-word", whiteSpace: "normal", width: "100%", display: "block" }}>Wide Service Area</p>
                     </div>
                 </div>
             </section>
