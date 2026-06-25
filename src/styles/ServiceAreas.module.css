@@ -89,3 +89,26 @@
 .flag {
     margin-right: 0.5rem;
 }
+.hero h1,
+.heroTitle {
+    font-size: 2.0rem !important;
+    line-height: 1.3 !important;
+}
+
+@media (max-width: 400px) {
+    .hero h1,
+    .heroTitle {
+        font-size: 1.8rem !important;
+    }
+}
+
+.areaSection h2,
+.sectionTitle {
+    color: #0b1a30 !important;
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+}
+
