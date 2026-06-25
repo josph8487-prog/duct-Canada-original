@@ -54,23 +54,24 @@ export default function About() {
             </section>
 
             {/* Stats / Trust Section */}
-            <section className={styles.statsSection}>
-                <div className={`container ${styles.statsGrid}`}>
-                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
-                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>8+</h4>
-                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Years in Business</p>
+            <section className={styles.statsSection} style={{ width: "100%", overflow: "hidden", padding: "20px 5px" }}>
+                <div className={`container ${styles.statsGrid}`} style={{ display: "flex", flexWrap: "nowrap", gap: "8px", justifyContent: "space-between", width: "100%", boxSizing: "border-box" }}>
+                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
+                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>8+</h4>
+                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Years in Business</p>
                     </div>
-                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
-                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>100%</h4>
-                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Satisfaction Guarantee</p>
+                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
+                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>100%</h4>
+                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Satisfaction Guarantee</p>
                     </div>
-                    <div className={styles.statItem} style={{ minWidth: "140px", flex: "1 1 0%" }}>
-                        <h4 style={{ fontSize: "clamp(1.5rem, 5vw, 2.2rem)", margin: "0 0 5px 0" }}>GTA</h4>
-                        <p style={{ fontSize: "clamp(0.85rem, 3.5vw, 1rem)", margin: 0, whiteSpace: "normal", wordBreak: "break-word" }}>Wide Service Area</p>
+                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
+                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>GTA</h4>
+                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Wide Service Area</p>
                     </div>
                 </div>
             </section>
         </>
     );
 }
+
 
