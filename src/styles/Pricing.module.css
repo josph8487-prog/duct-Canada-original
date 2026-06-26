@@ -228,6 +228,6 @@
 .contactLink {
   display: inline-block;
   white-space: nowrap;
-  font-size: clamp(10px, 3.2vw, 16px);
+  font-size: clamp(10px, 3.5vw, 16px);
 }
 
