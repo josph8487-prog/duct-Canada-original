@@ -7,9 +7,7 @@ export default function Contact() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulate form submission
         setSubmitted(true);
-        // In a real app, here you would send the data to an API endpoint
         console.log("Form submitted to ductcleaningcanada2@gmail.com");
     };
 
@@ -39,7 +37,6 @@ export default function Contact() {
                             <div className={styles.infoContent}>
                                 <h4>Phone</h4>
                                 <a href="tel:2267772863">226-777-2863</a>
-
                             </div>
                         </div>
 
@@ -47,7 +44,7 @@ export default function Contact() {
                             <div className={styles.iconCircle}>📧</div>
                             <div className={styles.infoContent}>
                                 <h4>Email</h4>
-                                <a href="mailto:ductcleaningcanada2@gmail.com">ductcleaningcanada2@gmail.com</a>
+                                <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</a>
                             </div>
                         </div>
 
@@ -55,7 +52,7 @@ export default function Contact() {
                             <div className={styles.iconCircle}>🏢</div>
                             <div className={styles.infoContent}>
                                 <h4>Address</h4>
-                                <p>35 Carlton Rd, Markham, ON L3R 1Z4</p>
+                                <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +103,6 @@ export default function Contact() {
 
             {/* Map Section */}
             <section className={styles.mapSection}>
-                {/* Embed Google Map for 35 Carlton Rd, Markham, ON L3R 1Z4 */}
                 <iframe
                     src="https://maps.google.com/maps?q=35%20Carlton%20Rd,%20Markham,%20ON%20L3R%201Z4&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     className={styles.mapFrame}
