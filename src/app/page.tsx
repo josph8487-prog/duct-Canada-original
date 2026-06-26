@@ -27,6 +27,23 @@ export default function Home() {
     }
   ];
 
+  // AAPKE BLUE BUTTONS KI STYLING + LIGHTING GLOW EFFECT HERE
+  const areaBtnStyle = {
+    padding: "14px 28px",
+    backgroundColor: "#0056b3", // Aapka original blue color
+    color: "#fff",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600",
+    fontSize: "16px",
+    display: "inline-block",
+    textAlign: "center",
+    // Yahan lighting/glow effect dala hai jo buttons ko shiny aur bright banayega
+    boxShadow: "0 0 12px rgba(0, 86, 179, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2)",
+    border: "1px solid rgba(255, 255, 255, 0.2)",
+    transition: "0.3s ease"
+  };
+
   return (
     <main>
 
@@ -45,7 +62,7 @@ export default function Home() {
                 Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
               </p>
 
-              <Link href="/services" className={`${styles.glowButton} btn btn-primary`}>
+              <Link href="/services" className="btn btn-primary">
                 Explore Services
               </Link>
 
@@ -61,9 +78,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS */}
-      <section className={styles.areaSection}>
-        <h2 className={styles.areaTitle}>Service Areas We Cover</h2>
+      {/* SERVICE AREAS (SPACE FIX: Is section par direct styles lagaye hain space khatam krne k liye) */}
+      <section style={{ paddingTop: "10px", marginTop: "0px" }}>
+        
+        {/* HEADING CENTERED */}
+        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
+          Service Areas We Cover
+        </h2>
 
         <div className={styles.areaGrid}>
           {[
@@ -78,15 +99,15 @@ export default function Home() {
             "Ajax",
             "Oshawa",
             "Scarborough",
-            "Whitby",
-            "East York",
-            "Etobicoke",
-            "York Region"
+            "Whitby",       // Naya Button
+            "East York",    // Naya Button
+            "Etobicoke",    // Naya Button
+            "York Region"   // Naya Button
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              className={styles.areaBtnStyle}
+              style={areaBtnStyle} // Wapis original inline style apply kar diya
             >
               {city}
             </Link>
