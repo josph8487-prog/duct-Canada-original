@@ -78,6 +78,7 @@ export default function BramptonPage() {
           <li>✔ 100% satisfaction guarantee</li>
         </ul>
       </section>
+      
 {/* MAP SECTION */}
 <section style={{ padding: "40px 20px", textAlign: "center" }}>
   <h2>Service Area Map - Brampton</h2>
@@ -89,8 +90,7 @@ export default function BramptonPage() {
     style={{ border: 0, borderRadius: "10px" }}
     loading="lazy"
   ></iframe>
-      
-      </section>
+</section>
 
       {/* TRUSTED CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
