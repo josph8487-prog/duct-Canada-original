@@ -32,38 +32,29 @@ export default function Contact() {
                             </p>
                         </div>
 
-                        {/* Clickable Phone Card */}
-                        <a href="tel:2267772863" className={styles.infoItemLink}>
-                            <div className={styles.infoItem}>
-                                <div className={styles.iconCircle}>📞</div>
-                                <div className={styles.infoContent}>
-                                    <h4>Phone</h4>
-                                    <span>226-777-2863</span>
-                                </div>
+                        <div className={styles.infoItem}>
+                            <div className={styles.iconCircle}>📞</div>
+                            <div className={styles.infoContent}>
+                                <h4>Phone</h4>
+                                <a href="tel:2267772863">226-777-2863</a>
                             </div>
-                        </a>
+                        </div>
 
-                        {/* Clickable Email Card */}
-                        <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.infoItemLink}>
-                            <div className={styles.infoItem}>
-                                <div className={styles.iconCircle}>📧</div>
-                                <div className={styles.infoContent}>
-                                    <h4>Email</h4>
-                                    <span className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</span>
-                                </div>
+                        <div className={styles.infoItem}>
+                            <div className={styles.iconCircle}>📧</div>
+                            <div className={styles.infoContent}>
+                                <h4>Email</h4>
+                                <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</a>
                             </div>
-                        </a>
+                        </div>
 
-                        {/* Clickable Address Card */}
-                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className={styles.infoItemLink}>
-                            <div className={styles.infoItem}>
-                                <div className={styles.iconCircle}>🏢</div>
-                                <div className={styles.infoContent}>
-                                    <h4>Address</h4>
-                                    <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
-                                </div>
+                        <div className={styles.infoItem}>
+                            <div className={styles.iconCircle}>🏢</div>
+                            <div className={styles.infoContent}>
+                                <h4>Address</h4>
+                                <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     {/* Contact Form */}
@@ -113,7 +104,7 @@ export default function Contact() {
             {/* Map Section */}
             <section className={styles.mapSection}>
                 <iframe
-                    src="https://google.com"
+                    src="https://maps.google.com/maps?q=35%20Carlton%20Rd,%20Markham,%20ON%20L3R%201Z4&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
