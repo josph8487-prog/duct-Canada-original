@@ -11,6 +11,15 @@ export default function Contact() {
         console.log("Form submitted to ductcleaningcanada2@gmail.com");
     };
 
+    // Smooth scroll handler for the address card
+    const scrollToMap = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const mapElement = document.getElementById('location-map');
+        if (mapElement) {
+            mapElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <section className={styles.hero}>
@@ -54,14 +63,16 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        {/* Unchanged Address Card */}
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>🏢</div>
-                            <div className={styles.infoContent}>
-                                <h4>Address</h4>
-                                <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
+                        {/* Clickable Address Card */}
+                        <a href="#location-map" onClick={scrollToMap} className={styles.infoItemLink} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>🏢</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Address</h4>
+                                    <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Contact Form */}
@@ -109,9 +120,9 @@ export default function Contact() {
             </section>
 
             {/* Map Section */}
-            <section className={styles.mapSection}>
+            <section id="location-map" className={styles.mapSection}>
                 <iframe
-                    src="https://maps.google.com/maps?q=35%20Carlton%20Rd,%20Markham,%20ON%20L3R%201Z4&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    src="https://google.com"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
