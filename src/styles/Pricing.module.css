@@ -224,3 +224,11 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.contactLink {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+}
