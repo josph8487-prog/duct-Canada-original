@@ -116,6 +116,7 @@ export default function Pricing() {
                         <div className={styles.contactDetails}>
                             <p>Call: <a href="tel:2267772863" className={styles.contactLink}>226-777-2863</a> </p>
                             <p>Email: <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.contactLink}>ductcleaningcanada2@gmail.com</a></p>
+
                         </div>
                     </div>
                 </div>
