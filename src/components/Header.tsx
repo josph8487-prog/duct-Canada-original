@@ -63,13 +63,15 @@ const Header = () => {
                     </button>
                 </div>
             </header>
-
+            
             {/* Mobile Menu Panel */}
             <div
                 className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''} mobile-menu-relative-box`}
                 aria-hidden={!isMenuOpen}
             >
                 <div className="menu-left-glow"></div>
+                <div className="menu-glow-orb-1"></div>
+                <div className="menu-glow-orb-2"></div>
                 {/* Panel header with close button */}
                 <div className={styles.mobileMenuHeader}>
                     <button
@@ -78,6 +80,7 @@ const Header = () => {
                         aria-label="Close menu"
                         tabIndex={isMenuOpen ? 0 : -1}
                     >
+
                         ✕
                     </button>
                 </div>
