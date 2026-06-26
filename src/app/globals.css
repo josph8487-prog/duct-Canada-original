@@ -181,4 +181,15 @@ a {
   overflow: hidden;
 }
 
+.mobile-active-link {
+    color: #00f2fe !important;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.8) !important;
+    padding-left: 0.9rem !important;
+}
+
+.mobile-active-link::before {
+    background-color: #00f2fe !important;
+    transform: scale(1.6) !important;
+    box-shadow: 0 0 8px #00f2fe !important;
+}
 
