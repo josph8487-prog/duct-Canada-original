@@ -145,14 +145,14 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Map Section - target="_top" secure embed setup */}
+{/* Map Section */}
             <section className={styles.mapSection}>
                 <iframe
                     src="https://google.com"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
-                    referrerPolicy="no-referrer"
+                    referrerPolicy="no-referrer-when-downgrade"
                     title="Duct Cleaning Canada Location"
                 ></iframe>
             </section>
