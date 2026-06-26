@@ -270,3 +270,14 @@
         display: none !important;
     }
 }
+.mobileNavLink:hover {
+    color: #00f2fe !important;
+    padding-left: 0.9rem !important;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6) !important;
+}
+
+.mobileNavLink:hover::before {
+    transform: scale(1.6) !important;
+    background-color: #00f2fe !important;
+    box-shadow: 0 0 8px #00f2fe !important;
+}
