@@ -11,15 +11,6 @@ export default function Contact() {
         console.log("Form submitted to ductcleaningcanada2@gmail.com");
     };
 
-    // Smooth scroll handler targeting your existing map section ID
-    const scrollToMap = (e: React.MouseEvent) => {
-        e.preventDefault();
-        const mapSection = document.getElementById('my-contact-map');
-        if (mapSection) {
-            mapSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <>
             <section className={styles.hero}>
@@ -41,29 +32,34 @@ export default function Contact() {
                             </p>
                         </div>
 
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>📞</div>
-                            <div className={styles.infoContent}>
-                                <h4>Phone</h4>
-                                <a href="tel:2267772863">226-777-2863</a>
+                        {/* Clickable Phone Card */}
+                        <a href="tel:2267772863" className={styles.infoItemLink}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>📞</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Phone</h4>
+                                    <span>226-777-2863</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>📧</div>
-                            <div className={styles.infoContent}>
-                                <h4>Email</h4>
-                                <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</a>
+                        {/* Clickable Email Card */}
+                        <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.infoItemLink}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>📧</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Email</h4>
+                                    <span className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
+                        {/* Plain Address Card - Not Clickable */}
                         <div className={styles.infoItem}>
                             <div className={styles.iconCircle}>🏢</div>
                             <div className={styles.infoContent}>
                                 <h4>Address</h4>
-                                <a href="#my-contact-map" onClick={scrollToMap} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
-                                </a>
+                                <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
                             </div>
                         </div>
                     </div>
@@ -112,8 +108,8 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Map Section - Kept completely original with an added id parameter */}
-            <section id="my-contact-map" className={styles.mapSection}>
+            {/* Map Section */}
+            <section className={styles.mapSection}>
                 <iframe
                     src="https://google.com"
                     className={styles.mapFrame}
