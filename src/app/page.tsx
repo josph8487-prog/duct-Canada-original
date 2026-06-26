@@ -61,10 +61,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (Clean with CSS Classes) */}
-      <section className={styles.areaSection}>
+      {/* SERVICE AREAS (HEADING SIZE SMALLER & POSITION FIXED) */}
+      <section style={{ clear: "both", display: "block", paddingTop: "40px", paddingBottom: "40px" }}>
         
-        <h2 className={styles.areaSectionTitle}>
+        {/* HEADING TEXT SIZE REDUCED AND POSITIONED PERFECTLY */}
+        <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "1.6rem", color: "#333", fontWeight: "700" }}>
           Service Areas We Cover
         </h2>
 
@@ -89,7 +90,18 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              className={styles.solidBlueBtn}
+              style={{
+                padding: "14px 28px",
+                backgroundColor: "#0056b3",
+                color: "#ffffff",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: "600",
+                fontSize: "16px",
+                boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+                display: "inline-block",
+                textAlign: "center"
+              }}
             >
               {city}
             </Link>
