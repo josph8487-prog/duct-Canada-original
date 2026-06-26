@@ -32,22 +32,29 @@ export default function Contact() {
                             </p>
                         </div>
 
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>📞</div>
-                            <div className={styles.infoContent}>
-                                <h4>Phone</h4>
-                                <a href="tel:2267772863">226-777-2863</a>
+                        {/* Clickable Phone Card */}
+                        <a href="tel:+12267772863" className={styles.infoItemLink} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>📞</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Phone</h4>
+                                    <span>226-777-2863</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>📧</div>
-                            <div className={styles.infoContent}>
-                                <h4>Email</h4>
-                                <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</a>
+                        {/* Clickable Email Card */}
+                        <a href="mailto:ductcleaningcanada2@gmail.com" className={styles.infoItemLink} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>📧</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Email</h4>
+                                    <span className={styles.responsiveEmail}>ductcleaningcanada2@gmail.com</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
+                        {/* Unchanged Address Card */}
                         <div className={styles.infoItem}>
                             <div className={styles.iconCircle}>🏢</div>
                             <div className={styles.infoContent}>
