@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,11 +20,9 @@ export default function MississaugaPage() {
     <>
       {/* HERO SECTION */}
       <section style={{ padding: "60px 20px", textAlign: "center" }}>
-        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "20px" }}>
-          Air Duct Cleaning in Mississauga
-        </h1>
+        <h1>Air Duct Cleaning in Mississauga</h1>
 
-        <p style={{ maxWidth: "850px", margin: "auto", fontSize: "1.1rem", lineHeight: "1.6" }}>
+        <p style={{ maxWidth: "850px", margin: "auto" }}>
           Looking for professional air duct cleaning in Mississauga? We provide complete HVAC cleaning solutions 
           including air duct cleaning, dryer vent cleaning, furnace cleaning, and duct sanitization services across 
           Mississauga, Ontario. Our goal is to improve indoor air quality, remove dust buildup, allergens, and improve 
@@ -37,12 +34,11 @@ export default function MississaugaPage() {
           style={{
             display: "inline-block",
             marginTop: "20px",
-            padding: "12px 25px",
-            background: "#000000",
-            color: "#ffffff",
+            padding: "12px 20px",
+            background: "#000",
+            color: "#fff",
             borderRadius: "6px",
             textDecoration: "none",
-            fontWeight: "600"
           }}
         >
           Get Free Quote
@@ -51,17 +47,15 @@ export default function MississaugaPage() {
 
       {/* CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: "15px" }}>
-          Our Air Duct Cleaning Services in Mississauga
-        </h2>
+        <h2>Our Air Duct Cleaning Services in Mississauga</h2>
 
-        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+        <p>
           Our Mississauga duct cleaning services are designed to ensure your home or business has clean, healthy airflow. 
           We specialize in full HVAC system cleaning and remove dust, mold spores, allergens, and debris that build up 
           inside ducts over time in Mississauga properties.
         </p>
 
-        <ul style={{ paddingLeft: "20px", marginBottom: "30px", lineHeight: "2" }}>
+        <ul>
           <li>Air Duct Cleaning Mississauga</li>
           <li>Dryer Vent Cleaning Mississauga</li>
           <li>Furnace Cleaning Mississauga</li>
@@ -69,17 +63,15 @@ export default function MississaugaPage() {
           <li>Duct Sanitization Mississauga</li>
         </ul>
 
-        <h3 style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "15px" }}>
-          Why Choose Our Mississauga Team
-        </h3>
+        <h3>Why Choose Our Mississauga Team</h3>
 
-        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+        <p>
           Homeowners in Mississauga trust our duct cleaning experts because we deliver fast, reliable, and affordable 
           services. We use professional-grade equipment to ensure deep cleaning of air ducts in Mississauga homes 
           and commercial buildings.
         </p>
 
-        <ul style={{ listStyleType: "none", paddingLeft: "0", lineHeight: "2", marginBottom: "30px" }}>
+        <ul>
           <li>✔ Fast local service in Mississauga</li>
           <li>✔ Affordable pricing with no hidden charges</li>
           <li>✔ Certified HVAC technicians</li>
@@ -87,7 +79,7 @@ export default function MississaugaPage() {
         </ul>
       </section>
 
-            {/* MAP SECTION */}
+      {/* MAP SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h2>Service Area Map - Mississauga</h2>
 
@@ -100,80 +92,66 @@ export default function MississaugaPage() {
         ></iframe>
       </section>
 
-      {/* FAQ SECTION (SEO BOOST) */}
+      {/* TRUSTED CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: "20px" }}>
-          Trusted Air Duct Cleaning in Mississauga
-        </h2>
+        <h2>Trusted Air Duct Cleaning in Mississauga</h2>
 
-        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+        <p>
           If you are searching for air duct cleaning in Mississauga, our team provides complete HVAC cleaning solutions 
           tailored for Mississauga homes. Dirty air ducts can reduce airflow, increase energy bills, and cause poor 
           indoor air quality. That is why professional duct cleaning in Mississauga is important for every household.
         </p>
 
-        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+        <p>
           We serve all areas of Mississauga including residential neighborhoods and commercial buildings. Our Mississauga 
           duct cleaning services ensure that your HVAC system runs efficiently throughout the year. Many customers in 
           Mississauga notice cleaner air and better heating/cooling performance after our service.
         </p>
 
-        <p style={{ marginBottom: "15px", lineHeight: "1.6" }}>
+        <p>
           Whether you need furnace cleaning, dryer vent cleaning, or full air duct cleaning in Mississauga, our experts 
           are ready to help. We are a trusted name in Mississauga for professional HVAC maintenance and deep cleaning.
         </p>
       </section>
 
       {/* INTERNAL LINKS */}
-      <section style={{ textAlign: "center", padding: "40px 20px", background: "#f9f9f9" }}>
-        <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "10px" }}>
-          Nearby Service Areas
-        </h3>
+      <section style={{ textAlign: "center", padding: "40px 20px" }}>
+        <h3>Nearby Service Areas</h3>
 
-        <p style={{ marginBottom: "15px" }}>We also serve nearby cities:</p>
+        <p>We also serve nearby cities:</p>
 
-        <div style={{ fontSize: "1.1rem", fontWeight: "500" }}>
-          <a href="/location/markham" style={{ color: "#0066cc", textDecoration: "none" }}>Markham</a> |{" "}
-          <a href="/location/toronto" style={{ color: "#0066cc", textDecoration: "none" }}>Toronto</a> |{" "}
-          <a href="/location/vaughan" style={{ color: "#0066cc", textDecoration: "none" }}>Vaughan</a> |{" "}
-          <a href="/location/brampton" style={{ color: "#0066cc", textDecoration: "none" }}>Brampton</a> |{" "}
-          <a href="/location/oakville" style={{ color: "#0066cc", textDecoration: "none" }}>Oakville</a>
+        <div style={{ marginTop: "10px" }}>
+          <a href="/location/markham">Markham</a> |{" "}
+          <a href="/location/toronto">Toronto</a> |{" "}
+          <a href="/location/vaughan">Vaughan</a>
         </div>
       </section>
 
       {/* CTA SECTION */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "10px" }}>
-          Need Air Duct Cleaning in Mississauga?
-        </h2>
+      <section style={{ padding: "40px 20px", textAlign: "center" }}>
+        <h2>Need Air Duct Cleaning in Mississauga?</h2>
 
-        <p style={{ fontSize: "1.2rem", marginBottom: "20px" }}>
+        <p>
           Call now for same-day service
         </p>
 
-        <div style={{ marginBottom: "30px" }}>
+        <div style={{ marginTop: "20px", marginBottom: "20px" }}>
           <a
             href="tel:2267772863"
             style={{
               display: "inline-block",
-              padding: "15px 35px",
-              background: "#28a745", // Green color
-              color: "#ffffff",
+              padding: "12px 20px",
+              background: "green",
+              color: "#fff",
               borderRadius: "6px",
               textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
             }}
           >
             Call Now
           </a>
         </div>
 
-        <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#555" }}>
-          Call our Duct Cleaning Specialists!
-        </p>
-        <p style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#000", marginTop: "5px" }}>
+        <p style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#000" }}>
           📞 226-777-2863
         </p>
       </section>
