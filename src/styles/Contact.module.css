@@ -230,3 +230,14 @@
   }
 }
 
+.infoItemLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.infoItemLink:hover {
+  text-decoration: none;
+  color: inherit;
+}
