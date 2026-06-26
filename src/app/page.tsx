@@ -81,15 +81,14 @@ export default function Home() {
 
       <section className={styles.areaSection}>
         <h2 className={styles.areaSectionTitle}>Service Areas We Cover</h2>
-
-        <div className={styles.areaGrid} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', animation: 'pulse 2s infinite alternate' }}>
+<div className={styles.areaGrid} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', animation: 'pulse 2s infinite alternate' }}>
   {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
-            <Link
-              key={city}
-              href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={areaBtnStyle}
-              className={styles.areaLinkHover}
-            >
+    <Link
+      key={city}
+      href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
+      style={areaBtnStyle}
+      className={styles.areaLinkHover}
+    >
               {city}
             </Link>
           ))}
