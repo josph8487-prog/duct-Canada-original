@@ -27,6 +27,21 @@ export default function Home() {
     }
   ];
 
+  // YOUR ORIGINAL BLUE BUTTON STYLING
+  const areaBtnStyle = {
+    padding: "14px 28px",
+    backgroundColor: "#0056b3",
+    color: "#fff",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600",
+    fontSize: "16px",
+    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+    transition: "0.3s",
+    display: "inline-block",
+    textAlign: "center"
+  };
+
   return (
     <main>
 
@@ -61,9 +76,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS */}
-      <section className={styles.areaSection}>
-        <h2 className={styles.areaSectionTitle}>Service Areas We Cover</h2>
+      {/* SERVICE AREAS (SPACE FIX & CENTERED) */}
+      <section style={{ paddingTop: "0px", marginTop: "-10px" }}>
+        
+        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
+          Service Areas We Cover
+        </h2>
 
         <div className={styles.areaGrid}>
           {[
@@ -78,15 +96,15 @@ export default function Home() {
             "Ajax",
             "Oshawa",
             "Scarborough",
-            "Whitby",
-            "East York",
-            "Etobicoke",
-            "York Region"
+            "Whitby",       // New Button
+            "East York",    // New Button
+            "Etobicoke",    // New Button
+            "York Region"   // New Button
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              className={styles.shinyBlueBtn}
+              style={areaBtnStyle} // Applied your blue buttons back
             >
               {city}
             </Link>
