@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -129,9 +130,9 @@ export default function MississaugaPage() {
 
       {/* CTA SECTION */}
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Need Air Duct Cleaning in Mississauga?</h2>
+        <h2 style={{ fontWeight: "bold" }}>Need Air Duct Cleaning in Mississauga?</h2>
 
-        <p>
+        <p style={{ fontWeight: "bold" }}>
           Call now for same-day service
         </p>
 
@@ -145,6 +146,7 @@ export default function MississaugaPage() {
               color: "#fff",
               borderRadius: "6px",
               textDecoration: "none",
+              fontWeight: "bold"
             }}
           >
             Call Now
