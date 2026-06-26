@@ -597,5 +597,38 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
+.areaSection {
+  clear: both;
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.areaSectionTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.solidBlueBtn {
+  padding: 14px 28px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.solidBlueBtn:hover {
+  background-color: #004085;
+}
 
 
