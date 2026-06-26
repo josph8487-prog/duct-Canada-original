@@ -27,19 +27,21 @@ export default function Home() {
     }
   ];
 
-  // YOUR ORIGINAL BLUE BUTTON STYLING
-  const areaBtnStyle = {
+  // REAL SOLID BLUE BUTTONS WITH NEON GLOW LIGHTING
+  const realBlueLightingBtn = {
     padding: "14px 28px",
-    backgroundColor: "#0056b3",
-    color: "#fff",
+    backgroundColor: "#0056b3", // Your exact blue background color
+    color: "#ffffff",           // Pure white text
     borderRadius: "8px",
     textDecoration: "none",
     fontWeight: "600",
     fontSize: "16px",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-    transition: "0.3s",
     display: "inline-block",
-    textAlign: "center"
+    textAlign: "center",
+    // Premium lighting glow effect around and inside the blue buttons
+    boxShadow: "0 0 15px rgba(0, 86, 179, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.2)",
+    border: "1px solid rgba(255, 255, 255, 0.1)",
+    transition: "0.3s ease"
   };
 
   return (
@@ -76,9 +78,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (SPACE FIX & CENTERED) */}
-      <section style={{ paddingTop: "0px", marginTop: "-10px" }}>
+      {/* SERVICE AREAS (PERFECT WORKING LAYOUT & TOP SPACE REMOVED) */}
+      <section style={{ paddingTop: "0px", marginTop: "-20px" }}>
         
+        {/* CENTERED TITLE */}
         <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
           Service Areas We Cover
         </h2>
@@ -104,7 +107,7 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={areaBtnStyle} // Applied your blue buttons back
+              style={realBlueLightingBtn} // Real blue color + lighting applied directly here
             >
               {city}
             </Link>
