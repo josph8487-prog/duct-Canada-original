@@ -87,19 +87,16 @@ export default function MississaugaPage() {
         </ul>
       </section>
 
-      {/* MAP SECTION */}
-      <section style={{ padding: "40px 20px", textAlign: "center", maxWidth: "900px", margin: "auto" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: "20px" }}>
-          Service Area Map - Mississauga
-        </h2>
+            {/* MAP SECTION */}
+      <section style={{ padding: "40px 20px", textAlign: "center" }}>
+        <h2>Service Area Map - Mississauga</h2>
 
         <iframe
           src="https://google.com"
           width="100%"
-          height="400"
+          height="350"
           style={{ border: 0, borderRadius: "10px" }}
           loading="lazy"
-          allowFullScreen
         ></iframe>
       </section>
 
