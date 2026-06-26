@@ -38,9 +38,8 @@ export default function Home() {
           <div className={styles.heroLeft}>
             <div>
               <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.0rem, 4vw, 3rem)', whiteSpace: 'nowrap' }}>
-  YOUR HOME PAGE LONG TEXT HERE
+  AIR DUCT CLEANING MARKHAM & GTA
 </h1>
-
               <p className={styles.heroSubtitle}>
                 Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
               </p>
