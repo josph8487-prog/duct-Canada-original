@@ -1,4 +1,4 @@
-          import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
@@ -27,18 +27,6 @@ export default function Home() {
     }
   ];
 
-  const areaBtnStyle = {
-    padding: "14px 28px",
-    backgroundColor: "#0056b3",
-    color: "#fff",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "600",
-    fontSize: "16px",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-    transition: "0.3s"
-  };
-
   return (
     <main>
 
@@ -57,7 +45,7 @@ export default function Home() {
                 Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
               </p>
 
-              <Link href="/services" className="btn btn-primary">
+              <Link href="/services" className={`${styles.glowButton} btn btn-primary`}>
                 Explore Services
               </Link>
 
@@ -75,7 +63,7 @@ export default function Home() {
 
       {/* SERVICE AREAS */}
       <section className={styles.areaSection}>
-        <h2>Service Areas We Cover</h2>
+        <h2 className={styles.areaTitle}>Service Areas We Cover</h2>
 
         <div className={styles.areaGrid}>
           {[
@@ -89,12 +77,16 @@ export default function Home() {
             "North York",
             "Ajax",
             "Oshawa",
-            "Scarborough"
+            "Scarborough",
+            "Whitby",
+            "East York",
+            "Etobicoke",
+            "York Region"
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={areaBtnStyle}
+              className={styles.areaBtnStyle}
             >
               {city}
             </Link>
