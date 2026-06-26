@@ -142,12 +142,12 @@ a {
         text-align: center !important;
     }
 }
- 
+  
 @media (max-width: 480px) {
-    [class*="heroTitle"], 
-    .hero h1 {
+    [class*="heroTitle"]:not([class*="home"]):not([class*="serviceareas"]):not([class*="service-areas"]) {
         font-size: 1.5rem !important;
         white-space: nowrap !important;
     }
 }
+
 
