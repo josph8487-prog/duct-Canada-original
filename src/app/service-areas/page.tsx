@@ -40,7 +40,7 @@ export default function ServiceAreas() {
 <section className={styles.hero}>
     <div className="container" style={{ padding: '0 20px', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
         <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.4rem, 5.5vw, 2.5rem)', fontWeight: '700', whiteSpace: 'normal', lineHeight: '1.2', wordWrap: 'break-word' }}>
-            Service Areas – Duct Cleaning CANADA
+           our Service Areas 
         </h1>
 
         <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(0.85rem, 3.5vw, 1.1rem)', fontWeight: '400', opacity: 0.9, marginTop: '12px', whiteSpace: 'normal' }}>
