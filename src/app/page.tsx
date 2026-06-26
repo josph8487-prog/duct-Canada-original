@@ -28,16 +28,16 @@ export default function Home() {
   ];
 
   const areaBtnStyle = {
-  padding: "14px 28px",
-  backgroundColor: "#0056b3",
-  color: "#fff",
-  borderRadius: "8px",
-  textDecoration: "none",
-  fontWeight: "600",
-  fontSize: "16px",
-  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-  transition: "0.3s"
-};
+    padding: "14px 28px",
+    backgroundColor: "#0056b3",
+    color: "#fff",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600",
+    fontSize: "16px",
+    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+    transition: "0.3s"
+  };
 
   return (
     <main>
@@ -78,7 +78,19 @@ export default function Home() {
         <h2>Service Areas We Cover</h2>
 
         <div className={styles.areaGrid}>
-          {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
+          {[
+            "Markham", 
+            "Toronto", 
+            "Vaughan", 
+            "Richmond Hill", 
+            "Mississauga", 
+            "Brampton", 
+            "Pickering",
+            "North York",
+            "Ajax",
+            "Oshawa",
+            "Scarborough"
+          ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
