@@ -27,10 +27,10 @@ export default function Home() {
     }
   ];
 
-  // AAPKE BLUE BUTTONS KI STYLING + LIGHTING GLOW EFFECT HERE
+  // BLUE BUTTONS WITH LIGHTING GLOW EFFECT
   const areaBtnStyle = {
     padding: "14px 28px",
-    backgroundColor: "#0056b3", // Aapka original blue color
+    backgroundColor: "#0056b3",
     color: "#fff",
     borderRadius: "8px",
     textDecoration: "none",
@@ -38,10 +38,9 @@ export default function Home() {
     fontSize: "16px",
     display: "inline-block",
     textAlign: "center",
-    // Yahan lighting/glow effect dala hai jo buttons ko shiny aur bright banayega
-    boxShadow: "0 0 12px rgba(0, 86, 179, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2)",
+    boxShadow: "0 0 15px rgba(0, 86, 179, 0.7), inset 0 0 12px rgba(255, 255, 255, 0.3)",
     border: "1px solid rgba(255, 255, 255, 0.2)",
-    transition: "0.3s ease"
+    transition: "0.3s"
   };
 
   return (
@@ -78,11 +77,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (SPACE FIX: Is section par direct styles lagaye hain space khatam krne k liye) */}
-      <section style={{ paddingTop: "10px", marginTop: "0px" }}>
+      {/* SERVICE AREAS (SPACE REMOVED & CENTERED) */}
+      <section style={{ paddingTop: "0px", marginTop: "0px", paddingBottom: "40px" }}>
         
-        {/* HEADING CENTERED */}
-        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
+        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333", marginTop: "10px" }}>
           Service Areas We Cover
         </h2>
 
@@ -99,15 +97,15 @@ export default function Home() {
             "Ajax",
             "Oshawa",
             "Scarborough",
-            "Whitby",       // Naya Button
-            "East York",    // Naya Button
-            "Etobicoke",    // Naya Button
-            "York Region"   // Naya Button
+            "Whitby",
+            "East York",
+            "Etobicoke",
+            "York Region"
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={areaBtnStyle} // Wapis original inline style apply kar diya
+              style={areaBtnStyle}
             >
               {city}
             </Link>
