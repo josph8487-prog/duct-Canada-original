@@ -148,7 +148,7 @@ export default function Contact() {
 {/* Map Section */}
             <section className={styles.mapSection}>
                 <iframe
-                    src="https://google.com"
+                    src="https://maps.google.com/maps?q=35%20Carlton%20Rd,%20Markham,%20ON%20L3R%201Z4&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
