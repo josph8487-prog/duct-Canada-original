@@ -61,10 +61,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (SPACE REMOVED & CLEAN SOLID BUTTONS) */}
-      <section style={{ paddingTop: "0px", marginTop: "-30px", paddingBottom: "40px" }}>
+      {/* SERVICE AREAS (Clean with CSS Classes) */}
+      <section className={styles.areaSection}>
         
-        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
+        <h2 className={styles.areaSectionTitle}>
           Service Areas We Cover
         </h2>
 
@@ -89,18 +89,7 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={{
-                padding: "14px 28px",
-                backgroundColor: "#0056b3", // Aapka original solid blue color
-                color: "#ffffff",
-                borderRadius: "8px",
-                textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "16px",
-                boxShadow: "0 2px 5px rgba(0,0,0,0.2)", // Saaf aur halki black shadow (No blue shade)
-                display: "inline-block",
-                textAlign: "center"
-              }}
+              className={styles.solidBlueBtn}
             >
               {city}
             </Link>
