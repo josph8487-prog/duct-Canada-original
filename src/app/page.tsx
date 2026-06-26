@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
@@ -29,31 +28,25 @@ export default function Home() {
   ];
 
   const areaBtnStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "14px 28px",
-    backgroundColor: "#0056b3",
-    color: "#fff",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "600",
-    fontSize: "16px",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
-    transition: "all 0.3s ease",
-    textAlign: "center",
-    boxSizing: "border-box",
-    minWidth: "160px",
-    flexGrow: 1,
-    maxWidth: "280px"
-  } as const;
+  padding: "14px 28px",
+  backgroundColor: "#0056b3",
+  color: "#fff",
+  borderRadius: "8px",
+  textDecoration: "none",
+  fontWeight: "600",
+  fontSize: "16px",
+  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+  transition: "0.3s"
+};
 
   return (
-    <main style={{ width: "100%", overflowX: "hidden" }}>
+    <main>
 
+      {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.heroContentWrapper}>
 
+          {/* LEFT */}
           <div className={styles.heroLeft}>
             <div>
               <h1 className={styles.heroTitle}>
@@ -74,27 +67,30 @@ export default function Home() {
             </div>
           </div>
 
+          {/* RIGHT IMAGE */}
           <div className={styles.heroRight}></div>
 
         </div>
       </section>
 
+      {/* SERVICE AREAS */}
       <section className={styles.areaSection}>
-        <h2 className={styles.areaSectionTitle}>Service Areas We Cover</h2>
-<div className={styles.areaGrid} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', animation: 'pulse 2s infinite alternate' }}>
-  {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
-    <Link
-      key={city}
-      href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-      style={areaBtnStyle}
-      className={styles.areaLinkHover}
-    >
+        <h2>Service Areas We Cover</h2>
+
+        <div className={styles.areaGrid}>
+          {["Markham", "Toronto", "Vaughan", "Richmond Hill"].map((city) => (
+            <Link
+              key={city}
+              href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
+              style={areaBtnStyle}
+            >
               {city}
             </Link>
           ))}
         </div>
       </section>
 
+      {/* SERVICES */}
       <section className={styles.servicesSection}>
         <div className="container">
 
