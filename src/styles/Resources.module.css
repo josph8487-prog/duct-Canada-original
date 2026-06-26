@@ -233,6 +233,6 @@
 .contactValue {
   display: inline-block;
   white-space: nowrap;
-  font-size: clamp(10px, 3.5vw, 16px);
+  font-size: clamp(10px, 3.7vw, 16px);
   text-transform: lowercase;
 }
