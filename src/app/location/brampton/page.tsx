@@ -78,18 +78,18 @@ export default function BramptonPage() {
           <li>✔ 100% satisfaction guarantee</li>
         </ul>
       </section>
+{/* MAP SECTION */}
+<section style={{ padding: "40px 20px", textAlign: "center" }}>
+  <h2>Service Area Map - Brampton</h2>
 
-      {/* MAP SECTION */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Service Area Map - Brampton</h2>
-
-        <iframe
-          src="https://google.com"
-          width="100%"
-          height="350"
-          style={{ border: 0, borderRadius: "10px" }}
-          loading="lazy"
-        ></iframe>
+  <iframe
+    src="https://www.google.com/maps?q=Brampton+Ontario+duct+cleaning&output=embed"
+    width="100%"
+    height="350"
+    style={{ border: 0, borderRadius: "10px" }}
+    loading="lazy"
+  ></iframe>
+      
       </section>
 
       {/* TRUSTED CONTENT SECTION */}
