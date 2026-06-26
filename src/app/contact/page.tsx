@@ -12,12 +12,15 @@ export default function Contact() {
         setLoading(true);
         setError(false);
 
-        const formData = new FormData(e.currentTarget);
+        const form = e.currentTarget;
+        const formData = new FormData(form);
         formData.append("access_key", "e14b8041-541d-480d-b267-e49fb256e4f9");
 
         try {
-            const res = await fetch("https://web3forms.com", {
+            // mode: 'cors' lagaya hai taake API response block na ho
+            const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
+                mode: "cors",
                 body: formData
             });
 
@@ -25,6 +28,7 @@ export default function Contact() {
 
             if (data.success) {
                 setSubmitted(true);
+                form.reset();
             } else {
                 setError(true);
             }
@@ -78,7 +82,7 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        {/* Unchanged Address Card */}
+                        {/* Address Card */}
                         <div className={styles.infoItem}>
                             <div className={styles.iconCircle}>🏢</div>
                             <div className={styles.infoContent}>
@@ -127,7 +131,7 @@ export default function Contact() {
                                 
                                 {error && (
                                     <div style={{ color: 'red', marginBottom: '1rem', fontSize: '0.9rem', textAlign: 'left' }}>
-                                        Something went wrong. Please try again later.
+                                        Submission failed. Please check your internet connection and try again.
                                     </div>
                                 )}
 
@@ -141,14 +145,14 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Map Section */}
+            {/* Map Section - target="_top" secure embed setup */}
             <section className={styles.mapSection}>
                 <iframe
                     src="https://google.com"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer"
                     title="Duct Cleaning Canada Location"
                 ></iframe>
             </section>
