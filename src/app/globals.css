@@ -202,3 +202,40 @@ a {
 .menu-left-glow {
   animation: flowGlow 8s linear infinite, pulseWave 4s ease-in-out infinite !important;
 }
+@keyframes floatOrbs {
+  0% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(-30px) translateX(15px) scale(1.1); }
+  100% { transform: translateY(0px) translateX(0px) scale(1); }
+}
+
+@keyframes floatOrbsReverse {
+  0% { transform: translateY(0px) translateX(0px) scale(1.1); }
+  50% { transform: translateY(40px) translateX(-20px) scale(0.9); }
+  100% { transform: translateY(0px) translateX(0px) scale(1.1); }
+}
+
+.menu-glow-orb-1 {
+  position: absolute;
+  top: 15%;
+  left: -50px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
+  animation: floatOrbs 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.menu-glow-orb-2 {
+  position: absolute;
+  bottom: 20%;
+  right: -30px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(155, 81, 224, 0.12) 0%, transparent 70%);
+  filter: blur(25px);
+  animation: floatOrbsReverse 14s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
