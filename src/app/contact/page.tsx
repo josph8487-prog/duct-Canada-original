@@ -11,6 +11,14 @@ export default function Contact() {
         console.log("Form submitted to ductcleaningcanada2@gmail.com");
     };
 
+    const scrollToMap = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const mapSection = document.getElementById('contact-map-section');
+        if (mapSection) {
+            mapSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <section className={styles.hero}>
@@ -54,8 +62,8 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        {/* Clickable Address Card */}
-                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className={styles.infoItemLink}>
+                        {/* Clickable Address Card - Scrolls directly to the map below */}
+                        <a href="#contact-map-section" onClick={scrollToMap} className={styles.infoItemLink}>
                             <div className={styles.infoItem}>
                                 <div className={styles.iconCircle}>🏢</div>
                                 <div className={styles.infoContent}>
@@ -110,8 +118,8 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Map Section */}
-            <section className={styles.mapSection}>
+            {/* Map Section Restored exactly like your old code */}
+            <section id="contact-map-section" className={styles.mapSection}>
                 <iframe
                     src="https://google.com"
                     className={styles.mapFrame}
