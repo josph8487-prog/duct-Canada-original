@@ -27,23 +27,6 @@ export default function Home() {
     }
   ];
 
-  // REAL SOLID BLUE BUTTONS WITH NEON GLOW LIGHTING
-  const realBlueLightingBtn = {
-    padding: "14px 28px",
-    backgroundColor: "#0056b3", // Your exact blue background color
-    color: "#ffffff",           // Pure white text
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "600",
-    fontSize: "16px",
-    display: "inline-block",
-    textAlign: "center",
-    // Premium lighting glow effect around and inside the blue buttons
-    boxShadow: "0 0 15px rgba(0, 86, 179, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.2)",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
-    transition: "0.3s ease"
-  };
-
   return (
     <main>
 
@@ -78,10 +61,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (PERFECT WORKING LAYOUT & TOP SPACE REMOVED) */}
-      <section style={{ paddingTop: "0px", marginTop: "-20px" }}>
+      {/* SERVICE AREAS */}
+      <section style={{ paddingTop: "0px", marginTop: "-30px", paddingBottom: "40px" }}>
         
-        {/* CENTERED TITLE */}
         <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333" }}>
           Service Areas We Cover
         </h2>
@@ -99,15 +81,26 @@ export default function Home() {
             "Ajax",
             "Oshawa",
             "Scarborough",
-            "Whitby",       // New Button
-            "East York",    // New Button
-            "Etobicoke",    // New Button
-            "York Region"   // New Button
+            "Whitby",
+            "East York",
+            "Etobicoke",
+            "York Region"
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={realBlueLightingBtn} // Real blue color + lighting applied directly here
+              style={{
+                padding: "14px 28px",
+                backgroundColor: "#0056b3",
+                color: "#ffffff",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: "600",
+                fontSize: "16px",
+                boxShadow: "0 0 15px rgba(0, 86, 179, 0.6)",
+                display: "inline-block",
+                textAlign: "center"
+              }}
             >
               {city}
             </Link>
