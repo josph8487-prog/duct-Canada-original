@@ -193,3 +193,12 @@ a {
     box-shadow: 0 0 8px #00f2fe !important;
 }
 
+@keyframes pulseWave {
+  0% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.6); }
+  50% { box-shadow: 0 0 35px rgba(155, 81, 224, 0.9), 0 0 50px rgba(0, 242, 254, 0.4); }
+  100% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.6); }
+}
+
+.menu-left-glow {
+  animation: flowGlow 8s linear infinite, pulseWave 4s ease-in-out infinite !important;
+}
