@@ -230,3 +230,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.contactValue {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(10px, 3.5vw, 16px);
+  text-transform: lowercase;
+}
