@@ -38,9 +38,9 @@ const Header = () => {
                     <nav className={styles.navLinks}>
                         <Link href="/" className={styles.navLink}>Home</Link>
                         <Link href="/about" className={styles.navLink}>About</Link>
-                        <Link href="/services" className={styles.navLink}>Services</Link>
+                        <Link href="/services" className={styles.navLink}>Our Services</Link>
                         <Link href="/pricing" className={styles.navLink}>Pricing</Link>
-                        <Link href="/service-areas" className={styles.navLink}>Service Areas</Link>
+                        <Link href="/service-areas" className={styles.navLink}>Areas We Serve</Link>
                         <Link href="/resources" className={styles.navLink}>Resources</Link>
                         <Link href="/gallery" className={styles.navLink}>Gallery</Link>
                         <Link href="/contact" className={styles.navLink}>Contact</Link>
@@ -85,9 +85,9 @@ const Header = () => {
                 <nav className={styles.mobileNavLinks}>
                     <Link href="/" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Home</Link>
                     <Link href="/about" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>About</Link>
-                    <Link href="/services" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Services</Link>
+                    <Link href="/services" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Our Services</Link>
                     <Link href="/pricing" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Pricing</Link>
-                    <Link href="/service-areas" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Service Areas</Link>
+                    <Link href="/service-areas" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Areas We Serve</Link>
                     <Link href="/resources" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Resources</Link>
                     <Link href="/gallery" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Gallery</Link>
                     <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>Contact</Link>
