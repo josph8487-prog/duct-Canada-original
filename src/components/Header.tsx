@@ -66,9 +66,10 @@ const Header = () => {
 
             {/* Mobile Menu Panel */}
             <div
-                className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}
+                className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''} mobile-menu-relative-box`}
                 aria-hidden={!isMenuOpen}
             >
+                <div className="menu-left-glow"></div>
                 {/* Panel header with close button */}
                 <div className={styles.mobileMenuHeader}>
                     <button
