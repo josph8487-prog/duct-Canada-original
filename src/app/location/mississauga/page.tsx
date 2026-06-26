@@ -135,7 +135,7 @@ export default function MississaugaPage() {
           Call now for same-day service
         </p>
 
-        <div style={{ marginTop: "20px", marginBottom: "30px" }}>
+        <div style={{ marginTop: "20px" }}>
           <a
             href="tel:2267772863"
             style={{
@@ -150,13 +150,6 @@ export default function MississaugaPage() {
             Call Now
           </a>
         </div>
-
-        <p style={{ fontSize: "1.4rem", fontWeight: "bold", color: "#000", marginBottom: "5px" }}>
-          Call our Duct Cleaning Specialists!
-        </p>
-        <p style={{ fontSize: "1.6rem", fontWeight: "bold", color: "#000", marginTop: "0" }}>
-          📞 226-777-2863
-        </p>
       </section>
     </>
   );
