@@ -142,6 +142,21 @@ a {
         text-align: center !important;
     }
 }
+.menu-left-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00f2fe, #4facfe, #9b51e0);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.8), 0 0 30px rgba(155, 81, 224, 0.4);
+  z-index: 99;
+}
+
+.mobile-menu-relative-box {
+  position: relative;
+  overflow: hidden;
+}
 
 
 
