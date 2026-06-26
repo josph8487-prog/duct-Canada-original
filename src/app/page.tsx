@@ -27,22 +27,6 @@ export default function Home() {
     }
   ];
 
-  // BLUE BUTTONS WITH LIGHTING GLOW EFFECT
-  const areaBtnStyle = {
-    padding: "14px 28px",
-    backgroundColor: "#0056b3",
-    color: "#fff",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "600",
-    fontSize: "16px",
-    display: "inline-block",
-    textAlign: "center",
-    boxShadow: "0 0 15px rgba(0, 86, 179, 0.7), inset 0 0 12px rgba(255, 255, 255, 0.3)",
-    border: "1px solid rgba(255, 255, 255, 0.2)",
-    transition: "0.3s"
-  };
-
   return (
     <main>
 
@@ -77,12 +61,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (SPACE REMOVED & CENTERED) */}
-      <section style={{ paddingTop: "0px", marginTop: "0px", paddingBottom: "40px" }}>
-        
-        <h2 style={{ textAlign: "center", marginBottom: "25px", fontSize: "2rem", color: "#333", marginTop: "10px" }}>
-          Service Areas We Cover
-        </h2>
+      {/* SERVICE AREAS */}
+      <section className={styles.areaSection}>
+        <h2 className={styles.areaSectionTitle}>Service Areas We Cover</h2>
 
         <div className={styles.areaGrid}>
           {[
@@ -105,7 +86,7 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={areaBtnStyle}
+              className={styles.shinyBlueBtn}
             >
               {city}
             </Link>
