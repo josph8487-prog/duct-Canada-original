@@ -4,27 +4,51 @@ import styles from '@/styles/Contact.module.css';
 
 export default function Contact() {
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setSubmitted(true);
-        console.log("Form submitted to ductcleaningcanada2@gmail.com");
+        setLoading(true);
+        setError(false);
+
+        const formData = new FormData(e.currentTarget);
+        formData.append("access_key", "e14b8041-541d-480d-b267-e49fb256e4f9");
+
+        try {
+            const res = await fetch("https://web3forms.com", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                setError(true);
+            }
+        } catch (err) {
+            setError(true);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
         <>
-            <section className={styles.hero}>
-                <div className="container">
+            <section className={styles.hero} dir="ltr">
+                <div className="container" style={{ textAlign: 'left' }}>
                     <h1 className={styles.heroTitle}>Contact Us</h1>
                     <p className={styles.heroSubtitle}>Get in touch for appointments or any information regarding our services.</p>
                 </div>
             </section>
 
-            <section className={styles.contactSection}>
+            <section className={styles.contactSection} dir="ltr">
                 <div className={`container ${styles.grid}`}>
 
                     {/* Contact Information */}
-                    <div className={styles.contactInfoCol}>
+                    <div className={styles.contactInfoCol} style={{ textAlign: 'left' }}>
                         <div>
                             <h2>Get in Touch</h2>
                             <p style={{ lineHeight: '1.6', color: 'var(--gray-700)', marginBottom: '2rem' }}>
@@ -65,7 +89,7 @@ export default function Contact() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className={styles.formCol}>
+                    <div className={styles.formCol} style={{ textAlign: 'left' }}>
                         <h3>Send us a Message</h3>
 
                         {submitted ? (
@@ -73,34 +97,43 @@ export default function Contact() {
                                 <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you shortly.
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} dir="ltr" style={{ textAlign: 'left' }}>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="contact-name" className={styles.label}>Name</label>
-                                    <input id="contact-name" type="text" className={styles.input} placeholder="Your Name" required />
+                                    <input id="contact-name" name="name" type="text" className={styles.input} placeholder="Your Name" required style={{ textAlign: 'left', direction: 'ltr' }} />
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="contact-email" className={styles.label}>Email</label>
-                                    <input id="contact-email" type="email" className={styles.input} placeholder="your@email.com" required />
+                                    <input id="contact-email" name="email" type="email" className={styles.input} placeholder="your@email.com" required style={{ textAlign: 'left', direction: 'ltr' }} />
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="contact-phone" className={styles.label}>Phone</label>
-                                    <input id="contact-phone" type="tel" className={styles.input} placeholder="(555) 123-4567" required />
+                                    <input id="contact-phone" name="phone" type="tel" className={styles.input} placeholder="(555) 123-4567" required style={{ textAlign: 'left', direction: 'ltr' }} />
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="contact-service" className={styles.label}>Service Type</label>
-                                    <select id="contact-service" className={styles.select}>
-                                        <option>Residential Cleaning</option>
-                                        <option>Commercial Cleaning</option>
-                                        <option>Deep Cleaning Package</option>
-                                        <option>Premium Package</option>
-                                        <option>Other</option>
+                                    <select id="contact-service" name="service" className={styles.select} style={{ textAlign: 'left', direction: 'ltr' }}>
+                                        <option value="Residential Cleaning">Residential Cleaning</option>
+                                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                        <option value="Deep Cleaning Package">Deep Cleaning Package</option>
+                                        <option value="Premium Package">Premium Package</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="contact-message" className={styles.label}>Message / Details</label>
-                                    <textarea id="contact-message" className={styles.textarea} placeholder="How can we help you?" required></textarea>
+                                    <textarea id="contact-message" name="message" className={styles.textarea} placeholder="How can we help you?" required style={{ textAlign: 'left', direction: 'ltr' }}></textarea>
                                 </div>
-                                <button type="submit" className={styles.submitBtn}>Send Message</button>
+                                
+                                {error && (
+                                    <div style={{ color: 'red', marginBottom: '1rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                                        Something went wrong. Please try again later.
+                                    </div>
+                                )}
+
+                                <button type="submit" className={styles.submitBtn} disabled={loading}>
+                                    {loading ? "Sending..." : "Send Message"}
+                                </button>
                             </form>
                         )}
                     </div>
@@ -111,7 +144,7 @@ export default function Contact() {
             {/* Map Section */}
             <section className={styles.mapSection}>
                 <iframe
-                    src="https://maps.google.com/maps?q=35%20Carlton%20Rd,%20Markham,%20ON%20L3R%201Z4&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    src="https://google.com"
                     className={styles.mapFrame}
                     allowFullScreen={true}
                     loading="lazy"
