@@ -39,16 +39,15 @@ export default function ServiceAreas() {
 {/* HERO SECTION */}
 <section className={styles.hero}>
     <div className="container" style={{ padding: '0 20px', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
-        <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.6rem, 6vw, 3rem)', whiteSpace: 'normal', lineHeight: '1.2', wordWrap: 'break-word' }}>
+        <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.4rem, 5.5vw, 2.5rem)', fontWeight: '700', whiteSpace: 'normal', lineHeight: '1.2', wordWrap: 'break-word' }}>
             Service Areas – Duct Cleaning CANADA
         </h1>
 
-        <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(0.9rem, 3.8vw, 1.2rem)', opacity: 0.9, marginTop: '12px', whiteSpace: 'normal' }}>
+        <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(0.85rem, 3.5vw, 1.1rem)', fontWeight: '400', opacity: 0.9, marginTop: '12px', whiteSpace: 'normal' }}>
             Professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services across Markham, Toronto and Greater Toronto Area.
         </p>
     </div>
 </section>
-
             {/* MAIN AREAS */}
             <div className={`container ${styles.section}`}>
 
