@@ -36,17 +36,17 @@ export default function ServiceAreas() {
     return (
         <>
             {/* HERO SECTION */}
-            <section className={styles.hero}>
-                <div className="container">
-                    <h1 className={styles.heroTitle}>
-                        Service Areas – Duct Cleaning CANADA
-                    </h1>
+<section className={styles.hero}>
+    <div className="container" style={{ padding: '0 15px' }}>
+        <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.1rem, 5.5vw, 3rem)', whiteSpace: 'nowrap' }}>
+            Service Areas – Duct Cleaning CANADA
+        </h1>
 
-                    <p className={styles.heroSubtitle}>
-                        Professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services across Markham, Toronto and Greater Toronto Area.
-                    </p>
-                </div>
-            </section>
+        <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(0.9rem, 3.5vw, 1.2rem)', opacity: 0.9, marginTop: '10px' }}>
+            Professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services across Markham, Toronto and Greater Toronto Area.
+        </p>
+    </div>
+</section>
 
             {/* MAIN AREAS */}
             <div className={`container ${styles.section}`}>
