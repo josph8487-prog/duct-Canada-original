@@ -36,7 +36,9 @@ export default function Home() {
     fontWeight: "600",
     fontSize: "16px",
     boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-    transition: "0.3s"
+    transition: "all 0.3s ease-in-out",
+    display: "inline-block",
+    textAlign: "center"
   };
 
   return (
@@ -77,7 +79,7 @@ export default function Home() {
       <section className={styles.areaSection}>
         <h2>Service Areas We Cover</h2>
 
-        <div className={styles.areaGrid}>
+        <div className={styles.areaGrid} style={{ display: "flex", flexWrap: "wrap", gap: "15px", justifyContent: "center", padding: "20px 0" }}>
           {[
             "Markham", 
             "Toronto", 
@@ -89,12 +91,26 @@ export default function Home() {
             "North York",
             "Ajax",
             "Oshawa",
-            "Scarborough"
+            "Scarborough",
+            "Etobicoke",
+            "Whitby",
+            "York Region",
+            "East York"
           ].map((city) => (
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
               style={areaBtnStyle}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "#006eff";
+                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,110,255,0.4)";
+                e.currentTarget.style.transform = "translateY(-3px) scale(1.03)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = "#0056b3";
+                e.currentTarget.style.boxShadow = "0 2px 5px rgba(0,0,0,0.2)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+              }}
             >
               {city}
             </Link>
