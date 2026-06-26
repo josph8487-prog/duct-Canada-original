@@ -142,4 +142,12 @@ a {
         text-align: center !important;
     }
 }
+ 
+@media (max-width: 480px) {
+    [class*="heroTitle"], 
+    .hero h1 {
+        font-size: 1.5rem !important;
+        white-space: nowrap !important;
+    }
+}
 
