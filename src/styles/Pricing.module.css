@@ -226,11 +226,8 @@
 }
 
 .contactLink {
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: inline-block;
-  vertical-align: bottom;
+  white-space: nowrap;
+  font-size: clamp(10px, 3.2vw, 16px);
 }
 
