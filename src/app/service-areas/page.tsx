@@ -35,7 +35,8 @@ export default function ServiceAreas() {
 
     return (
         <>
-            {/* HERO SECTION */}
+            
+{/* HERO SECTION */}
 <section className={styles.hero}>
     <div className="container" style={{ padding: '0 15px' }}>
         <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.1rem, 5.5vw, 3rem)', whiteSpace: 'nowrap' }}>
@@ -47,7 +48,6 @@ export default function ServiceAreas() {
         </p>
     </div>
 </section>
-
             {/* MAIN AREAS */}
             <div className={`container ${styles.section}`}>
 
