@@ -183,22 +183,50 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-
-.contactWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.contactWrapper * {
+.responsiveEmail {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(10px, 3.2vw, 16px);
+  text-transform: lowercase;
   max-width: 100%;
-  box-sizing: border-box;
 }
+
+.responsiveAddress {
+  display: block;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .contactInfoCol, .formCol {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .infoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .infoContent {
+    text-align: center;
+    width: 100%;
+  }
+}
+
