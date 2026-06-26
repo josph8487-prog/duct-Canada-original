@@ -39,7 +39,7 @@ export default function ServiceAreas() {
             <section className={styles.hero}>
                 <div className="container">
                     <h1 className={styles.heroTitle}>
-                        Service Areas – Air Duct Cleaning Markham & GTA
+                        Service Areas – Duct Cleaning CANADA
                     </h1>
 
                     <p className={styles.heroSubtitle}>
