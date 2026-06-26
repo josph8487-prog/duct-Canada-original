@@ -54,14 +54,16 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        {/* Plain Address Card - Not Clickable */}
-                        <div className={styles.infoItem}>
-                            <div className={styles.iconCircle}>🏢</div>
-                            <div className={styles.infoContent}>
-                                <h4>Address</h4>
-                                <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
+                        {/* Clickable Address Card */}
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className={styles.infoItemLink}>
+                            <div className={styles.infoItem}>
+                                <div className={styles.iconCircle}>🏢</div>
+                                <div className={styles.infoContent}>
+                                    <h4>Address</h4>
+                                    <p className={styles.responsiveAddress}>35 Carlton Rd, Markham, ON L3R 1Z4</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Contact Form */}
