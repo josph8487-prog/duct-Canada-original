@@ -80,17 +80,17 @@ export default function EastYorkPage() {
       </section>
 
       {/* MAP SECTION */}
-      <section style={{ padding: "40px 20px", textAlign: "center" }}>
-        <h2>Service Area Map - East York</h2>
+<section style={{ padding: "40px 20px", textAlign: "center" }}>
+  <h2>Service Area Map - East York</h2>
 
-        <iframe
-          src="https://google.com"
-          width="100%"
-          height="350"
-          style={{ border: 0, borderRadius: "10px" }}
-          loading="lazy"
-        ></iframe>
-      </section>
+  <iframe
+    src="https://www.google.com/maps?q=East+York+Ontario+duct+cleaning&output=embed"
+    width="100%"
+    height="350"
+    style={{ border: 0, borderRadius: "10px" }}
+    loading="lazy"
+  ></iframe>
+</section>
 
       {/* TRUSTED CONTENT SECTION */}
       <section style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
