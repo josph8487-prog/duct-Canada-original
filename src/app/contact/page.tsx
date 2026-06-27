@@ -17,7 +17,6 @@ export default function Contact() {
         formData.append("access_key", "e14b8041-541d-480d-b267-e49fb256e4f9");
 
         try {
-            // mode: 'cors' lagaya hai taake API response block na ho
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 mode: "cors",
