@@ -44,7 +44,7 @@ export default function ServiceAreas() {
 
         </h1>
 
-        <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(1.85rem, 3.5vw, 1.1rem)', fontWeight: '500', opacity: 0.9, marginTop: '12px', whiteSpace: 'normal' }}>
+        <p className={styles.heroSubtitle} style={{ fontSize: 'clamp(0.95rem, 3.5vw, 1.1rem)', fontWeight: '400', opacity: 0.9, marginTop: '15px', whiteSpace: 'normal' }}>
             Professional air duct cleaning, dryer vent cleaning, furnace cleaning and HVAC services across Markham, Toronto and Greater Toronto Area.
         </p>
     </div>
