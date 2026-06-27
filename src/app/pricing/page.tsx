@@ -6,7 +6,7 @@ export default function Pricing() {
         <>
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.heroTitle} style={{ fontSize: '24px', fontWeight: '500', marginTop: '80px' }}>
+                    <h1 className={styles.heroTitle} style={{ fontSize: '24px', fontWeight: '700', marginTop: '90px' }}>
            Pricing packages
 </h1>
 
