@@ -17,6 +17,7 @@ export default function Contact() {
         formData.append("access_key", "e14b8041-541d-480d-b267-e49fb256e4f9");
 
         try {
+            // mode: 'cors' lagaya hai taake API response block na ho
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 mode: "cors",
@@ -42,9 +43,9 @@ export default function Contact() {
         <>
             <section className={styles.hero} dir="ltr">
                 <div className="container" style={{ textAlign: 'left' }}>
-       <p className={styles.heroSubtitle}>Get in touch for appointments or any information regarding our services.</p>
-                </div>
-            </section>
+       <h1 className={styles.heroTitle} style={{ fontSize: '25px', whiteSpace: 'nowrap', marginTop: '100px', textAlign: 'center' }}>
+  CONTACT US
+</h1>
              
 <p className={styles.heroSubtitle} style={{ textAlign: 'left', paddingLeft: '35%', marginTop: '10px' }}>Get in touch for appointments or any information regarding our services.</p>
                 </div>
