@@ -43,7 +43,7 @@ export default function Contact() {
         <>
             <section className={styles.hero} dir="ltr">
                 <div className="container" style={{ textAlign: 'left' }}>
-       <h1 className={styles.heroTitle} style={{ fontSize: '25px', whiteSpace: 'nowrap', marginTop: '100px', textAlign: 'center' }}>
+       <h1 className={styles.heroTitle} style={{ fontSize: '25px', whiteSpace: 'nowrap', marginTop: '140px', textAlign: 'center' }}>
   CONTACT US
 </h1>
              <p className={styles.heroSubtitle} style={{ textAlign: 'center', marginTop: '10px' }}>
