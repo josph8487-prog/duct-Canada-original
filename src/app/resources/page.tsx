@@ -5,7 +5,7 @@ export default function Resources() {
         <>
             <section className={styles.hero}>
                 <div className="container">
-           <h1 className={styles.heroTitle} style={{ fontSize: '24px', marginTop: '40px' }}>Resources</h1>
+           <h1 className={styles.heroTitle} style={{ fontSize: '24px', marginTop: '80px' }}>Resources</h1>
 
 
                     <p className={styles.heroSubtitle}>Valuable information about duct cleaning, HVAC maintenance, and indoor air quality.</p>
