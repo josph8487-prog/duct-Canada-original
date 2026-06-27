@@ -63,7 +63,7 @@ export default function About() {
                     </div>
                     <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
                         <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>100%</h4>
-                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Satisfaction Guarantee</p>
+                   <p style={{ fontSize: "16px", margin: "20px 0", whiteSpace: "nowrap", lineHeight: "1.2" }}>100% Satisfaction Guarantee</p>        
                     </div>
                     <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
                         <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>GTA</h4>
