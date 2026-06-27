@@ -54,25 +54,67 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Stats / Trust Section */}
-            <section className={styles.statsSection} style={{ width: "100%", overflow: "hidden", padding: "20px 5px" }}>
-                <div className={`container ${styles.statsGrid}`} style={{ display: "flex", flexWrap: "nowrap", gap: "8px", justifyContent: "space-between", width: "100%", boxSizing: "border-box" }}>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>8+</h4>
-                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Years in Business</p>
-                    </div>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>100%</h4>
-                   <p style={{ fontSize: "16px", margin: "20px 0", whiteSpace: "nowrap", lineHeight: "1.2" }}>100% Satisfaction Guarantee</p>        
-                    </div>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>GTA</h4>
-                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Wide Service Area</p>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-}
+            
+{/* Stats / Trust Section */}
+<section className={styles.statsSection} style={{ width: "100%", padding: "20px 10px", boxSizing: "border-box" }}>
+    <div className={`container ${styles.statsGrid}`} style={{ 
+        display: "flex", 
+        flexDirection: "row", /* Items ko ek hi line mein rakhne ke liye */
+        justifyContent: "space-between", 
+        alignItems: "flex-start", 
+        gap: "15px", 
+        width: "100%", 
+        maxWidth: "1200px", /* Desktop par bohot zyaada stretch na ho */
+        margin: "0 auto",
+        boxSizing: "border-box" 
+    }}>
+        
+        {/* Stat Item 1 */}
+        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>13+</h4>
+            <p style={{ 
+                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
+                margin: 0, 
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", /* Word tootne se rokega */
+                overflowWrap: "break-word", 
+                lineHeight: "1.3" 
+            }}>
+                Years in Business
+            </p>
+        </div>
+
+        {/* Stat Item 2 */}
+        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>100%</h4>
+            <p style={{ 
+                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
+                margin: 0, 
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", 
+                overflowWrap: "break-word", 
+                lineHeight: "1.3" 
+            }}>
+                Satisfaction Guarantee
+            </p>
+        </div>
+
+        {/* Stat Item 3 */}
+        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>GTA</h4>
+            <p style={{ 
+                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
+                margin: 0, 
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", 
+                overflowWrap: "break-word", 
+                lineHeight: "1.3" 
+            }}>
+                Wide Service Area
+            </p>
+        </div>
+
+    </div>
+</section>
 
 
