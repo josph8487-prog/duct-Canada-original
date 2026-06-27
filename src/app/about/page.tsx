@@ -7,7 +7,8 @@ export default function About() {
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `linear-gradient(rgba(0, 17, 44, 0.8), rgba(0, 17, 44, 0.8)), url('/images/Banner.jpeg')` }}>
                 <div className="container">
-                    <h1 className={styles.heroTitle}>About Us</h1>
+                    <h1 className={styles.heroTitle} style={{ marginTop: '140px', fontSize: '28px', fontWeight: '700' }}>About Us</h1>
+
                     <p className={styles.heroSubtitle}>Leading the way in indoor air quality solutions since 2017.</p>
                 </div>
             </section>
