@@ -6,7 +6,10 @@ export default function Pricing() {
         <>
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.heroTitle}>Pricing Packages</h1>
+                    <h1 className={styles.heroTitle} style={{ fontSize: '24px', fontWeight: '500', marginTop: '80px' }}>
+           Pricing
+</h1>
+
                     <p className={styles.heroSubtitle}>Transparent, flat-rate pricing for professional duct cleaning. No hidden fees.</p>
                 </div>
             </section>
