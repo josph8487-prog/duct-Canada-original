@@ -39,7 +39,7 @@ export default function ServiceAreas() {
 {/* HERO SECTION */}
 <section className={styles.hero}>
     <div className="container" style={{ padding: '0 20px', width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
-   <h1 className={styles.heroTitle} style={{ fontSize: '24px', fontWeight: '700', whiteSpace: 'normal', lineHeight: '1.2', wordWrap: 'break-word', marginTop: '80px' }}>
+   <h1 className={styles.heroTitle} style={{ fontSize: '24px', fontWeight: '700', whiteSpace: 'normal', lineHeight: '1.2', wordWrap: 'break-word', marginTop: '100px' }}>
            Areas We Serve
 
         </h1>
