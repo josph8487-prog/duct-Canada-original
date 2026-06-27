@@ -42,9 +42,9 @@ export default function Contact() {
         <>
             <section className={styles.hero} dir="ltr">
                 <div className="container" style={{ textAlign: 'left' }}>
-       <h1 className={styles.heroTitle} style={{ fontSize: '25px', whiteSpace: 'nowrap', marginTop: '100px', textAlign: 'center' }}>
-  CONTACT US
-</h1>
+       <p className={styles.heroSubtitle}>Get in touch for appointments or any information regarding our services.</p>
+                </div>
+            </section>
              
 <p className={styles.heroSubtitle} style={{ textAlign: 'left', paddingLeft: '35%', marginTop: '10px' }}>Get in touch for appointments or any information regarding our services.</p>
                 </div>
