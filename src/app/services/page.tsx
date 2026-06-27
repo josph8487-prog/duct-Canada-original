@@ -55,7 +55,8 @@ export default function Services() {
         <>
             <section className={styles.hero}>
                 <div className="container">
-                    <h1 className={styles.heroTitle}>Our Services</h1>
+                     <h1 className={styles.heroTitle} style={{ marginTop: '140px', fontSize: '25px', fontWeight: '500' }}>Our Services</h1>
+
                     <p className={styles.heroSubtitle}>Professional residential and commercial duct cleaning solutions backed by industry expertise.</p>
                 </div>
             </section>
