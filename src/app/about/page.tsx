@@ -56,59 +56,59 @@ export default function About() {
 
             
 {/* Stats / Trust Section */}
-<section className={styles.statsSection} style={{ width: "100%", padding: "20px 10px", boxSizing: "border-box" }}>
-    <div className={`container ${styles.statsGrid}`} style={{ 
-        display: "flex", 
-        flexDirection: "row", /* Items ko ek hi line mein rakhne ke liye */
-        justifyContent: "space-between", 
-        alignItems: "flex-start", 
-        gap: "15px", 
-        width: "100%", 
-        maxWidth: "1200px", /* Desktop par bohot zyaada stretch na ho */
-        margin: "0 auto",
-        boxSizing: "border-box" 
+<section style={{ width: "100% !important", padding: "20px 10px !important", boxSizing: "border-box !important", display: "block !important" }}>
+    <div style={{ 
+        display: "flex !important", 
+        flexDirection: "row !important", 
+        justifyContent: "space-between !important", 
+        alignItems: "flex-start !important", 
+        gap: "10px !important", 
+        width: "100% !important", 
+        maxWidth: "1200px !important", 
+        margin: "0 auto !important",
+        boxSizing: "border-box !important" 
     }}>
         
         {/* Stat Item 1 */}
-        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
-            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>13+</h4>
+        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
+            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>13+</h4>
             <p style={{ 
-                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
-                margin: 0, 
-                whiteSpace: "normal", 
-                wordBreak: "keep-all", /* Word tootne se rokega */
-                overflowWrap: "break-word", 
-                lineHeight: "1.3" 
+                fontSize: "12px !important", 
+                margin: "0 !important", 
+                whiteSpace: "normal !important", 
+                wordBreak: "keep-all !important", 
+                overflowWrap: "anywhere !important", 
+                lineHeight: "1.2 !important" 
             }}>
                 Years in Business
             </p>
         </div>
 
         {/* Stat Item 2 */}
-        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
-            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>100%</h4>
+        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
+            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>100%</h4>
             <p style={{ 
-                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
-                margin: 0, 
-                whiteSpace: "normal", 
-                wordBreak: "keep-all", 
-                overflowWrap: "break-word", 
-                lineHeight: "1.3" 
+                fontSize: "12px !important", 
+                margin: "0 !important", 
+                whiteSpace: "normal !important", 
+                wordBreak: "keep-all !important", 
+                overflowWrap: "anywhere !important", 
+                lineHeight: "1.2 !important" 
             }}>
                 Satisfaction Guarantee
             </p>
         </div>
 
         {/* Stat Item 3 */}
-        <div className={styles.statItem} style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
-            <h4 style={{ fontSize: "clamp(1.2rem, 4vw, 1.8rem)", margin: "0 0 5px 0", fontWeight: "700" }}>GTA</h4>
+        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
+            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>GTA</h4>
             <p style={{ 
-                fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", 
-                margin: 0, 
-                whiteSpace: "normal", 
-                wordBreak: "keep-all", 
-                overflowWrap: "break-word", 
-                lineHeight: "1.3" 
+                fontSize: "12px !important", 
+                margin: "0 !important", 
+                whiteSpace: "normal !important", 
+                wordBreak: "keep-all !important", 
+                overflowWrap: "anywhere !important", 
+                lineHeight: "1.2 !important" 
             }}>
                 Wide Service Area
             </p>
@@ -116,5 +116,3 @@ export default function About() {
 
     </div>
 </section>
-
-
