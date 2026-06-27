@@ -54,65 +54,68 @@ export default function About() {
                 </div>
             </section>
 
-{/* Stats / Trust Section */}
-<section className="custom-stats-section">
-    {/* Pure standard CSS block jo rules ko forcefully apply karega */}
-    <style>{`
-        .custom-stats-section {
-            width: 100% !important;
-            padding: 20px 10px !important;
-            box-sizing: border-box !important;
-        }
-        .custom-stats-grid {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: space-between !important;
-            align-items: flex-start !important;
-            gap: 12px !important;
-            width: 100% !important;
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            box-sizing: border-box !important;
-        }
-        .custom-stat-item {
-            flex: 1 !important;
-            min-width: 0 !important;
-            text-align: center !important;
-        }
-        .custom-stat-item h4 {
-            font-size: 20px !important;
-            margin: 0 0 4px 0 !important;
-            font-weight: 700 !important;
-            color: #b86b33 !important; /* Brown orange color jo image mein hai */
-        }
-        .custom-stat-item p {
-            font-size: 11px !important;
-            margin: 0 !important;
-            line-height: 1.3 !important;
-            white-space: normal !important;
-            word-break: keep-all !important; /* Word ko beech se tootne nahi dega */
-            overflow-wrap: normal !important;
-            color: #000000 !important;
-        }
-    `}</style>
 
-    <div className="custom-stats-grid">
-        {/* Item 1 */}
-        <div className="custom-stat-item">
-            <h4>13+</h4>
-            <p>Years in Business</p>
+            {/* Stats / Trust Section */}
+<section style={{ width: "100%", padding: "20px 10px", boxSizing: "border-box" }}>
+    <div style={{ 
+        display: "flex", 
+        flexDirection: "row", 
+        justifyContent: "space-between", 
+        alignItems: "stretch", 
+        gap: "12px", 
+        width: "100%", 
+        maxWidth: "1200px", 
+        margin: "0 auto",
+        boxSizing: "border-box" 
+    }}>
+        
+        {/* Stat Item 1 */}
+        <div style={{ flex: "1 1 0px", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "22px", margin: "0 0 4px 0", fontWeight: "700", color: "#b86b33" }}>13+</h4>
+            <p style={{ 
+                fontSize: "12px", 
+                margin: "0", 
+                lineHeight: "1.3",
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", 
+                overflowWrap: "normal",
+                color: "#000000"
+            }}>
+                Years in Business
+            </p>
         </div>
 
-        {/* Item 2 */}
-        <div className="custom-stat-item">
-            <h4>100%</h4>
-            <p>Satisfaction Guarantee</p>
+        {/* Stat Item 2 */}
+        <div style={{ flex: "1 1 0px", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "22px", margin: "0 0 4px 0", fontWeight: "700", color: "#b86b33" }}>100%</h4>
+            <p style={{ 
+                fontSize: "12px", 
+                margin: "0", 
+                lineHeight: "1.3",
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", 
+                overflowWrap: "normal",
+                color: "#000000"
+            }}>
+                Satisfaction Guarantee
+            </p>
         </div>
 
-        {/* Item 3 */}
-        <div className="custom-stat-item">
-            <h4>GTA</h4>
-            <p>Wide Service Area</p>
+        {/* Stat Item 3 */}
+        <div style={{ flex: "1 1 0px", minWidth: "0", textAlign: "center" }}>
+            <h4 style={{ fontSize: "22px", margin: "0 0 4px 0", fontWeight: "700", color: "#b86b33" }}>GTA</h4>
+            <p style={{ 
+                fontSize: "12px", 
+                margin: "0", 
+                lineHeight: "1.3",
+                whiteSpace: "normal", 
+                wordBreak: "keep-all", 
+                overflowWrap: "normal",
+                color: "#000000"
+            }}>
+                Wide Service Area
+            </p>
         </div>
+
     </div>
 </section>
