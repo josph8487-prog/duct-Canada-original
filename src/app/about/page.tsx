@@ -54,65 +54,65 @@ export default function About() {
                 </div>
             </section>
 
-            
 {/* Stats / Trust Section */}
-<section style={{ width: "100% !important", padding: "20px 10px !important", boxSizing: "border-box !important", display: "block !important" }}>
-    <div style={{ 
-        display: "flex !important", 
-        flexDirection: "row !important", 
-        justifyContent: "space-between !important", 
-        alignItems: "flex-start !important", 
-        gap: "10px !important", 
-        width: "100% !important", 
-        maxWidth: "1200px !important", 
-        margin: "0 auto !important",
-        boxSizing: "border-box !important" 
-    }}>
-        
-        {/* Stat Item 1 */}
-        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
-            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>13+</h4>
-            <p style={{ 
-                fontSize: "12px !important", 
-                margin: "0 !important", 
-                whiteSpace: "normal !important", 
-                wordBreak: "keep-all !important", 
-                overflowWrap: "anywhere !important", 
-                lineHeight: "1.2 !important" 
-            }}>
-                Years in Business
-            </p>
+<section className="custom-stats-section">
+    {/* Pure standard CSS block jo rules ko forcefully apply karega */}
+    <style>{`
+        .custom-stats-section {
+            width: 100% !important;
+            padding: 20px 10px !important;
+            box-sizing: border-box !important;
+        }
+        .custom-stats-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+        }
+        .custom-stat-item {
+            flex: 1 !important;
+            min-width: 0 !important;
+            text-align: center !important;
+        }
+        .custom-stat-item h4 {
+            font-size: 20px !important;
+            margin: 0 0 4px 0 !important;
+            font-weight: 700 !important;
+            color: #b86b33 !important; /* Brown orange color jo image mein hai */
+        }
+        .custom-stat-item p {
+            font-size: 11px !important;
+            margin: 0 !important;
+            line-height: 1.3 !important;
+            white-space: normal !important;
+            word-break: keep-all !important; /* Word ko beech se tootne nahi dega */
+            overflow-wrap: normal !important;
+            color: #000000 !important;
+        }
+    `}</style>
+
+    <div className="custom-stats-grid">
+        {/* Item 1 */}
+        <div className="custom-stat-item">
+            <h4>13+</h4>
+            <p>Years in Business</p>
         </div>
 
-        {/* Stat Item 2 */}
-        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
-            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>100%</h4>
-            <p style={{ 
-                fontSize: "12px !important", 
-                margin: "0 !important", 
-                whiteSpace: "normal !important", 
-                wordBreak: "keep-all !important", 
-                overflowWrap: "anywhere !important", 
-                lineHeight: "1.2 !important" 
-            }}>
-                Satisfaction Guarantee
-            </p>
+        {/* Item 2 */}
+        <div className="custom-stat-item">
+            <h4>100%</h4>
+            <p>Satisfaction Guarantee</p>
         </div>
 
-        {/* Stat Item 3 */}
-        <div style={{ flex: "1 !important", minWidth: "0 !important", textAlign: "center !important" }}>
-            <h4 style={{ fontSize: "20px !important", margin: "0 0 5px 0 !important", fontWeight: "700 !important", wordBreak: "keep-all !important" }}>GTA</h4>
-            <p style={{ 
-                fontSize: "12px !important", 
-                margin: "0 !important", 
-                whiteSpace: "normal !important", 
-                wordBreak: "keep-all !important", 
-                overflowWrap: "anywhere !important", 
-                lineHeight: "1.2 !important" 
-            }}>
-                Wide Service Area
-            </p>
+        {/* Item 3 */}
+        <div className="custom-stat-item">
+            <h4>GTA</h4>
+            <p>Wide Service Area</p>
         </div>
-
     </div>
 </section>
