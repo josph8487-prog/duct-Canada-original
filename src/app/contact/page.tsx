@@ -46,7 +46,8 @@ export default function Contact() {
        <h1 className={styles.heroTitle} style={{ fontSize: '25px', whiteSpace: 'nowrap', marginTop: '100px', textAlign: 'center' }}>
   CONTACT US
 </h1>
-             <p className={styles.heroSubtitle}>Get in touch for appointments or any information regarding our services.</p>
+             
+<p className={styles.heroSubtitle} style={{ textAlign: 'left', paddingLeft: '42%', marginTop: '10px' }}>Get in touch for appointments or any information regarding our services.</p>
                 </div>
             </section>
 
