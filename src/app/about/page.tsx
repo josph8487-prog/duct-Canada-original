@@ -21,7 +21,7 @@ export default function About() {
             {/* Block 1: Our Story */}
             <div style={{ marginBottom: '35px' }}>
                 <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>Our Story</h2>
-                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>Dedicated to Cleaner Air for Every Home</h3>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>Dedicated to Cleaner Air in Every Home</h3>
                 <div className={styles.description}>
                     <p>
                         Founded in 2010, Duct Cleaning Canada provides trusted professional duct cleaning and HVAC services in Markham and all GTA areas.
