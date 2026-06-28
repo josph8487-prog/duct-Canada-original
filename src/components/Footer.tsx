@@ -71,8 +71,11 @@ const Footer = () => {
               <Link href="/services">Air Duct Cleaning</Link>
               <Link href="/services">Dryer Vent Cleaning</Link>
               <Link href="/services">Furnace Cleaning</Link>
-              <Link href="/services">Blower Fan Cleaning</Link>
+              <Link href="/services">Blower Cleaning</Link>
               <Link href="/services">Sanitization Services</Link>
+              <Link href="/services">Exhaust Fan Cleaning</Link>
+              <Link href="/services">Dishwasher Vent Cleaning</Link>
+              <Link href="/services">Filter Replacement</Link>
             </div>
           </div>
 
