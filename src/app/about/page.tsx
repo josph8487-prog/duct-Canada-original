@@ -14,26 +14,51 @@ export default function About() {
             </section>
 
             {/* Main Content */}
-            <section className={styles.contentSection}>
-                <div className={`container ${styles.grid}`}>
+<section className={styles.contentSection}>
+    <div className={`container ${styles.grid}`}>
 
-                    <div className={styles.textColumn}>
-                        <h2>Our Story</h2>
-                        <h3>Dedicated to Cleaner Air for Every Home</h3>
+        <div className={styles.textColumn}>
+            {/* Block 1: Our Story */}
+            <div style={{ marginBottom: '35px' }}>
+                <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '10px' }}>Our Story</h2>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>Dedicated to Cleaner Air for Every Home</h3>
+                <div className={styles.description}>
+                    <p>
+                        Founded in 2010, Duct Cleaning Canada provides trusted professional duct cleaning and HVAC services in Markham and all GTA areas.
+                    </p>
+                </div>
+            </div>
 
-                        <div className={styles.description}>
-                            <p>
-                                Founded in 2010, Duct Cleaning Canada provides trusted professional duct cleaning and HVAC services in Markham and all GTA areas.
-                            </p>
-                            <p>
-                                 Our certified, HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air. We provide professional air duct cleaning, dryer vent cleaning, furnace cleaning, blower motor cleaning, filter replacement, exhaust fan maintenance services, and many more.
-                            </p>
-                            <p>
-                            <p>
-    Proud winners of the Best Service and Customer Satisfaction Award, we are a customer-trusted company pledged to protect Canadian homes with innovative air quality solutions for generations to come.
-</p>
+            {/* Block 2: What We Do */}
+            <div style={{ marginBottom: '35px' }}>
+                <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '12px' }}>What We Do</h2>
+                <div className={styles.description}>
+                    <p>
+                        Our certified, HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air.
+                    </p>
+                </div>
+            </div>
 
-                            </p>
+            {/* Block 3: Our Full Range of Services */}
+            <div style={{ marginBottom: '35px' }}>
+                <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '12px' }}>Our Full Range of Services</h2>
+                <div className={styles.description}>
+                    <ul style={{ paddingLeft: '20px', listStyleType: 'disc', margin: '0' }}>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Professional Air Duct Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dryer Vent Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace & Blower Motor Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement & Exhaust Fan Maintenance</li>
+                    </ul>
+                </div>
+            </div>
+
+            {/* Block 4: Our Achievement */}
+            <div>
+                <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '12px' }}>Our Achievement</h2>
+                <div className={styles.description}>
+                    <p>
+                        Proud winners of the Best Service and Customer Satisfaction Award, we are a customer-trusted company pledged to protect Canadian homes with innovative air quality solutions for generations to come.
+                    </p>
                         </div>
 
                         <div className={styles.highlightBox}>
