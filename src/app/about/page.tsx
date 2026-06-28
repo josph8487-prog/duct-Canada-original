@@ -39,7 +39,7 @@ export default function About() {
                         <div className={styles.highlightBox}>
                             <h4>Our Commitment</h4>
                             <p>
-                                We don't just clean ducts; we improve lives by ensuring the air you breathe is fresh, clean, and safe.
+                                We clean ducts to improve lives. We provide 100% satisfaction and do not leave until your indoor air is perfectly fresh, clean, and safe.
                             </p>
                         </div>
                     </div>
