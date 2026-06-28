@@ -55,25 +55,22 @@ export default function About() {
             </section>
 
 {/* Stats / Trust Section */}
-            <section className={styles.statsSection} style={{ width: "100%", overflow: "hidden", padding: "20px 5px" }}>
-                <div className={`container ${styles.statsGrid}`} style={{ display: "flex", flexWrap: "nowrap", gap: "8px", justifyContent: "space-between", width: "100%", boxSizing: "border-box" }}>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>8+</h4>
-                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Years in Business</p>
+            <section className={styles.statsSection}>
+                <div className={`container ${styles.statsGrid}`}>
+                    <div className={styles.statItem}>
+                        <h4>8+</h4>
+                        <p>Years in Business</p>
                     </div>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>100%</h4>
-                   <p style={{ fontSize: "16px", margin: "20px 0", whiteSpace: "nowrap", lineHeight: "1.2" }}>100% Satisfaction Guarantee</p>        
+                    <div className={styles.statItem}>
+                        <h4>100%</h4>
+                        <p>100% Satisfaction Guarantee</p>
                     </div>
-                    <div className={styles.statItem} style={{ flex: "1 1 33%", textAlign: "center", padding: "5px", boxSizing: "border-box" }}>
-                        <h4 style={{ fontSize: "1.2rem", margin: "0 0 2px 0", fontWeight: "700" }}>GTA</h4>
-                        <p style={{ fontSize: "0.75rem", margin: 0, whiteSpace: "normal", wordBreak: "break-word", lineHeight: "1.2" }}>Wide Service Area</p>
+                    <div className={styles.statItem}>
+                        <h4>GTA</h4>
+                        <p>Wide Service Area</p>
                     </div>
                 </div>
             </section>
         </>
     );
 }
-
-
-
