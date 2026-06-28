@@ -20,7 +20,7 @@ export default function About() {
         <div className={styles.textColumn}>
             {/* Block 1: Our Story */}
             <div style={{ marginBottom: '35px' }}>
-                <h2 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '10px' }}>Our Story</h2>
+                <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>Our Story</h2>
                 <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>Dedicated to Cleaner Air for Every Home</h3>
                 <div className={styles.description}>
                     <p>
@@ -31,7 +31,7 @@ export default function About() {
 
             {/* Block 2: What We Do */}
             <div style={{ marginBottom: '35px' }}>
-                <h2 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>What We Do</h2>
+                <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>What We Do</h2>
                 <div className={styles.description}>
                     <p>
                         Our certified, HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air.
@@ -41,7 +41,7 @@ export default function About() {
 
             {/* Block 3: Our Full Range of Services */}
             <div style={{ marginBottom: '35px' }}>
-                <h2 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>Our Full Range of Services</h2>
+                <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>Our Full Range of Services</h2>
                 <div className={styles.description}>
                     <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Professional Air Duct Cleaning</li>
@@ -54,7 +54,7 @@ export default function About() {
 
             {/* Block 4: Our Achievement */}
             <div>
-                <h2 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>Our Achievement</h2>
+                <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>Our Achievement</h2>
                 <div className={styles.description}>
                     <p>
                         Proud winners of the Best Service and Customer Satisfaction Award, we are a customer-trusted company pledged to protect Canadian homes with innovative air quality solutions for generations to come.
