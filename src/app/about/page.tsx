@@ -9,7 +9,7 @@ export default function About() {
                 <div className="container">
                     <h1 className={styles.heroTitle} style={{ marginTop: '140px', fontSize: '28px', fontWeight: '700' }}>About Us</h1>
 
-                    <p className={styles.heroSubtitle}>Leading the way in indoor air quality solutions since 2017.</p>
+                    <p className={styles.heroSubtitle}>Leading the way in indoor air quality solutions since 2010.</p>
                 </div>
             </section>
 
