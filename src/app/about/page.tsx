@@ -31,7 +31,7 @@ export default function About() {
 
             {/* Block 2: What We Do */}
             <div style={{ marginBottom: '35px' }}>
-                <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '12px' }}>What We Do</h2>
+                <h2 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px' }}>What We Do</h2>
                 <div className={styles.description}>
                     <p>
                         Our certified, HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air.
