@@ -150,8 +150,8 @@
 .featureGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 3rem;
+    gap: 24px;
+    margin-top: 48px;
 }
 
 @media (min-width: 768px) {
@@ -161,67 +161,40 @@
 }
 
 .featureCard {
-    background: white;
-    border-radius: var(--radius);
+    background: #ffffff;
+    border-radius: 8px;
     overflow: hidden;
     text-align: left;
     transition: transform 0.2s;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--gray-100);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #f3f4f6;
     display: flex;
     flex-direction: column;
 }
 
 .featureCard:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.featureCard img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .featureTitle {
     font-size: 1.1rem;
     font-weight: 700;
-    margin: 1rem;
-    color: var(--secondary);
+    margin: 16px;
+    color: #111111;
     text-transform: uppercase;
     text-align: center;
 }
 
 .featureText {
-    color: var(--gray-800);
-    padding: 0 1rem 1rem;
+    color: #1f2937;
+    padding: 0 16px 16px;
     text-align: center;
     font-size: 0.9rem;
 }
 
 .servicesPreview {
-    background-color: var(--gray-50);
-}
-
-@media (min-width: 768px) {
-    .heroTitle {
-        font-size: 3.5rem;
-    }
-}
-
-
-    .featureGrid {
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 cols for services */
-    }
-}
-
-@media (min-width: 1100px) {
-    .featureGrid {
-        grid-template-columns: repeat(3, 1fr);
-        /* Keep 3 or go to 4 if space permits */
-    }
+    background-color: #f9fafb;
 }
 
 /* About Section */
