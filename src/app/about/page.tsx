@@ -12,8 +12,8 @@ export default function About() {
                     <p className={styles.heroSubtitle}>Leading the way in indoor air quality solutions since 2010.</p>
                 </div>
             </section>
-
-            {/* Main Content */}
+            
+{/* Main Content */}
 <section className={styles.contentSection}>
     <div className={`container ${styles.grid}`}>
 
@@ -43,7 +43,7 @@ export default function About() {
             <div style={{ marginBottom: '35px' }}>
                 <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '12px' }}>Our Full Range of Services</h2>
                 <div className={styles.description}>
-                    <ul style={{ paddingLeft: '20px', listStyleType: 'disc', margin: '0' }}>
+                    <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Professional Air Duct Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dryer Vent Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace & Blower Motor Cleaning</li>
@@ -59,15 +59,10 @@ export default function About() {
                     <p>
                         Proud winners of the Best Service and Customer Satisfaction Award, we are a customer-trusted company pledged to protect Canadian homes with innovative air quality solutions for generations to come.
                     </p>
-                        </div>
+                </div>
+            </div>
 
-                        <div className={styles.highlightBox}>
-                            <h4>Our Commitment</h4>
-                            <p>
-                                We clean ducts to improve lives. We provide 100% satisfaction and do not leave until your indoor air is perfectly fresh, clean, and safe.
-                            </p>
-                        </div>
-                    </div>
+        </div>
 
                     <div className={styles.imageColumn}>
                         {/* Using the technician image we generated earlier as a good fit here too, or we can use another one */}
