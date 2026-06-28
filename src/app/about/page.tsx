@@ -47,9 +47,9 @@ export default function About() {
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Professional Air Duct Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dryer Vent Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace & Blower Motor Cleaning</li>
-                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement & Exhaust Fan Maintenance</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement & Exhaust Fan Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Air Duct Sanitization</li>
-                       <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace Filter Replacement</li>
+                       <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement</li>
 
                       <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dishwasher Vent Cleaning</li>
                     </ul>
