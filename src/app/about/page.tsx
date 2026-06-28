@@ -26,10 +26,10 @@ export default function About() {
                                 Founded in 2010, Duct Cleaning Canada provides trusted professional duct cleaning and HVAC services in Markham and all GTA areas.
                             </p>
                             <p>
-                                Our certified HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air through truly professional air duct cleaning.
+                                 Our certified, HVAC-licensed technicians remove dust, allergens, and debris from air ducts and HVAC systems, helping families enjoy cleaner, healthier air. We provide professional air duct cleaning, dryer vent cleaning, furnace cleaning, blower motor cleaning, filter replacement, exhaust fan maintenance services, and many more.
                             </p>
                             <p>
-                                <p>
+                            <p>
     Proud winners of the Best Service and Customer Satisfaction Award, we are a customer-trusted company pledged to protect Canadian homes with innovative air quality solutions for generations to come.
 </p>
 
