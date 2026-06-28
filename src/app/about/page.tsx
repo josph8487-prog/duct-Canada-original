@@ -44,14 +44,15 @@ export default function About() {
                 <h2 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>Our Full Range of Services</h2>
                 <div className={styles.description}>
                     <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
-                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Professional Air Duct Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Air Duct Cleaning</li>
                         <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dryer Vent Cleaning</li>
-                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace & Blower Motor Cleaning</li>
-                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement & Exhaust Fan Cleaning</li>
-                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Air Duct Sanitization</li>
-                       <li style={{ marginBottom: '8px', fontSize: '16px' }}>Filter Replacement</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Blower Motor Cleaning</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}> Air Duct Sanitization</li>
+                        <li style={{ marginBottom: '8px', fontSize: '16px' }}>Exhaust Fan Cleaning</li>
+                       <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dishwasher Vent Cleaning</li>
 
-                      <li style={{ marginBottom: '8px', fontSize: '16px' }}>Dishwasher Vent Cleaning</li>
+                      <li style={{ marginBottom: '8px', fontSize: '16px' }}>Furnace Filter Replacement</li>
                     </ul>
                 </div>
             </div>
