@@ -550,17 +550,24 @@
 }
 
 .areaGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 16px;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
     width: 100%;
 }
+
+@media (min-width: 768px) {
+    .areaGrid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        padding: 0;
+    }
+}
+
 
 .areaLinkHover:hover {
     background-color: #004085 !important;
