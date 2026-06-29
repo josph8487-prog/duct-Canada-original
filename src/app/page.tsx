@@ -41,7 +41,7 @@ export default function Home() {
   Duct Cleaning Canada Experts
 </h1>
               <p className={styles.heroSubtitle}>
-               Markham & GTA Trusted Duct Cleaning Company: Air vents, Furnace, AC Coils, Dryer Vent & Sanitization Services
+               Trusted By Markham & GTA Homeowners For Premium Furnace AC Coils Air Vents & Sanitization
 
               </p>
 
