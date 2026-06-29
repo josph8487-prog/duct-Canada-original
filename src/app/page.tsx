@@ -46,7 +46,7 @@ export default function Home() {
               </p>
 
               <Link href="/services" className="btn btn-primary">
-                Explore Services & Book Online
+                Explore Services
               </Link>
 <p style={{ color: '#ffffff', fontSize: '16px', marginTop: '14px', opacity: 0.95, fontWeight: '600', lineHeight: '1.4' }}>
   Fully Licensed & Insured Professional Duct Cleaning Services
