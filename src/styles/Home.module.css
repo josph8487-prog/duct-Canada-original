@@ -446,7 +446,7 @@
 .testimonialHeader h2 {
     color: var(--primary);
     font-size: 1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
 }
@@ -547,7 +547,7 @@
     font-weight: 800;
     color: #111111;
     margin-bottom: 2.5rem;
-    text-transform:  capitalize;
+    text-transform: capitalize;
     letter-spacing: 0.5px;
 }
 
@@ -616,6 +616,22 @@
 
 .solidBlueBtn:hover {
   background-color: #004085;
+}
+
+.mainTitle,
+.sectionHeading,
+.areasHeading,
+.serviceCard h3,
+.about h2,
+.about h3 {
+    text-transform: lowercase !important;
+    text-transform: capitalize !important;
+}
+
+.subTitle,
+.areasSubtext,
+.serviceCard p {
+    text-transform: none !important;
 }
 
 
