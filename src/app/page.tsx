@@ -88,20 +88,22 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              style={{
-                padding: "12px 20px",
-                backgroundColor: "#0056b3",
-                color: "#ffffff",
-                borderRadius: "8px",
-                textDecoration: "none",
-                fontWeight: "600",
-                fontSize: "15px",
-                boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-                display: "inline-block",
-                textAlign: "center",
-                minWidth: "140px",
-                boxSizing: "border-box"
-              }}
+              
+style={{
+  padding: "12px 10px",
+  backgroundColor: "#0056b3",
+  color: "#ffffff",
+  borderRadius: "8px",
+  textDecoration: "none",
+  fontWeight: "600",
+  fontSize: "14px",
+  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+  display: "block",
+  textAlign: "center",
+  width: "100%",
+  boxSizing: "border-box"
+}}
+
             >
               {city}
             </Link>
