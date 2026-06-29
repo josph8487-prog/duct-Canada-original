@@ -41,7 +41,8 @@ export default function Home() {
   Duct Cleaning Canada Experts
 </h1>
               <p className={styles.heroSubtitle}>
-                Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
+               Markham & GTA Trusted Duct Cleaning Company: Air vents, Furnace, AC Coils, Dryer Vent & Sanitization Services
+
               </p>
 
               <Link href="/services" className="btn btn-primary">
