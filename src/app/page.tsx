@@ -60,10 +60,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE AREAS (HEADING SIZE SMALLER & POSITION FIXED) */}
+      {/* SERVICE AREAS */}
       <section style={{ clear: "both", display: "block", paddingTop: "40px", paddingBottom: "40px" }}>
         
-        {/* HEADING TEXT SIZE REDUCED AND POSITIONED PERFECTLY */}
         <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "1.6rem", color: "#333", fontWeight: "700" }}>
           Service Areas We Cover
         </h2>
@@ -90,16 +89,18 @@ export default function Home() {
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
               style={{
-                padding: "14px 28px",
+                padding: "12px 20px",
                 backgroundColor: "#0056b3",
                 color: "#ffffff",
                 borderRadius: "8px",
                 textDecoration: "none",
                 fontWeight: "600",
-                fontSize: "16px",
+                fontSize: "15px",
                 boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
                 display: "inline-block",
-                textAlign: "center"
+                textAlign: "center",
+                minWidth: "140px",
+                boxSizing: "border-box"
               }}
             >
               {city}
