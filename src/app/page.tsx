@@ -37,7 +37,7 @@ export default function Home() {
           {/* LEFT */}
           <div className={styles.heroLeft}>
             <div>
-              <h1 className={styles.heroTitle} style={{ fontSize: 'clamp(1.0rem, 4vw, 3rem)', whiteSpace: 'nowrap' }}>
+              <h1 className={styles.heroTitle}>
   AIR DUCT CLEANING MARKHAM & GTA
 </h1>
               <p className={styles.heroSubtitle}>
