@@ -618,20 +618,12 @@
   background-color: #004085;
 }
 
-.mainTitle,
-.sectionHeading,
-.areasHeading,
-.serviceCard h3,
-.about h2,
-.about h3 {
-    text-transform: lowercase !important;
-    text-transform: capitalize !important;
-}
-
-.subTitle,
-.areasSubtext,
-.serviceCard p {
+.heroTitle, 
+h1, 
+h2, 
+h3, 
+.mainTitle, 
+.sectionHeading {
     text-transform: none !important;
 }
-
 
