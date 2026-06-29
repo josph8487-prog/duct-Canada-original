@@ -48,6 +48,9 @@ export default function Home() {
               <Link href="/services" className="btn btn-primary">
                 Explore Services
               </Link>
+<p style={{ color: '#ffffff', fontSize: '14px', marginTop: '15px', opacity: 0.9 }}>
+  ⭐⭐⭐⭐⭐ 5.0 Rated On Google | Certified Technicians
+</p>
 
             </div>
           </div>
