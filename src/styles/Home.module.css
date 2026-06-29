@@ -618,5 +618,8 @@
   background-color: #004085;
 }
 
+h1, h2, h3 {
+  text-transform: capitalize !important;
+}
 
 
