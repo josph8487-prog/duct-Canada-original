@@ -46,12 +46,12 @@ export default function Home() {
               </p>
 
               <Link href="/services" className="btn btn-primary">
-                Explore Services
+                Explore Services & Book Online
               </Link>
-<p style={{ color: '#ffffff', fontSize: '14px', marginTop: '15px', opacity: 0.9 }}>
-  ⭐⭐⭐⭐⭐ 5.0 Rated On Google | Certified Technicians
-</p>
 
+<p style={{ color: '#ffffff', fontSize: '13px', marginTop: '12px', opacity: 0.85, fontWeight: '500' }}>
+  Fully Licensed & Insured Professional Duct Cleaning Services
+</p>
             </div>
           </div>
 
