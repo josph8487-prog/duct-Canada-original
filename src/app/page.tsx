@@ -88,7 +88,7 @@ export default function Home() {
             <Link
               key={city}
               href={`/location/${city.toLowerCase().replace(/\s+/g, "-")}`}
-              
+            
 style={{
   padding: "10px 14px",
   backgroundColor: "#0056b3",
@@ -100,9 +100,9 @@ style={{
   boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
   display: "inline-block",
   textAlign: "center",
-  boxSizing: "border-box"
+  boxSizing: "border-box",
+  width: "100%"
 }}
-
             >
               {city}
             </Link>
