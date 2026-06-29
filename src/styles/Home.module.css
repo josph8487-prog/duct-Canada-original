@@ -163,12 +163,12 @@
 }
 
 .featureText {
-    color: #111111;
+    color: #333333;
     padding: 0 1.2rem 1.5rem;
     text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
     margin: 0;
 }
 
