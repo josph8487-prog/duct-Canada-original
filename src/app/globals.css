@@ -239,3 +239,8 @@ a {
   pointer-events: none;
   z-index: 1;
 }
+
+h1, h2, h3 {
+  text-transform: capitalize !important;
+}
+
