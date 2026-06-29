@@ -1,278 +1,123 @@
 .hero {
     position: relative;
-    min-height: 600px;
+    width: 100%;
+    min-height: 550px;
+    background-color: var(--secondary);
     display: flex;
     align-items: stretch;
     justify-content: center;
-    background-color: var(--secondary);
     overflow: hidden;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 .heroContentWrapper {
     display: flex;
     width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 @media (min-width: 900px) {
     .heroContentWrapper {
         flex-direction: row;
-        align-items: stretch;
-        width: 100%;
+        align-items: center;
+    }
+}
+
+.heroLeft {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+@media (min-width: 900px) {
+    .heroLeft {
+        width: 50%;
+        padding: 60px 40px;
     }
 }
 
 .heroContent {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.heroLeft {
-    flex: 1 1 100%;
-    max-width: 100%;
-    background-color: var(--secondary);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 3rem 1.5rem;
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-@media (min-width: 900px) {
-    .heroLeft {
-        flex: 1 1 50%;
-        max-width: 50%;
-        padding: 4rem 3rem;
-    }
-}
-
-.heroLeft::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50px;
-    width: 100px;
-    height: 100%;
-    background-color: var(--secondary);
-    border-radius: 0 50% 50% 0;
-    z-index: 1;
-    display: none;
-}
-
-@media (min-width: 900px) {
-    .heroLeft::after {
-        display: block;
-    }
 }
 
 .heroRight {
-    flex: 1 1 100%;
+    width: 100%;
     min-height: 350px;
     background-image: url('/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
     display: block;
 }
 
 @media (min-width: 900px) {
     .heroRight {
-        flex: 1 1 50%;
-        max-width: 50%;
-        min-height: 600px;
+        width: 50%;
+        min-height: 550px;
     }
 }
 
 .heroTitle {
     font-size: 1.8rem;
     font-weight: 800;
-    color: white;
-    margin-bottom: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
     line-height: 1.2;
     text-transform: uppercase;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    width: 100%;
-    display: block;
     text-align: left;
-}
-
-@media (min-width: 900px) {
-    .heroTitle {
-        font-size: clamp(1.8rem, 3vw, 2.8rem);
-    }
-.hero {
-    position: relative;
-    min-height: 600px;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    background-color: var(--secondary);
-    overflow: hidden;
     width: 100%;
-}
-
-.heroContentWrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-
-@media (min-width: 900px) {
-    .heroContentWrapper {
-        flex-direction: row;
-        align-items: stretch;
-        width: 100%;
-    }
-}
-
-.heroContent {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.heroLeft {
-    flex: 1 1 100%;
-    max-width: 100%;
-    background-color: var(--secondary);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 3rem 1.5rem;
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-@media (min-width: 900px) {
-    .heroLeft {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 4rem 3rem;
-    }
-}
-
-.heroLeft::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50px;
-    width: 100px;
-    height: 100%;
-    background-color: var(--secondary);
-    border-radius: 0 50% 50% 0;
-    z-index: 1;
-    display: none;
-}
-
-@media (min-width: 900px) {
-    .heroLeft::after {
-        display: block;
-    }
-}
-
-.heroRight {
-    flex: 1 1 100%;
-    min-height: 350px;
-    background-image: url('/hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    display: block;
-}
-
-@media (min-width: 900px) {
-    .heroRight {
-        flex: 0 0 50%;
-        max-width: 50%;
-        min-height: 600px;
-    }
-}
-
-.heroTitle {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    text-transform: uppercase;
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    text-align: left;
-    white-space: normal;
+    white-space: normal !important;
     word-break: normal;
     overflow-wrap: break-word;
-    word-wrap: break-word;
 }
 
 @media (min-width: 900px) {
     .heroTitle {
-        font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+        font-size: 2.5rem;
     }
 }
 
 .heroSubtitle {
     font-size: 1rem;
-    color: white;
-    margin-bottom: 2rem;
+    color: #ffffff;
+    margin-bottom: 25px;
     opacity: 0.9;
-    max-width: 100%;
-    font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    width: 100%;
 }
 
 .servingBadge {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 14px;
-    color: #000;
+    color: #000000;
     font-weight: 700;
-    background: #fff;
-    padding: 10px 12px;
-    border-radius: 5px;
+    background: #ffffff;
+    padding: 12px 16px;
+    border-radius: 6px;
     display: inline-block;
     border-left: 5px solid #0056b3;
-    line-height: 1.5;
-    max-width: 100%;
+    line-height: 1.4;
+    width: 100%;
     box-sizing: border-box;
     text-align: left;
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 900px) {
     .servingBadge {
-        display: block;
-        width: 100%;
-        font-size: 14px;
+        width: auto;
     }
 }
+
 
 .features {
     background-color: white;
