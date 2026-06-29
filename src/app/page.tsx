@@ -6,7 +6,7 @@ export default function Home() {
 
   const services = [
     {
-      title: "Air Duct Cleaning Markham & GTA",
+      title: "Duct Cleaning Canada ",
       text: "Professional air duct cleaning services in Markham, Toronto and GTA. Improve indoor air quality and airflow.",
       image: "/images/services/air-duct-cleaning.jpg"
     },
