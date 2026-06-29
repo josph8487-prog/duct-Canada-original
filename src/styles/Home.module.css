@@ -547,7 +547,7 @@
     font-weight: 800;
     color: #111111;
     margin-bottom: 2.5rem;
-    text-transform: uppercase;
+    text-transform:  capitalize;
     letter-spacing: 0.5px;
 }
 
