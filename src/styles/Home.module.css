@@ -618,12 +618,5 @@
   background-color: #004085;
 }
 
-.heroTitle, 
-h1, 
-h2, 
-h3, 
-.mainTitle, 
-.sectionHeading {
-    text-transform: none !important;
-}
+
 
