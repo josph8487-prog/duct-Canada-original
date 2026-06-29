@@ -49,9 +49,6 @@ export default function Home() {
                 Explore Services
               </Link>
 
-              <div className={styles.servingBadge}>
-                <strong>Serving:</strong> Markham • Toronto • Vaughan • Richmond Hill • North York
-              </div>
             </div>
           </div>
 
