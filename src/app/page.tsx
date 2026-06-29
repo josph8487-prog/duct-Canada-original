@@ -38,7 +38,7 @@ export default function Home() {
           <div className={styles.heroLeft}>
             <div>
               <h1 className={styles.heroTitle}>
-  Duct Cleaning Canada | Elite HVAC & Air Vent Sanitization
+  Air Duct Cleaning Markham & GTA
 </h1>
               <p className={styles.heroSubtitle}>
                 Trusted duct cleaning company offering air duct, dryer vent, furnace and HVAC cleaning services across Ontario.
